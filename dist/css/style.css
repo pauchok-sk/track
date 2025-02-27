@@ -6624,7 +6624,7 @@ body {
   transition: color .2s ease,background-color .2s ease
 }
 .button:active {
-  background-color: #fff
+  background-color: #fff!important
 }
 .button._min {
   min-height: 36px;
@@ -6634,7 +6634,7 @@ body {
   background-color: #fff
 }
 .button._white:active {
-  background-color: var(--magenta)
+  background-color: var(--magenta)!important
 }
 .button._outline {
   border: 3px solid #000

@@ -27,7 +27,7 @@
     background-color: var(--cian);
   }
   @include pressed {
-    background-color: white;
+    background-color: white !important;
   }
 
   // sizes
@@ -43,7 +43,7 @@
       background-color: var(--cian);
     }
     @include pressed {
-      background-color: var(--magenta);
+      background-color: var(--magenta) !important;
     }
   }
 
