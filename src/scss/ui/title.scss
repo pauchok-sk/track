@@ -1,0 +1,42 @@
+.title {
+  font-family: "Unbounded", sans-serif;
+}
+
+.main-title {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 2.24px;
+  @include laptop-middle {
+    font-size: 48px;
+  }
+  @include laptop-min {
+    font-size: 36px;
+  }
+  @include tablet {
+    font-size: 26px;
+    letter-spacing: 1.04px;
+  }
+
+  span {
+    color: var(--magenta);
+  }
+}
+
+.s-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 1.6px;
+  @include laptop {
+    font-size: 32px;
+  }
+  @include laptop-min {
+    font-size: 26px;
+  }
+  @include tablet {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+  }
+}

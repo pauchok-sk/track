@@ -1,0 +1,42 @@
+.burger {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--yellow);
+  overflow-y: auto;
+  color: black;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+
+  &._open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  &__list {
+    a {
+      font-family: "Unbounded", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0.8px;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--magenta);
+      }
+    }
+  }
+  &__buttons {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  &__btn {
+    width: 100%;
+  }
+}

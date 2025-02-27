@@ -1,0 +1,194 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 165px 0px 95px 0px;
+  background-color: var(--yellow);
+  color: black;
+  z-index: 1;
+  min-height: 100vh;
+  @include laptop-min {
+    padding-top: 100px;
+    min-height: auto;
+  }
+  @include tablet {
+    padding-bottom: 160px;
+  }
+
+  &__star {
+    position: absolute;
+    z-index: -1;
+    width: 56px;
+    height: 56px;
+
+    &:nth-child(1) {
+      left: 55px;
+      top: 120px;
+    }
+    &:nth-child(2) {
+      left: 260px;
+      bottom: 55px;
+    }
+    &:nth-child(3) {
+      top: 95px;
+      right: 135px;
+    }
+    &:nth-child(4) {
+      right: 70px;
+      top: 255px;
+    }
+    &:nth-child(5) {
+      right: 210px;
+      bottom: 245px;
+    }
+    @include laptop-min {
+      width: 44px;
+      height: 44px;
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        left: 40px;
+        bottom: 40px;
+      }
+    }
+    @include tablet {
+      &:nth-child(5) {
+        right: 100px;
+      }
+    }
+    @include mobile {
+      width: 34px;
+      height: 34px;
+      &:nth-child(3) {
+        right: 30px;
+        top: auto;
+        bottom: 275px;
+      }
+      &:nth-child(4), &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+  &__music {
+    position: absolute;
+    left: 50px;
+    bottom: 150px;
+    z-index: -1;
+    @include laptop {
+      width: 100px;
+    }
+    @include laptop-middle {
+      left: 30px;
+      bottom: 75px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__recorder {
+    position: absolute;
+    left: 15px;
+    bottom: -55px;
+    z-index: -1;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    @include laptop {
+      width: 250px;
+    }
+    @include laptop-middle {
+      width: 170px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    @include laptop {
+      width: 245px;
+    }
+    @include laptop-middle {
+      width: 150px;
+    }
+    @include laptop-min {
+      right: -30px;
+    }
+    @include tablet {
+      width: 185px;
+      right: 0;
+    }
+    @include tablet-min {
+      right: -20px;
+    }
+  }
+  &__pipe {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    z-index: -1;
+    @include laptop-middle {
+      width: 120px;
+    }
+    @include tablet {
+      width: 90px;
+      right: -30px;
+    }
+  }
+  &__recorder-big {
+    position: absolute;
+    right: 60px;
+    bottom: -110px;
+    z-index: -1;
+    @include laptop {
+      width: 360px;
+    }
+    @include laptop-middle {
+      width: 220px;
+      bottom: -65px;
+    }
+    @include tablet {
+      width: 260px;
+      bottom: -65px;
+      right: 15px;
+    }
+  }
+  &__head {
+    margin-bottom: 48px;
+    @include tablet {
+      margin-bottom: 32px;
+      max-width: 300px;
+
+      .s-title {
+        max-width: 190px;
+      }
+    }
+  }
+  &__row {
+    max-width: 940px;
+
+    @include tablet {
+      max-width: 245px;
+      br {
+        display: none;
+      }
+    }
+  }
+  &__icon {
+    width: 56px;
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

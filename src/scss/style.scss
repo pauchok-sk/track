@@ -1,0 +1,28 @@
+@import "./lib/bootstrap.min";
+
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+@import "./base/animation";
+@import "./base/classes";
+
+// widgets
+@import "./widgets/burger";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/section";
+@import "./ui/title";
+@import "./ui/text";
+
+// components
+@import "./components/header";
+
+@import "./components/hero";
+
+@import "./components/footer";
