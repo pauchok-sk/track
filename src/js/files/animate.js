@@ -44,18 +44,10 @@ export function getOrdersAnimate() {
   const section = document.querySelector(".get-orders");
 
   if (section) {
+    const stirringsArr = section.querySelectorAll(".stirring-el");
     const bg = document.querySelector(".get-orders__bg");
-    const omg = document.querySelector(".get-orders__omg");
-    const star = document.querySelector(".get-orders__star");
-    const starY = document.querySelector(".get-orders__star-y");
-    const circle = document.querySelector(".get-orders__circle");
-    const disk = document.querySelector(".get-orders__disk");
-    const smile = document.querySelector(".get-orders__smile");
-    const tg = document.querySelector(".get-orders__tg");
 
-    const arr = [omg, star, starY, circle, disk, smile, tg];
-
-    arr.forEach(item => stirring(item, 2.5));
+    stirringsArr.forEach((item) => stirring(item, 2.5));
 
     section.addEventListener("mousemove", (e) => {
       const { width, height } = section.getBoundingClientRect();
@@ -69,7 +61,28 @@ export function getOrdersAnimate() {
         duration: 10,
         ease: "power2.out",
       });
-    })
+    });
+  }
+}
+
+export function qrSectionAnimate() {
+  const section = document.querySelector(".qr");
+
+  if (section) {
+    const stirringsArr = section.querySelectorAll(".stirring-el");
+    stirringsArr.forEach((item) => stirring(item, 3.5));
+    const backgrounds = document.querySelectorAll(".qr__bg");
+
+    section.addEventListener("mousemove", (e) => {
+      const { width, height } = section.getBoundingClientRect();
+      const x = (e.offsetX / width - 0.5) * 20;
+      const y = (e.offsetY / height - 0.5) * 20;
+
+      backgrounds.forEach((bg, index) => {
+          const depth = (index + 1) * 5;
+          gsap.to(bg, { x: x * depth, y: y * depth, duration: 30, ease: "power2.out" });
+      });
+    });
   }
 }
 

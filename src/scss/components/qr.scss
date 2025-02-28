@@ -1,0 +1,182 @@
+.qr {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0px;
+  background-color: var(--tg);
+  color: black;
+  z-index: 1;
+  @include laptop-min {
+    min-height: 570px;
+  }
+  @include tablet-min {
+    padding-bottom: 360px;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+  &__left {
+    background: url("@img/rect-circles.png") left 0 bottom 0 / 50% auto
+      no-repeat;
+    @include tablet {
+      width: 795px;
+      inset: auto;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      background-size: 100% auto;
+    }
+  }
+  &__right {
+    transform: scale(-1, 1);
+    background: url("@img/rect-circles.png") left 0 bottom 0 / 50% auto
+      no-repeat;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__disk {
+    left: calc(50% - 195px);
+    bottom: -265px;
+    @include laptop-min {
+      width: 400px;
+      bottom: -130px;
+      left: calc(50% - 200px);
+    }
+    @include tablet {
+      width: 320px;
+      left: auto;
+      right: -85px;
+      bottom: -130px;
+    }
+  }
+  &__body {
+    position: relative;
+    max-width: 800px;
+    @include tablet {
+      position: static;
+    }
+    @include tablet-min {
+      max-width: 300px;
+    }
+  }
+
+  &__tv {
+    top: 80px;
+    right: -150px;
+    z-index: -1;
+    @include laptop-min {
+      width: 195px;
+      right: -40px;
+      bottom: -210px;
+    }
+    @include tablet {
+      top: auto;
+      bottom: 140px;
+      right: -10px;
+    }
+  }
+  &__qr-disk {
+    left: -120px;
+    bottom: -275px;
+    z-index: -1;
+    @include laptop-min {
+      width: 110px;
+      bottom: -195px;
+      left: -15px;
+    }
+    @include tablet {
+      left: 15px;
+      bottom: 165px;
+    }
+  }
+  &__tel {
+    bottom: -330px;
+    left: 80px;
+    @include laptop-min {
+      width: 56px;
+      bottom: -235px;
+      left: 60px;
+    }
+    @include tablet {
+      left: 90px;
+      bottom: 125px;
+    }
+  }
+  &__qr {
+    bottom: -160px;
+    left: 255px;
+    z-index: -1;
+    @include laptop-min {
+      bottom: -120px;
+    }
+    @include tablet {
+      width: 75px;
+      left: auto;
+      right: 200px;
+      bottom: 15px;
+    }
+  }
+  &__boom {
+    right: 150px;
+    bottom: -315px;
+    z-index: 1;
+    @include laptop-min {
+      width: 60px;
+      right: 300px;
+      bottom: -240px;
+    }
+    @include tablet {
+      bottom: 70px;
+      right: 5px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
+    @include tablet-min {
+      br {
+        display: none;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 180px;
+      height: 115px;
+      right: -95px;
+      bottom: -15px;
+      background: url("@img/curve.png") 0 0 / 100% auto no-repeat;
+      z-index: -1;
+      @include laptop-min {
+        transform: rotate(15deg);
+        right: -15px;
+        bottom: -47px;
+        width: 105px;
+        height: 105px;
+      }
+      @include tablet {
+        right: 5px;
+        bottom: -70px;
+        transform: rotate(35deg);
+      }
+      @include tablet-min {
+        right: -40px;
+        bottom: -55px;
+        transform: rotate(60deg);
+      }
+    }
+
+    a {
+      background-color: var(--magenta);
+      @include hover {
+        background-color: white;
+      }
+    }
+  }
+}

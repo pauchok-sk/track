@@ -10,24 +10,12 @@
   }
 
   a {
-    position: relative;
+    padding: 0 2px;
+    background-color: var(--tg);
+    border-radius: 4px;
+    transition: background-color .2s ease;
     @include hover {
-      &::before {
-        background-color: var(--magenta);
-      }
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      top: 4px;
-      height: 100%;
-      background-color: var(--tg);
-      border-radius: 4px;
-      z-index: -1;
-      transition: background-color .2s ease;
+      background-color: var(--magenta);
     }
   }
 }
