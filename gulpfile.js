@@ -35,7 +35,7 @@ const fonts = gulp.series(reset, otfToTtf, ttfToWoff2, woff2Copy, fontsStyle);
 // Порядок виконання завдань для режиму розробник
 const devTasks = gulp.series(fonts, gitignore);
 // Порядок виконання завдань для режиму продакшн
-const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, gulp.parallel(WebP, copySvg), gitignore));
+const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, gulp.parallel(imagesOptimize, copySvg), gitignore));
 
 // Експорт завдань
 export { html }

@@ -1,0 +1,128 @@
+.get-orders {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  z-index: 1;
+  padding: 60px 0px 380px 0px;
+  @include tablet {
+    padding-bottom: 315px;
+  }
+  &__bg {
+    position: absolute;
+    width: 2200px;
+    object-fit: cover;
+    top: -530px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+    z-index: -2;
+    @include mobile {
+      width: 1820px;
+      top: -300px;
+    }
+  }
+  &__dj {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    @include tablet {
+      max-width: none;
+      width: 405px;
+    }
+    @include mobile {
+      width: 300px;
+    }
+  }
+  &__head {
+    position: relative;
+    max-width: 810px;
+    z-index: 1;
+    @include tablet {
+      max-width: 500px;
+    }
+    @include mobile {
+      max-width: 300px;
+    }
+  }
+  &__omg {
+    left: 0;
+    bottom: -195px;
+    transform: rotate(-13deg);
+    z-index: -1;
+    @include tablet {
+      width: 105px;
+      bottom: -100px;
+      left: -10px;
+    }
+    @include mobile {
+      bottom: -120px;
+    }
+  }
+  &__star {
+    bottom: -210px;
+    left: 235px;
+    width: 24px;
+    @include tablet {
+      bottom: -200px;
+      left: 30px;
+    }
+  }
+  &__circle {
+    right: 260px;
+    bottom: -140px;
+    @include tablet {
+      width: 75px;
+      right: 100px;
+    }
+    @include mobile {
+      right: 25px;
+      bottom: -150px;
+    }
+  }
+  &__disk {
+    right: 270px;
+    bottom: -220px;
+    @include tablet {
+      bottom: -240px;
+      right: 35px;
+      width: 80px;
+    }
+    @include mobile {
+      bottom: -215px;
+      right: 60px;
+    }
+  }
+  &__star-y {
+    bottom: -70px;
+    right: 235px;
+    @include tablet {
+      right: 0;
+      bottom: -80px;
+    }
+  }
+  &__smile {
+    bottom: -115px;
+    right: 95px;
+    transform: rotate(30deg);
+    @include tablet {
+      bottom: -40px;
+      right: 60px;
+      width: 27px;
+    }
+  }
+  &__tg {
+    bottom: -395px;
+    right: -25px;
+    @include tablet {
+      width: 125px;
+      right: 40px;
+      bottom: -360px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

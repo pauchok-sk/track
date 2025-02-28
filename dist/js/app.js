@@ -6537,7 +6537,7 @@
     gsap.registerPlugin(CSSPlugin);
     var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
     gsapWithCSS.core.Tween;
-    function heroCursor() {
+    function heroAnimate() {
         const hero = document.querySelector(".hero");
         const music = document.querySelector(".hero__music");
         const record = document.querySelector(".hero__recorder");
@@ -6570,19 +6570,46 @@
             stars.forEach((star => stirring(star)));
             if (window.matchMedia("(max-width: 991px)").matches) stirring(recorcBig);
         }
-        function stirring(el) {
-            gsapWithCSS.to(el, {
-                x: "random(-10, 15, 1)",
-                y: "random(-10, 15, 1)",
-                rotation: "random(-5, 5, 1)",
-                duration: 1.5,
-                ease: "sine.inOut",
-                repeat: -1,
-                yoyo: true
-            });
+    }
+    function getOrdersAnimate() {
+        const section = document.querySelector(".get-orders");
+        if (section) {
+            const bg = document.querySelector(".get-orders__bg");
+            const omg = document.querySelector(".get-orders__omg");
+            const star = document.querySelector(".get-orders__star");
+            const starY = document.querySelector(".get-orders__star-y");
+            const circle = document.querySelector(".get-orders__circle");
+            const disk = document.querySelector(".get-orders__disk");
+            const smile = document.querySelector(".get-orders__smile");
+            const tg = document.querySelector(".get-orders__tg");
+            const arr = [ omg, star, starY, circle, disk, smile, tg ];
+            arr.forEach((item => stirring(item, 2.5)));
+            section.addEventListener("mousemove", (e => {
+                const {width, height} = section.getBoundingClientRect();
+                const x = (e.offsetX / width - .5) * 20;
+                const y = (e.offsetY / height - .5) * 20;
+                gsapWithCSS.to(bg, {
+                    x,
+                    y,
+                    duration: 10,
+                    ease: "power2.out"
+                });
+            }));
         }
+    }
+    function stirring(el, duration) {
+        gsapWithCSS.to(el, {
+            x: "random(-10, 15, 1)",
+            y: "random(-10, 15, 1)",
+            rotation: "random(-5, 5, 1)",
+            duration: duration || 1.5,
+            ease: "sine.inOut",
+            repeat: -1,
+            yoyo: true
+        });
     }
     spoller();
     burger();
-    heroCursor();
+    heroAnimate();
+    getOrdersAnimate();
 })();

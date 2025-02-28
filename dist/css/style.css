@@ -6465,7 +6465,8 @@ template {
 :root {
   --yellow: #fff100;
   --magenta: #ff6df1;
-  --cian: #00ffca
+  --cian: #00ffca;
+  --tg: #00f4ff
 }
 html {
   box-sizing: border-box
@@ -6528,30 +6529,6 @@ body {
 ._a-rotating {
   -webkit-animation: rotate 2s linear infinite;
   animation: rotate 2s linear infinite
-}
-.parallax-container {
-  position: relative;
-  width: 400px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 20px;
-  cursor: pointer
-}
-.layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: -webkit-transform .1s ease-out;
-  transition: transform .1s ease-out;
-  transition: transform .1s ease-out,-webkit-transform .1s ease-out
-}
-.layer1 {
-  background-image: url(https://fototips.ru/wp-content/uploads/2012/03/00_Autumn_Photo.webp);
-  z-index: 1;
-  width: 1005px;
-  height: 500px
 }
 .w-fit {
   width: -webkit-fit-content!important;
@@ -6617,6 +6594,9 @@ body {
   min-height: 58px;
   border-radius: 8px;
   text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 8px 24px;
   font-size: 20px;
   color: #000;
@@ -6635,6 +6615,12 @@ body {
 }
 .button._white:active {
   background-color: var(--magenta)!important
+}
+.button._blue {
+  background-color: var(--tg)
+}
+.button._blue:active {
+  background-color: #fff!important
 }
 .button._outline {
   border: 3px solid #000
@@ -6670,6 +6656,21 @@ body {
   font-weight: 700;
   line-height: 30px;
   margin: 0
+}
+.text a {
+  position: relative
+}
+.text a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 4px;
+  height: 100%;
+  background-color: var(--tg);
+  border-radius: 4px;
+  z-index: -1;
+  transition: background-color .2s ease
 }
 .header {
   position: absolute;
@@ -6822,6 +6823,75 @@ body {
 }
 .hero__icon {
   width: 56px
+}
+.get-orders {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+  z-index: 1;
+  padding: 60px 0 380px 0
+}
+.get-orders__bg {
+  position: absolute;
+  width: 2200px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  top: -530px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  max-width: none;
+  z-index: -2
+}
+.get-orders__dj {
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1
+}
+.get-orders__head {
+  position: relative;
+  max-width: 810px;
+  z-index: 1
+}
+.get-orders__omg {
+  left: 0;
+  bottom: -195px;
+  -webkit-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+  z-index: -1
+}
+.get-orders__star {
+  bottom: -210px;
+  left: 235px;
+  width: 24px
+}
+.get-orders__circle {
+  right: 260px;
+  bottom: -140px
+}
+.get-orders__disk {
+  right: 270px;
+  bottom: -220px
+}
+.get-orders__star-y {
+  bottom: -70px;
+  right: 235px
+}
+.get-orders__smile {
+  bottom: -115px;
+  right: 95px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg)
+}
+.get-orders__tg {
+  bottom: -395px;
+  right: -25px
+}
+.get-orders__tg img {
+  width: 100%
 }
 @media (min-width:576px) {
   .container,
@@ -11666,6 +11736,48 @@ body {
     width: 40px;
     height: 40px
   }
+  .get-orders {
+    padding-bottom: 315px
+  }
+  .get-orders__dj {
+    max-width: none;
+    width: 405px
+  }
+  .get-orders__head {
+    max-width: 500px
+  }
+  .get-orders__omg {
+    width: 105px;
+    bottom: -100px;
+    left: -10px
+  }
+  .get-orders__star {
+    bottom: -200px;
+    left: 30px
+  }
+  .get-orders__circle {
+    width: 75px;
+    right: 100px
+  }
+  .get-orders__disk {
+    bottom: -240px;
+    right: 35px;
+    width: 80px
+  }
+  .get-orders__star-y {
+    right: 0;
+    bottom: -80px
+  }
+  .get-orders__smile {
+    bottom: -40px;
+    right: 60px;
+    width: 27px
+  }
+  .get-orders__tg {
+    width: 125px;
+    right: 40px;
+    bottom: -360px
+  }
 }
 @media (max-width:576px) {
   .hero__right {
@@ -11773,6 +11885,27 @@ body {
   .hero__star:nth-child(4),
   .hero__star:nth-child(5) {
     display: none
+  }
+  .get-orders__bg {
+    width: 1820px;
+    top: -300px
+  }
+  .get-orders__dj {
+    width: 300px
+  }
+  .get-orders__head {
+    max-width: 300px
+  }
+  .get-orders__omg {
+    bottom: -120px
+  }
+  .get-orders__circle {
+    right: 25px;
+    bottom: -150px
+  }
+  .get-orders__disk {
+    bottom: -215px;
+    right: 60px
   }
 }
 @media (prefers-reduced-motion:no-preference) {
@@ -11915,6 +12048,12 @@ body {
   .button._white:hover {
     background-color: var(--cian)
   }
+  .button._blue:hover {
+    background-color: var(--yellow)
+  }
+  .text a:hover::before {
+    background-color: var(--magenta)
+  }
   .header__list a:hover {
     color: var(--magenta)
   }
@@ -11931,6 +12070,12 @@ body {
   }
   .button._white:active {
     background-color: var(--cian)
+  }
+  .button._blue:active {
+    background-color: var(--yellow)
+  }
+  .text a:active::before {
+    background-color: var(--magenta)
   }
   .header__list a:active {
     color: var(--magenta)

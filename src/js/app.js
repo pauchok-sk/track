@@ -3,9 +3,10 @@ import "./lib/bootstrap.min.js";
 
 import spoller from "./files/spoller.js";
 import burger from "./files/burger.js";
-import { heroCursor } from "./files/cursorParallax.js";
+import { getOrdersAnimate, heroAnimate } from "./files/animate.js";
 
 spoller();
 burger();
 
-heroCursor();
+heroAnimate();
+getOrdersAnimate();
