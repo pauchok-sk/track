@@ -1,4 +1,4 @@
-export function mediaAdaptive() {
+export default function mediaAdaptive() {
   function DynamicAdapt(type) {
     this.type = type;
   }
@@ -32,7 +32,14 @@ export function mediaAdaptive() {
     this.mediaQueries = Array.prototype.map.call(
       this.оbjects,
       function (item) {
-        return "(" + this.type + "-width: " + item.breakpoint + "px)," + item.breakpoint;
+        return (
+          "(" +
+          this.type +
+          "-width: " +
+          item.breakpoint +
+          "px)," +
+          item.breakpoint
+        );
       },
       this
     );
@@ -52,9 +59,12 @@ export function mediaAdaptive() {
       const mediaBreakpoint = mediaSplit[1];
 
       // массив объектов с подходящим брейкпоинтом
-      const оbjectsFilter = Array.prototype.filter.call(this.оbjects, function (item) {
-        return item.breakpoint === mediaBreakpoint;
-      });
+      const оbjectsFilter = Array.prototype.filter.call(
+        this.оbjects,
+        function (item) {
+          return item.breakpoint === mediaBreakpoint;
+        }
+      );
       matchMedia.addListener(function () {
         _this.mediaHandler(matchMedia, оbjectsFilter);
       });
@@ -159,21 +169,4 @@ export function mediaAdaptive() {
 
   const da = new DynamicAdapt("max");
   da.init();
-}
-
-export function isWebp() {
-  // Проверка поддержки webp
-  function testWebP(callback) {
-    let webP = new Image();
-    webP.onload = webP.onerror = function () {
-      callback(webP.height == 2);
-    };
-    webP.src =
-      "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-  }
-  // Добавление класса _webp или _no-webp для HTML
-  testWebP(function (support) {
-    let className = support === true ? "webp" : "no-webp";
-    document.documentElement.classList.add(className);
-  });
 }

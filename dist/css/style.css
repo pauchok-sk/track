@@ -6468,6 +6468,7 @@ template {
   --cian: #00ffca;
   --tg: #00f4ff;
   --red: #f52344;
+  --l-red: #ffc3cd;
   --robin: #00cfd9
 }
 html {
@@ -6553,6 +6554,9 @@ body {
 .text-robin {
   color: var(--robin)
 }
+.pointer {
+  cursor: pointer
+}
 .burger {
   position: fixed;
   left: 0;
@@ -6591,7 +6595,7 @@ body {
   padding-bottom: 30px
 }
 .burger__btn {
-  width: 100%
+  width: 100%!important
 }
 .btn-reset {
   cursor: pointer;
@@ -6661,7 +6665,8 @@ body {
   min-height: 680px
 }
 .title {
-  font-family: Unbounded,sans-serif
+  font-family: Unbounded,sans-serif;
+  margin: 0 0 20px 0
 }
 .main-title {
   font-size: 56px;
@@ -6690,6 +6695,68 @@ body {
   border-radius: 4px;
   transition: background-color .2s ease
 }
+.sm-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0
+}
+.sm-text a {
+  color: var(--magenta);
+  font-weight: 700
+}
+.input-control {
+  position: relative;
+  display: flex;
+  align-items: center
+}
+.input {
+  outline: 0;
+  border-radius: 8px;
+  border: 2px solid #000;
+  background: #fff;
+  width: 100%;
+  background-color: #fff;
+  padding: 12px 45px 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: border-color .2s ease
+}
+.input:focus {
+  border-color: var(--cian)
+}
+.input[disabled]::-webkit-input-placeholder {
+  opacity: .3
+}
+.input[disabled]:-ms-input-placeholder {
+  opacity: .3
+}
+.input[disabled]::-ms-input-placeholder {
+  opacity: .3
+}
+.input[disabled]::placeholder {
+  opacity: .3
+}
+.input[disabled] .passowrd-btn {
+  opacity: .3
+}
+.input._error {
+  border-color: var(--red)!important;
+  background-color: var(--l-red)!important
+}
+.password-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/eye-close.svg) center/100% auto no-repeat;
+  transition: opacity .2s ease
+}
+.password-btn._active {
+  background: url(../img/eye.svg) center/100% auto no-repeat
+}
 .header {
   position: absolute;
   left: 0;
@@ -6699,6 +6766,10 @@ body {
   color: #000;
   padding: 24px 0;
   z-index: 50
+}
+.header._white {
+  background-color: #fff;
+  position: sticky
 }
 .header__logo {
   display: flex;
@@ -6761,6 +6832,18 @@ body {
   transition: opacity .2s ease,border-radius .2s ease,-webkit-transform .2s ease;
   transition: transform .2s ease,opacity .2s ease,border-radius .2s ease;
   transition: transform .2s ease,opacity .2s ease,border-radius .2s ease,-webkit-transform .2s ease
+}
+.header__profile {
+  cursor: pointer;
+  transition: color .2s ease
+}
+.header__profile-icon {
+  width: 40px;
+  height: 40px
+}
+.header__profile-arrow {
+  width: 20px;
+  height: 20px
 }
 .hero {
   position: relative;
@@ -7137,6 +7220,67 @@ body {
 }
 .questions__accordion-body p:first-child {
   margin-bottom: 0
+}
+.login {
+  padding: 165px 0 25px 0;
+  min-height: 800px;
+  background-color: var(--yellow);
+  color: #000
+}
+.login__form {
+  max-width: 560px
+}
+.login__question a {
+  position: relative;
+  background-color: rgba(0,0,0,0);
+  text-decoration: underline;
+  background: 0 0!important;
+  z-index: 1
+}
+.login__question a::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  border-radius: 2px;
+  background: var(--magenta);
+  bottom: -1px;
+  left: 0;
+  right: -5px;
+  z-index: -1;
+  transition: background-color .2s ease
+}
+.login__remember-input {
+  display: none
+}
+.login__remember-input:checked+label::before {
+  background: url(../img/check.svg) center/95% auto no-repeat;
+  background-color: #000
+}
+.login__remember-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer
+}
+.login__remember-btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #000
+}
+.login__repair-password {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: underline;
+  transition: color .2s ease
 }
 .footer {
   padding: 60px 0;
@@ -12052,6 +12196,13 @@ body {
     font-size: 16px;
     line-height: 20px
   }
+  .sm-text {
+    font-size: 12px;
+    line-height: 16px
+  }
+  .input {
+    line-height: 20px
+  }
   .header__logo {
     gap: 8px;
     font-size: 16px
@@ -12224,6 +12375,21 @@ body {
   }
   .questions__accordion-body {
     font-size: 16px;
+    line-height: 20px
+  }
+  .login {
+    padding: 120px 0 20px 0;
+    min-height: 640px
+  }
+  .login__question a::before {
+    height: 12px
+  }
+  .login__remember-btn {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .login__repair-password {
+    font-size: 14px;
     line-height: 20px
   }
 }
@@ -12432,6 +12598,15 @@ body {
   .online-pay__logos {
     gap: 16px
   }
+  .login__form .button {
+    width: 100%!important
+  }
+  .login__policy {
+    max-width: 285px
+  }
+  .login__content {
+    max-width: 310px
+  }
   .footer {
     font-size: 12px;
     line-height: 20px
@@ -12586,14 +12761,33 @@ body {
   .text a:hover {
     background-color: var(--magenta)
   }
+  .sm-text a:hover {
+    text-decoration: underline
+  }
+  .input:hover {
+    border-color: var(--tg)
+  }
+  .password-btn:hover {
+    opacity: .7
+  }
   .header__list a:hover {
     color: var(--magenta)
   }
   .header__btn-reg:hover {
     color: var(--magenta)
   }
+  .header__profile:hover {
+    color: var(--magenta)
+  }
   .qr__content a:hover {
     background-color: #fff
+  }
+  .login__question a:hover::before {
+    background-color: var(--cian)
+  }
+  .login__repair-password:hover {
+    color: var(--magenta);
+    text-decoration: none
   }
   .footer__policy:hover {
     text-decoration: none
@@ -12621,14 +12815,33 @@ body {
   .text a:active {
     background-color: var(--magenta)
   }
+  .sm-text a:active {
+    text-decoration: underline
+  }
+  .input:active {
+    border-color: var(--tg)
+  }
+  .password-btn:active {
+    opacity: .7
+  }
   .header__list a:active {
     color: var(--magenta)
   }
   .header__btn-reg:active {
     color: var(--magenta)
   }
+  .header__profile:active {
+    color: var(--magenta)
+  }
   .qr__content a:active {
     background-color: #fff
+  }
+  .login__question a:active::before {
+    background-color: var(--cian)
+  }
+  .login__repair-password:active {
+    color: var(--magenta);
+    text-decoration: none
   }
   .footer__policy:active {
     text-decoration: none

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250303232232" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250303232232" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script defer src="files/passwordBtn.js?_v=20250303232232"></script>
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container d-flex lg:row lg:gap-3 align-items-center justify-content-between">
+			<div class="header__logo-wrapper col-xl-4">
+				<a href="/" class="header__logo">
+					<img src="img/disk.svg" alt="image" class="header__logo-disk _a-rotating" />
+					<div>Поставь<span>мой</span>трек</div>
+				</a>
+			</div>
+			<ul class="list col-xl-4 header__list">
+				<li><a href="#">Получайте заказы</a></li>
+				<li><a href="#">Онлайн оплата</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<div class="d-none d-lg-flex align-items-center justify-content-end gap-4 col-xl-4">
+				<a href="#" class="header__btn-reg">Регистрация</a>
+				<a href="#" class="button header__btn-login _min _white _outline">Вход</a>
+			</div>
+			<button class="btn-reset header__burger-btn" id="burger-btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
+		</div>
+	</header>
+
+	<div class="burger pt-4" id="burger">
+		<div class="container d-flex flex-column h-100">
+			<ul class="list d-flex flex-column gap-3 burger__list mb-4 flex-fill">
+				<li><a href="#">Получайте заказы</a></li>
+				<li><a href="#">Онлайн оплата</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<div class="d-flex align-items-center justify-content-center gap-3 mb-4">
+				<a href="#">
+					<img src="img/sbp.svg" alt="icon">
+				</a>
+				<a href="#">
+					<img src="img/tpay.svg" alt="icon">
+				</a>
+				<a href="#">
+					<img src="img/a-pay.svg" alt="icon">
+				</a>
+				<a href="#">
+					<img src="img/s-pay.svg" alt="icon">
+				</a>
+			</div>
+			<div class="burger__buttons">
+				<a href="#" class="button burger__btn mb-3">Зарегистрироваться</a>
+				<a href="#" class="button burger__btn _outline _white">Зарегистрироваться</a>
+			</div>
+		</div>
+	</div>
+	<main>
+
+		<section class="login">
+			<div class="container">
+				<h1 class="title main-title text-center md-3 mb-md-5">Регистрация</h1>
+				<form action="#" class="login__form mx-auto">
+					<div class="d-flex flex-column gap-2">
+						<div class="input-control">
+							<input type="text" placeholder="Имя" class="input" />
+						</div>
+						<div class="input-control">
+							<input type="email" placeholder="E-mail" class="input" />
+						</div>
+						<div class="input-control">
+							<input type="password" placeholder="Пароль" class="input" />
+							<div class="btn-reset password-btn"></div>
+						</div>
+						<div class="input-control">
+							<input type="password" placeholder="Повторите пароль" class="input _error" />
+							<div class="btn-reset password-btn"></div>
+						</div>
+					</div>
+					<button class="button mx-auto mt-3 mt-md-5">Зарегистрироваться</button>
+				</form>
+				<p class="text text-center mt-5 login__question">
+					Уже есть аккаунт? <a href="#">Войти</a>
+				</p>
+				<p class="sm-text text-center mt-5 login__policy mx-auto">
+					Создавая аккаунт, вы соглашаетесь с
+					<a href="#">политикой обработки персональных данных</a>
+				</p>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="row flex-xl-row flex-column justify-content-center text-center text-xl-start gap-xl-0 gap-4">
+				<div class="col-xl">
+					<p>2025 © поставьмойтрек.рф</p>
+				</div>
+				<div class="col-xl text-center">
+					<a href="#" class="footer__policy">Политика обработки персональных данных</a>
+				</div>
+				<div class="col-xl">
+					<a href="#" target="_blank" class="footer__dev mx-auto ms-xl-0 ms-xl-auto w-fit d-flex align-items-center">
+						<img src="img/dev-logo.svg" alt="icon" class="me-2" />
+						<span>Разработка сайта – Вангер.рф</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js?_v=20250303232232"></script>
+</body>
+
+</html>

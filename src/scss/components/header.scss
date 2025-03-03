@@ -13,6 +13,11 @@
     padding: 20px 0px;
   }
 
+  &._white {
+    background-color: white;
+    position: sticky;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
@@ -102,5 +107,20 @@
       background-color: currentColor;
       transition: transform .2s ease, opacity .2s ease, border-radius .2s ease;
     }
+  }
+  &__profile {
+    cursor: pointer;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--magenta);
+    }
+  }
+  &__profile-icon {
+    width: 40px;
+    height: 40px;
+  }
+  &__profile-arrow {
+    width: 20px;
+    height: 20px;
   }
 }

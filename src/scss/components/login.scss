@@ -1,0 +1,109 @@
+.login {
+  padding: 165px 0px 25px 0px;
+  min-height: 800px;
+  background-color: var(--yellow);
+  color: black;
+  @include tablet {
+    padding: 120px 0px 20px 0px;
+    min-height: 640px;
+  }
+  &__form {
+    max-width: 560px;
+
+    @include mobile {
+      .button {
+        width: 100% !important;
+      }
+    }
+  }
+  &__question {
+    a {
+      position: relative;
+      background-color: transparent;
+      text-decoration: underline;
+      background: none !important;
+      z-index: 1;
+
+      @include hover {
+        &::before {
+          background-color: var(--cian);
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        border-radius: 2px;
+        background: var(--magenta);
+        bottom: -1px;
+        left: 0;
+        right: -5px;
+        z-index: -1;
+        transition: background-color 0.2s ease;
+        @include tablet {
+          height: 12px;
+        }
+      }
+    }
+  }
+  &__policy {
+    @include mobile {
+      max-width: 285px;
+    }
+  }
+  &__remember-input {
+    display: none;
+    &:checked + label {
+      &::before {
+        background: url("@img/check.svg") center / 95% auto no-repeat;
+        background-color: black;
+      }
+    }
+  }
+  &__remember-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 2px solid black;
+    }
+  }
+  &__repair-password {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: underline;
+    transition: color .2s ease;
+
+    @include hover {
+      color: var(--magenta);
+      text-decoration: none;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__content {
+    @include mobile {
+      max-width: 310px;
+    }
+  }
+}

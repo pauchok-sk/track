@@ -13,9 +13,28 @@
     padding: 0 2px;
     background-color: var(--tg);
     border-radius: 4px;
-    transition: background-color .2s ease;
+    transition: background-color 0.2s ease;
     @include hover {
       background-color: var(--magenta);
+    }
+  }
+}
+
+.sm-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0;
+  @include tablet {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  a {
+    color: var(--magenta);
+    font-weight: 700;
+    @include hover {
+      text-decoration: underline;
     }
   }
 }

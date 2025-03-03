@@ -19,6 +19,7 @@
 @import "./ui/section";
 @import "./ui/title";
 @import "./ui/text";
+@import "./ui/input";
 
 // components
 @import "./components/header";
@@ -29,5 +30,7 @@
 @import "./components/sys-pay";
 @import "./components/online-pay";
 @import "./components/questions";
+@import "./components/login";
+@import "./components/orders";
 
 @import "./components/footer";

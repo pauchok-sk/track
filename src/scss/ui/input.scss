@@ -1,0 +1,64 @@
+.input-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid black;
+  background: white;
+  width: 100%;
+  background-color: white;
+  padding: 12px 45px 12px 20px;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
+  transition: border-color 0.2s ease;
+
+  @include hover {
+    border-color: var(--tg);
+  }
+  @include tablet {
+    line-height: 20px;
+  }
+
+  &:focus {
+    border-color: var(--cian);
+  }
+
+  &[disabled] {
+    &::placeholder {
+      opacity: 0.3;
+    }
+
+    .passowrd-btn {
+      opacity: 0.3;
+    }
+  }
+
+  &._error {
+    border-color: var(--red) !important;
+    background-color: var(--l-red) !important;
+  }
+}
+
+.password-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('@img/eye-close.svg') center / 100% auto no-repeat;
+  transition: opacity .2s ease;
+  @include hover {
+    opacity: 0.7;
+  }
+
+  &._active {
+    background: url('@img/eye.svg') center / 100% auto no-repeat;
+  }
+}
