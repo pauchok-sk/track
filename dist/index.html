@@ -8,8 +8,8 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250228160612" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250228160612" />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250303145509" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250303145509" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -124,9 +124,9 @@
 				<a href="#" class="button w-fit mx-md-auto">Зарегистрироваться</a>
 			</div>
 		</section>
-		<section class="get-orders">
+		<section class="get-orders section-parallax">
 
-			<img src="img/hypnosis.png" alt="background" class="get-orders__bg position-absolute">
+			<img src="img/hypnosis.png" alt="background" data-duration="40" class="get-orders__bg position-absolute section-parallax-el">
 			<img src="img/dj-women.png" alt="image" class="get-orders__dj position-absolute">
 
 			<div class="container">
@@ -155,10 +155,10 @@
 			</div>
 		</section>
 
-		<section class="qr s-baza">
+		<section class="qr s-baza section-parallax">
 			<img src="img/disk-text.png" alt="icon" class="qr__disk position-absolute _a-rotating-slow">
-			<div class="qr__bg qr__left"></div>
-			<div class="qr__bg qr__right"></div>
+			<div class="qr__bg qr__left section-parallax-el"></div>
+			<div class="qr__bg qr__right section-parallax-el"></div>
 
 			<div class="container">
 				<div class="qr__body text-center mx-auto">
@@ -175,13 +175,153 @@
 			</div>
 		</section>
 
+		<section class="sys-pay s-baza section-parallax">
+			<img src="img/spiral-y.png" alt="background" data-duration="50" class="sys-pay__bg position-absolute section-parallax-el" />
+			<img src="img/face-women.png" alt="face" class="sys-pay__face position-absolute">
+			<div class="container">
+				<div class="text-center mx-auto sys-pay__body position-relative">
+
+					<img src="img/flash-cian.png" alt="icon" class="stirring-el sys-pay__flash-lc position-absolute">
+					<img src="img/flash-magenta.png" alt="icon" class="stirring-el sys-pay__flash-lm position-absolute">
+					<img src="img/percent-25.png" alt="icon" class="stirring-el sys-pay__percent-b position-absolute">
+					<img src="img/heart-star.png" alt="icon" class="stirring-el sys-pay__heart-star position-absolute">
+					<img src="img/cloud.png" alt="icon" class="stirring-el sys-pay__cloud position-absolute">
+					<img src="img/percent-75.png" alt="icon" class="stirring-el sys-pay__percent-c position-absolute">
+					<img src="img/flash-magenta.png" alt="icon" class="stirring-el sys-pay__flash-rm position-absolute">
+					<img src="img/flash-cian.png" alt="icon" class="stirring-el sys-pay__flash-rc position-absolute">
+
+
+					<h2 class="title s-title mb-2">Гибкая система оплаты</h2>
+					<p class="text sys-pay__content mb-4 mx-auto">
+						Установите <span class="text-magenta">фиксированную плату</span> за
+						заказ, определяйте
+						<span class="text-robin">индивидуальную стоимость</span> для каждого
+						заказа или же предоставьте гостям возможность
+						<span class="text-red">самостоятельно назначать сумму</span>
+						вознаграждения.
+					</p>
+					<a href="#" class="button mx-auto">Начать бесплатно</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="online-pay s-baza">
+			<div class="container">
+				<div class="online-pay__body text-center mx-auto mb-4">
+					<h2 class="title s-title mb-2">Онлайн платежи</h2>
+					<p class="text">
+						Гости оплачивают заявки любым удобным способом (Карта, СБП, SberPay,
+						T-Pay, Alfa Pay), все заявки зачисляются на ваш персональный баланс, с
+						которого вы можете вывести полученные средства в любое удобное для вас
+						время.
+					</p>
+				</div>
+				<div class="online-pay__logos">
+					<img src="img/sbp.svg" alt="icon" class="online-pay__logo">
+					<img src="img/tpay.svg" alt="icon" class="online-pay__logo">
+					<img src="img/a-pay.svg" alt="icon" class="online-pay__logo">
+					<img src="img/s-pay.svg" alt="icon" class="online-pay__logo">
+				</div>
+			</div>
+			<img src="img/recorder-mobile.png" alt="icon" class="stirring-el online-pay__recorder position-absolute">
+			<img src="img/arm-card.png" alt="icon" class="online-pay__arm position-absolute">
+		</section>
+
+		<section class="questions">
+			<div class="container">
+				<h2 class="title s-title text-center mb-5">ЧаВо</h2>
+
+				<div class="questions__accordion" id="accordionQuestions">
+					<div class="questions__item">
+						<h2 class="accordion-header" id="question-1">
+							<button class="questions__accordion-button btn-reset" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-questions-1" aria-controls="collapse-questions-1">
+								<span>Как принимать заказы?</span>
+								<div class="questions__accordion-plus"></div>
+							</button>
+						</h2>
+						<div id="collapse-questions-1" class="collapse" aria-labelledby="question-1" data-bs-parent="#accordionQuestions">
+							<div class="questions__accordion-body">
+								<p>
+									<strong>Это тело аккордеона первого элемента.</strong> По
+									умолчанию оно скрыто, пока плагин сворачивания не добавит
+									соответствующие классы, которые мы используем для стилизации
+									каждого элемента. Эти классы управляют общим внешним видом, а
+									также отображением и скрытием с помощью переходов CSS. Вы можете
+									изменить все это с помощью собственного CSS или переопределить
+									наши переменные по умолчанию.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="questions__item">
+						<h2 class="accordion-header" id="question-2">
+							<button class="questions__accordion-button btn-reset" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-questions-2" aria-controls="collapse-questions-2">
+								<span>Как принимать заказы?</span>
+								<div class="questions__accordion-plus"></div>
+							</button>
+						</h2>
+						<div id="collapse-questions-2" class="collapse" aria-labelledby="question-2" data-bs-parent="#accordionQuestions">
+							<div class="questions__accordion-body">
+								<p>
+									<strong>Это тело аккордеона первого элемента.</strong> По
+									умолчанию оно скрыто, пока плагин сворачивания не добавит
+									соответствующие классы, которые мы используем для стилизации
+									каждого элемента. Эти классы управляют общим внешним видом, а
+									также отображением и скрытием с помощью переходов CSS. Вы можете
+									изменить все это с помощью собственного CSS или переопределить
+									наши переменные по умолчанию.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="questions__item">
+						<h2 class="accordion-header" id="question-3">
+							<button class="questions__accordion-button btn-reset" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-questions-3" aria-controls="collapse-questions-3">
+								<span>Как принимать заказы?</span>
+								<div class="questions__accordion-plus"></div>
+							</button>
+						</h2>
+						<div id="collapse-questions-3" class="collapse" aria-labelledby="question-3" data-bs-parent="#accordionQuestions">
+							<div class="questions__accordion-body">
+								<p>
+									<strong>Это тело аккордеона первого элемента.</strong> По
+									умолчанию оно скрыто, пока плагин сворачивания не добавит
+									соответствующие классы, которые мы используем для стилизации
+									каждого элемента. Эти классы управляют общим внешним видом, а
+									также отображением и скрытием с помощью переходов CSS. Вы можете
+									изменить все это с помощью собственного CSS или переопределить
+									наши переменные по умолчанию.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="button _yellow mt-5 mx-auto">Задать вопрос</a>
+			</div>
+		</section>
+
 
 	</main>
 	<footer class="footer">
 		<div class="container">
+			<div class="row flex-xl-row flex-column justify-content-center text-center text-xl-start gap-xl-0 gap-4">
+				<div class="col-xl">
+					<p>2025 © поставьмойтрек.рф</p>
+				</div>
+				<div class="col-xl text-center">
+					<a href="#" class="footer__policy">Политика обработки персональных данных</a>
+				</div>
+				<div class="col-xl">
+					<a href="#" target="_blank" class="footer__dev mx-auto ms-xl-0 ms-xl-auto w-fit d-flex align-items-center">
+						<img src="img/dev-logo.svg" alt="icon" class="me-2" />
+						<span>Разработка сайта – Вангер.рф</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</footer>
-	<script src="js/app.min.js?_v=20250228160612"></script>
+
+	<script src="js/app.min.js?_v=20250303145509"></script>
 </body>
 
 </html>

@@ -6,17 +6,169 @@
   min-height: 680px;
   padding: 60px 0px;
   z-index: 1;
+  @include tablet {
+    min-height: 470px;
+  }
+  @include tablet-min {
+    min-height: 640px;
+  }
   &__bg {
+    max-width: none;
     width: 2120px;
     right: 115px;
     top: 50%;
     transform: translateY(-50%);
     z-index: -2;
+    @include desktop {
+      right: 60px;
+      top: 54%;
+    }
+    @include laptop-min {
+      width: 1830px;
+      right: -270px;
+    }
+    @include tablet {
+      right: -470px;
+    }
+    @include mobile {
+      right: -480px;
+      top: 48%;
+    }
+  }
+  &__face {
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(calc(50% + 145px));
+    @include laptop-min {
+      width: 340px;
+    }
+    @include tablet {
+      width: 235px;
+    }
+    @include tablet-min {
+      right: 10px;
+      bottom: 0;
+      transform: translateX(0);
+    }
   }
   &__body {
     max-width: 800px;
+    @include mobile {
+      max-width: 300px;
+    }
   }
   &__content {
     max-width: 600px;
+  }
+  &__flash-lc {
+    left: -90px;
+    bottom: -50px;
+    @include laptop-min {
+      bottom: -55px;
+      left: -20px;
+      width: 65px;
+    }
+    @include mobile {
+      width: 50px;
+    }
+  }
+  &__flash-lm {
+    left: 0;
+    bottom: -25px;
+    @include laptop-min {
+      width: 35px;
+      bottom: -40px;
+      left: 30px;
+    }
+    @include mobile {
+      width: 27px;
+    }
+  }
+  &__percent-b {
+    left: 130px;
+    bottom: -24px;
+    transform: rotate(-23deg);
+    @include laptop-min {
+      left: 65px;
+      bottom: -60px;
+    }
+  }
+  &__heart-star {
+    bottom: -300px;
+    left: -35px;
+    transform: rotate(-15deg);
+    @include laptop-min {
+      width: 150px;
+      left: 55px;
+      bottom: -245px;
+    }
+    @include tablet {
+      width: 115px;
+      left: 5px;
+      bottom: -185px;
+    }
+  }
+  &__cloud {
+    right: -54px;
+    top: 135px;
+    transform: rotate(15deg);
+    @include laptop-min {
+      transform: rotate(0);
+      right: 0;
+      top: auto;
+      bottom: -25px;
+    }
+    @include tablet-min {
+      width: 25px;
+    }
+  }
+  &__percent-c {
+    right: -50px;
+    bottom: -20px;
+    transform: rotate(15deg);
+    @include laptop-min {
+      bottom: -95px;
+      right: -10px;
+    }
+    @include tablet-min {
+      width: 60px;
+    }
+    @include mobile {
+      bottom: -60px;
+      right: 5px;
+    }
+  }
+  &__flash-rm {
+    right: -60px;
+    bottom: -190px;
+    transform: scale(1, -1);
+    @include laptop-min {
+      right: 45px;
+      bottom: -180px;
+      width: 35px;
+    }
+    @include tablet-min {
+      width: 25px;
+      right: 25px;
+      bottom: -130px;
+    }
+  }
+  &__flash-rc {
+    right: -110px;
+    bottom: -230px;
+    transform: rotate(-20deg) scale(1, -1);
+    @include laptop-min {
+      right: 5px;
+      bottom: -195px;
+      width: 55px;
+    }
+    @include tablet-min {
+      width: 45px;
+    }
+    @include mobile {
+      right: -10px;
+      bottom: -145px;
+    }
   }
 }

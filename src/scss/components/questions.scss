@@ -1,0 +1,75 @@
+.questions {
+  padding: 60px 0px 85px 0px;
+  background-color: white;
+  color: black;
+  &__accordion {
+  }
+  &__item {
+    border-bottom: 2px solid black;
+  }
+  &__accordion-button {
+    @include flex-between;
+    width: 100%;
+    padding: 20px 0px;
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 140%;
+    text-align: start;
+
+    &[aria-expanded="true"] {
+      .questions__accordion-plus {
+        transform: rotate(45deg);
+      }
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__accordion-plus {
+    @include flex-center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+    width: 40px;
+    height: 40px;
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 25px;
+      border-radius: 100px;
+      background-color: currentColor;
+      @include tablet {
+        width: 2px;
+        height: 18px;
+      }
+    }
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+  &__accordion-body {
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    p {
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

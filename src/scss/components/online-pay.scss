@@ -1,0 +1,59 @@
+.online-pay {
+  position: relative;
+  overflow: hidden;
+  color: black;
+  padding: 60px 0px;
+  background-color: var(--yellow);
+  @include tablet-min {
+    min-height: 640px;
+  }
+  &__body {
+    max-width: 800px;
+    @include mobile {
+      max-width: 300px
+    }
+  }
+  &__logos {
+    @include flex-center;
+    gap: 60px;
+    @include laptop-min {
+      gap: 30px;
+    }
+    @include mobile {
+      gap: 16px;
+    }
+  }
+  &__logo {
+    @media (min-width: 481px) {
+      &:first-child {
+        width: 180px;
+      }
+      &:nth-child(2) {
+        width: 175px;
+      }
+      &:nth-child(3) {
+        width: 95px;
+      }
+      &:last-child {
+        width: 160px;
+      }
+    }
+  }
+  &__recorder {
+    bottom: 40px;
+    left: calc(50% - 120px);
+    @include tablet-min {
+      bottom: 60px;
+      left: 50px;
+      width: 95px;
+    }
+  }
+  &__arm {
+    bottom: -65px;
+    right: calc(50% - 300px);
+    @include tablet-min {
+      right: -75px;
+      bottom: -25px;
+    }
+  }
+}

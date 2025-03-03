@@ -58,6 +58,16 @@
     }
   }
 
+  &._yellow {
+    background-color: var(--yellow);
+    @include hover {
+      background-color: var(--tg);
+    }
+    @include pressed {
+      background-color: white !important;
+    }
+  }
+
   // variants
   &._outline {
     border: 3px solid black;

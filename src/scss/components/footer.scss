@@ -1,0 +1,28 @@
+.footer {
+  padding: 60px 0px;
+  font-size: 14px;
+  line-height: 24px;
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__policy {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    @include hover {
+      text-decoration: none;
+    }
+  }
+  &__dev {
+    transition: opacity .2s ease;
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}

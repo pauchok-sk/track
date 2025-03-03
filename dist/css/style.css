@@ -6640,6 +6640,12 @@ body {
 .button._blue:active {
   background-color: #fff!important
 }
+.button._yellow {
+  background-color: var(--yellow)
+}
+.button._yellow:active {
+  background-color: #fff!important
+}
 .button._outline {
   border: 3px solid #000
 }
@@ -6975,6 +6981,191 @@ body {
 }
 .qr__content a {
   background-color: var(--magenta)
+}
+.sys-pay {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+  min-height: 680px;
+  padding: 60px 0;
+  z-index: 1
+}
+.sys-pay__bg {
+  max-width: none;
+  width: 2120px;
+  right: 115px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: -2
+}
+.sys-pay__face {
+  position: absolute;
+  bottom: -10px;
+  right: 50%;
+  -webkit-transform: translateX(calc(50% + 145px));
+  transform: translateX(calc(50% + 145px))
+}
+.sys-pay__body {
+  max-width: 800px
+}
+.sys-pay__content {
+  max-width: 600px
+}
+.sys-pay__flash-lc {
+  left: -90px;
+  bottom: -50px
+}
+.sys-pay__flash-lm {
+  left: 0;
+  bottom: -25px
+}
+.sys-pay__percent-b {
+  left: 130px;
+  bottom: -24px;
+  -webkit-transform: rotate(-23deg);
+  transform: rotate(-23deg)
+}
+.sys-pay__heart-star {
+  bottom: -300px;
+  left: -35px;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg)
+}
+.sys-pay__cloud {
+  right: -54px;
+  top: 135px;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg)
+}
+.sys-pay__percent-c {
+  right: -50px;
+  bottom: -20px;
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg)
+}
+.sys-pay__flash-rm {
+  right: -60px;
+  bottom: -190px;
+  -webkit-transform: scale(1,-1);
+  transform: scale(1,-1)
+}
+.sys-pay__flash-rc {
+  right: -110px;
+  bottom: -230px;
+  -webkit-transform: rotate(-20deg) scale(1,-1);
+  transform: rotate(-20deg) scale(1,-1)
+}
+.online-pay {
+  position: relative;
+  overflow: hidden;
+  color: #000;
+  padding: 60px 0;
+  background-color: var(--yellow)
+}
+.online-pay__body {
+  max-width: 800px
+}
+.online-pay__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px
+}
+.online-pay__recorder {
+  bottom: 40px;
+  left: calc(50% - 120px)
+}
+.online-pay__arm {
+  bottom: -65px;
+  right: calc(50% - 300px)
+}
+.questions {
+  padding: 60px 0 85px 0;
+  background-color: #fff;
+  color: #000
+}
+.questions__item {
+  border-bottom: 2px solid #000
+}
+.questions__accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 140%;
+  text-align: start
+}
+.questions__accordion-button[aria-expanded=true] .questions__accordion-plus {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+.questions__accordion-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease;
+  width: 40px;
+  height: 40px
+}
+.questions__accordion-plus::after,
+.questions__accordion-plus::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: currentColor
+}
+.questions__accordion-plus::before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.questions__accordion-body {
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600
+}
+.questions__accordion-body p:first-child {
+  margin-bottom: 0
+}
+.footer {
+  padding: 60px 0;
+  font-size: 14px;
+  line-height: 24px
+}
+.footer__policy {
+  text-decoration: underline;
+  text-underline-offset: 2px
+}
+.footer__dev {
+  transition: opacity .2s ease
+}
+.footer p {
+  margin: 0
+}
+@media (min-width:481px) {
+  .online-pay__logo:first-child {
+    width: 180px
+  }
+  .online-pay__logo:nth-child(2) {
+    width: 175px
+  }
+  .online-pay__logo:nth-child(3) {
+    width: 95px
+  }
+  .online-pay__logo:last-child {
+    width: 160px
+  }
 }
 @media (min-width:576px) {
   .container,
@@ -11315,6 +11506,12 @@ body {
     text-align: center!important
   }
 }
+@media (max-width:1539px) {
+  .sys-pay__bg {
+    right: 60px;
+    top: 54%
+  }
+}
 @media (max-width:1399.98px) {
   .table-responsive-xxl {
     overflow-x: auto;
@@ -11698,6 +11895,56 @@ body {
     width: 105px;
     height: 105px
   }
+  .sys-pay__bg {
+    width: 1830px;
+    right: -270px
+  }
+  .sys-pay__face {
+    width: 340px
+  }
+  .sys-pay__flash-lc {
+    bottom: -55px;
+    left: -20px;
+    width: 65px
+  }
+  .sys-pay__flash-lm {
+    width: 35px;
+    bottom: -40px;
+    left: 30px
+  }
+  .sys-pay__percent-b {
+    left: 65px;
+    bottom: -60px
+  }
+  .sys-pay__heart-star {
+    width: 150px;
+    left: 55px;
+    bottom: -245px
+  }
+  .sys-pay__cloud {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    right: 0;
+    top: auto;
+    bottom: -25px
+  }
+  .sys-pay__percent-c {
+    bottom: -95px;
+    right: -10px
+  }
+  .sys-pay__flash-rm {
+    right: 45px;
+    bottom: -180px;
+    width: 35px
+  }
+  .sys-pay__flash-rc {
+    right: 5px;
+    bottom: -195px;
+    width: 55px
+  }
+  .online-pay__logos {
+    gap: 30px
+  }
 }
 @media (max-width:767.98px) {
   .table-responsive-md {
@@ -11949,6 +12196,36 @@ body {
     -webkit-transform: rotate(35deg);
     transform: rotate(35deg)
   }
+  .sys-pay {
+    min-height: 470px
+  }
+  .sys-pay__bg {
+    right: -470px
+  }
+  .sys-pay__face {
+    width: 235px
+  }
+  .sys-pay__heart-star {
+    width: 115px;
+    left: 5px;
+    bottom: -185px
+  }
+  .questions__accordion-button {
+    font-size: 16px
+  }
+  .questions__accordion-plus {
+    width: 24px;
+    height: 24px
+  }
+  .questions__accordion-plus::after,
+  .questions__accordion-plus::before {
+    width: 2px;
+    height: 18px
+  }
+  .questions__accordion-body {
+    font-size: 16px;
+    line-height: 20px
+  }
 }
 @media (max-width:576px) {
   .hero__right {
@@ -11968,6 +12245,41 @@ body {
     bottom: -55px;
     -webkit-transform: rotate(60deg);
     transform: rotate(60deg)
+  }
+  .sys-pay {
+    min-height: 640px
+  }
+  .sys-pay__face {
+    right: 10px;
+    bottom: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  .sys-pay__cloud {
+    width: 25px
+  }
+  .sys-pay__percent-c {
+    width: 60px
+  }
+  .sys-pay__flash-rm {
+    width: 25px;
+    right: 25px;
+    bottom: -130px
+  }
+  .sys-pay__flash-rc {
+    width: 45px
+  }
+  .online-pay {
+    min-height: 640px
+  }
+  .online-pay__recorder {
+    bottom: 60px;
+    left: 50px;
+    width: 95px
+  }
+  .online-pay__arm {
+    right: -75px;
+    bottom: -25px
   }
 }
 @media (max-width:575.98px) {
@@ -12092,6 +12404,37 @@ body {
   .get-orders__disk {
     bottom: -215px;
     right: 60px
+  }
+  .sys-pay__bg {
+    right: -480px;
+    top: 48%
+  }
+  .sys-pay__body {
+    max-width: 300px
+  }
+  .sys-pay__flash-lc {
+    width: 50px
+  }
+  .sys-pay__flash-lm {
+    width: 27px
+  }
+  .sys-pay__percent-c {
+    bottom: -60px;
+    right: 5px
+  }
+  .sys-pay__flash-rc {
+    right: -10px;
+    bottom: -145px
+  }
+  .online-pay__body {
+    max-width: 300px
+  }
+  .online-pay__logos {
+    gap: 16px
+  }
+  .footer {
+    font-size: 12px;
+    line-height: 20px
   }
 }
 @media (prefers-reduced-motion:no-preference) {
@@ -12237,6 +12580,9 @@ body {
   .button._blue:hover {
     background-color: var(--yellow)
   }
+  .button._yellow:hover {
+    background-color: var(--tg)
+  }
   .text a:hover {
     background-color: var(--magenta)
   }
@@ -12248,6 +12594,12 @@ body {
   }
   .qr__content a:hover {
     background-color: #fff
+  }
+  .footer__policy:hover {
+    text-decoration: none
+  }
+  .footer__dev:hover {
+    opacity: .5
   }
 }
 @media (hover:none) {
@@ -12263,6 +12615,9 @@ body {
   .button._blue:active {
     background-color: var(--yellow)
   }
+  .button._yellow:active {
+    background-color: var(--tg)
+  }
   .text a:active {
     background-color: var(--magenta)
   }
@@ -12274,5 +12629,11 @@ body {
   }
   .qr__content a:active {
     background-color: #fff
+  }
+  .footer__policy:active {
+    text-decoration: none
+  }
+  .footer__dev:active {
+    opacity: .5
   }
 }

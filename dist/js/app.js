@@ -6571,46 +6571,38 @@
             if (window.matchMedia("(max-width: 991px)").matches) stirring(recorcBig);
         }
     }
-    function getOrdersAnimate() {
-        const section = document.querySelector(".get-orders");
-        if (section) {
-            const stirringsArr = section.querySelectorAll(".stirring-el");
-            const bg = document.querySelector(".get-orders__bg");
-            stirringsArr.forEach((item => stirring(item, 2.5)));
-            section.addEventListener("mousemove", (e => {
-                const {width, height} = section.getBoundingClientRect();
-                const x = (e.offsetX / width - .5) * 20;
-                const y = (e.offsetY / height - .5) * 20;
-                gsapWithCSS.to(bg, {
-                    x,
-                    y,
-                    duration: 10,
-                    ease: "power2.out"
-                });
-            }));
-        }
-    }
-    function qrSectionAnimate() {
-        const section = document.querySelector(".qr");
-        if (section) {
-            const stirringsArr = section.querySelectorAll(".stirring-el");
-            stirringsArr.forEach((item => stirring(item, 3.5)));
-            const backgrounds = document.querySelectorAll(".qr__bg");
+    function backgroundParallax() {
+        const sections = document.querySelectorAll(".section-parallax");
+        if (sections.length) sections.forEach((section => {
+            const backgrounds = section.querySelectorAll(".section-parallax-el");
             section.addEventListener("mousemove", (e => {
                 const {width, height} = section.getBoundingClientRect();
                 const x = (e.offsetX / width - .5) * 20;
                 const y = (e.offsetY / height - .5) * 20;
                 backgrounds.forEach(((bg, index) => {
+                    const duration = bg.dataset.duration;
                     const depth = (index + 1) * 5;
                     gsapWithCSS.to(bg, {
                         x: x * depth,
                         y: y * depth,
-                        duration: 30,
+                        duration: duration || 30,
                         ease: "power2.out"
                     });
                 }));
             }));
-        }
+            section.addEventListener("mouseleave", (() => {
+                gsapWithCSS.to(backgrounds, {
+                    x: 0,
+                    y: 0,
+                    duration: 15,
+                    ease: "power2.out"
+                });
+            }));
+        }));
+    }
+    function stirringsElements() {
+        const stirringsArr = document.querySelectorAll(".stirring-el");
+        if (stirringsArr.length) stirringsArr.forEach((item => stirring(item, 3.5)));
     }
     function stirring(el, duration) {
         gsapWithCSS.to(el, {
@@ -6626,6 +6618,6 @@
     spoller();
     burger();
     heroAnimate();
-    getOrdersAnimate();
-    qrSectionAnimate();
+    backgroundParallax();
+    stirringsElements();
 })();
