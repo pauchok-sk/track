@@ -6774,6 +6774,14 @@ body {
   border-color: var(--red)!important;
   background-color: var(--l-red)!important
 }
+.input[type=number]::-webkit-inner-spin-button,
+.input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
+}
+.input[type=number] {
+  -moz-appearance: textfield
+}
 .password-btn {
   cursor: pointer;
   position: absolute;
@@ -6785,6 +6793,14 @@ body {
 }
 .password-btn._active {
   background: url(../img/eye.svg) center/100% auto no-repeat
+}
+.input-type {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #000;
+  right: 20px
 }
 .toggle {
   position: relative;
@@ -7457,6 +7473,24 @@ body {
   font-weight: 600;
   line-height: 140%
 }
+.orders__card-right .input-control {
+  width: 140px;
+  height: auto
+}
+.orders__card-right .input {
+  min-height: 58px;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: end
+}
+.orders__card-right .input-type {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  right: 24px
+}
 .orders__card-price {
   font-size: 24px;
   font-weight: 600;
@@ -7480,10 +7514,32 @@ body {
   color: var(--yellow);
   transition: color .2s ease
 }
+.orders__pending-pay {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  white-space: nowrap
+}
+.orders__pending-pay .spinner-border {
+  width: 24px;
+  height: 24px;
+  border-width: 2px!important
+}
+.orders__delete {
+  width: 24px;
+  height: 24px;
+  color: var(--yellow);
+  transition: color .2s ease
+}
+.orders__delete svg {
+  width: 100%;
+  height: 100%
+}
 .footer {
   padding: 60px 0;
   font-size: 14px;
-  line-height: 24px
+  line-height: 24px;
+  border-top: 1px solid #fff
 }
 .footer__policy {
   text-decoration: underline;
@@ -12336,6 +12392,9 @@ body {
   .orders__card-right {
     width: 100%
   }
+  .orders__card-right .input-control {
+    width: 100%
+  }
   .orders__card-price {
     width: 100%
   }
@@ -12680,6 +12739,16 @@ body {
   .orders__card-title {
     font-size: 18px
   }
+  .orders__card-right .input {
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 20px
+  }
+  .orders__card-right .input-type {
+    font-size: 16px;
+    line-height: 20px;
+    right: 20px
+  }
   .orders__status {
     font-size: 16px;
     line-height: 20px;
@@ -12688,6 +12757,10 @@ body {
   .orders__reject {
     font-size: 16px;
     line-height: 20px
+  }
+  .orders__submit {
+    padding-left: 35px;
+    padding-right: 35px
   }
 }
 @media (max-width:575.98px) {
@@ -13107,6 +13180,9 @@ body {
   .orders__reject:hover {
     color: var(--magenta)
   }
+  .orders__delete:hover {
+    color: var(--magenta)
+  }
   .footer__policy:hover {
     text-decoration: none
   }
@@ -13171,6 +13247,9 @@ body {
     color: var(--yellow)
   }
   .orders__reject:active {
+    color: var(--magenta)
+  }
+  .orders__delete:active {
     color: var(--magenta)
   }
   .footer__policy:active {

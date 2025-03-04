@@ -44,6 +44,15 @@
     border-color: var(--red) !important;
     background-color: var(--l-red) !important;
   }
+
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
 
 .password-btn {
@@ -52,13 +61,22 @@
   right: 20px;
   width: 20px;
   height: 20px;
-  background: url('@img/eye-close.svg') center / 100% auto no-repeat;
-  transition: opacity .2s ease;
+  background: url("@img/eye-close.svg") center / 100% auto no-repeat;
+  transition: opacity 0.2s ease;
   @include hover {
     opacity: 0.7;
   }
 
   &._active {
-    background: url('@img/eye.svg') center / 100% auto no-repeat;
+    background: url("@img/eye.svg") center / 100% auto no-repeat;
   }
+}
+
+.input-type {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: black;
+  right: 20px;
 }
