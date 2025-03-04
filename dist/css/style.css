@@ -13171,7 +13171,7 @@ body {
     color: var(--magenta);
     text-decoration: none
   }
-  .orders__fix-price a:hover {
+  .orders__fix-price:hover {
     text-decoration: underline
   }
   .orders__nav-btn:hover {
@@ -13240,7 +13240,7 @@ body {
     color: var(--magenta);
     text-decoration: none
   }
-  .orders__fix-price a:active {
+  .orders__fix-price:active {
     text-decoration: underline
   }
   .orders__nav-btn:active {
