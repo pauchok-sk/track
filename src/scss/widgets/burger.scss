@@ -11,7 +11,10 @@
   visibility: hidden;
   transform: translateY(30px);
   pointer-events: none;
-  transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
 
   &._open {
     opacity: 1;
@@ -19,6 +22,11 @@
     pointer-events: all;
     transform: translateY(0);
   }
+  &._black {
+    background-color: black;
+    color: white;
+  }
+
   &__list {
     a {
       font-family: "Unbounded", sans-serif;
@@ -38,5 +46,30 @@
   }
   &__btn {
     width: 100% !important;
+  }
+  &__line {
+    margin: 40px 0px;
+    height: 2px;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: var(--magenta);
+  }
+  &__footer {
+    margin-top: 20px;
+    padding: 45px 18px 30px 18px;
+    background-color: white;
+    color: black;
+  }
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &__profile-icon {
+    width: 40px;
+    height: 40px;
   }
 }

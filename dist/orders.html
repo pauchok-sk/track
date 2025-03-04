@@ -8,10 +8,9 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250303232232" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250303232232" />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250304121531" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250304121531" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script defer src="files/passwordBtn.js?_v=20250303232232"></script>
 </head>
 
 <body class="body">
@@ -24,34 +23,99 @@
 				</a>
 			</div>
 			<ul class="list col-xl-4 header__list">
-				<li><a href="#">Получайте заказы</a></li>
-				<li><a href="#">Онлайн оплата</a></li>
-				<li><a href="#">FAQ</a></li>
+				<li><a href="#" class="text-magenta">Заказы</a></li>
+				<li><a href="#">Экран</a></li>
+				<li><a href="#">Платежи и баланс</a></li>
 			</ul>
 			<div class="d-none d-lg-flex align-items-center justify-content-end gap-4 col-xl-4">
 				<div class="dropdown">
-					<div class="header__profile d-flex align-items-center" id="dropdown-profile" data-toggle="dropdown">
+					<div class="header__profile d-flex align-items-center" data-bs-toggle="dropdown">
 						<svg class="header__profile-icon me-3">
-							<use xlink:href='img/icons/icons.svg#icon-user'></use>
+							<use xlink:href="img/icons/icons.svg#icon-user"></use>
 						</svg>
 						<span class="me-2">DJ Koreshok</span>
 						<svg class="header__profile-arrow">
 							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
 						</svg>
 					</div>
-					<div class="dropdown-menu" aria-labelledby="dropdown-profile">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<a class="dropdown-item" href="#">Something else here</a>
+					<div class="dropdown-menu header__profile-dropdown">
+						<ul class="list header__profile-list">
+							<li><a href="#">Страница заказа</a></li>
+							<li><a href="#">Мой профиль</a></li>
+						</ul>
+						<button href="#" class="button _min _white _outline">Выход</button>
 					</div>
 				</div>
 			</div>
+			<button class="btn-reset header__burger-btn" id="burger-btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
 		</div>
 	</header>
 
+	<div class="burger pt-4 _black" id="burger">
+		<div class="d-flex flex-column h-100">
+			<div class="container flex-fill">
+				<ul class="list d-flex flex-column gap-3 burger__list mb-4">
+					<li><a href="#" class="text-magenta">Заказы</a></li>
+					<li><a href="#">Экран</a></li>
+					<li><a href="#">Платежи и баланс</a></li>
+				</ul>
+				<div class="burger__line"></div>
+				<ul class="list d-flex flex-column gap-3 burger__list mb-4">
+					<li><a href="#">Страница заказа</a></li>
+					<li><a href="#">Мой профиль</a></li>
+				</ul>
+			</div>
+			<div class="burger__footer">
+				<div class="d-flex align-items-center justify-content-center gap-3 mb-5">
+					<a href="#">
+						<img src="img/sbp.svg" alt="icon" />
+					</a>
+					<a href="#">
+						<img src="img/tpay.svg" alt="icon" />
+					</a>
+					<a href="#">
+						<img src="img/a-pay.svg" alt="icon" />
+					</a>
+					<a href="#">
+						<img src="img/s-pay.svg" alt="icon" />
+					</a>
+				</div>
+				<div class="d-flex align-items-center justify-content-between">
+					<a href="#" class="burger__profile">
+						<svg class="burger__profile-icon">
+							<use xlink:href="img/icons/icons.svg#icon-user"></use>
+						</svg>
+						<span>DJ Koreshok</span>
+					</a>
+					<button class="button _white _outline">Выйти</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<main>
 
-
+		<section class="orders">
+			<div class="container">
+				<h1 class="title s-title mb-4 orders__title">Заказы</h1>
+				<div class="orders__head">
+					<div class="d-flex align-items-center justify-content-between justify-content-sm-start gap-4 flex-row-reverse flex-sm-row orders__toggle-wrapper">
+						<div class="toggle _active"></div>
+						<span class="orders__toggle-title">Приём заказов</span>
+					</div>
+					<div class="orders__fix-price">
+						<a href="#">Фиксированная стоимость</a>
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-pen'></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
 
 	</main>
 	<footer class="footer">
@@ -73,7 +137,7 @@
 		</div>
 	</footer>
 
-	<script src="js/app.min.js?_v=20250303232232"></script>
+	<script src="js/app.min.js?_v=20250304121531"></script>
 </body>
 
 </html>

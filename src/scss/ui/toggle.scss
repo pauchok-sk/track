@@ -1,0 +1,30 @@
+.toggle {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  border: 2px solid currentColor;
+  width: 50px;
+  height: 30px;
+  color: var(--gray);
+  transition: color .2s ease;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: 6px;
+    background-color: currentColor;
+    transition: right .2s ease, left .2s ease;
+  }
+
+  &._active {
+    color: var(--yellow);
+    &::before {
+      left: calc(100% - 22px);
+    }
+  }
+}

@@ -6469,7 +6469,8 @@ template {
   --tg: #00f4ff;
   --red: #f52344;
   --l-red: #ffc3cd;
-  --robin: #00cfd9
+  --robin: #00cfd9;
+  --gray: #ababab
 }
 html {
   box-sizing: border-box
@@ -6582,6 +6583,10 @@ body {
   -webkit-transform: translateY(0);
   transform: translateY(0)
 }
+.burger._black {
+  background-color: #000;
+  color: #fff
+}
 .burger__list a {
   font-family: Unbounded,sans-serif;
   font-size: 20px;
@@ -6596,6 +6601,30 @@ body {
 }
 .burger__btn {
   width: 100%!important
+}
+.burger__line {
+  margin: 40px 0;
+  height: 2px;
+  flex-shrink: 0;
+  width: 100%;
+  background-color: var(--magenta)
+}
+.burger__footer {
+  margin-top: 20px;
+  padding: 45px 18px 30px 18px;
+  background-color: #fff;
+  color: #000
+}
+.burger__profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 700
+}
+.burger__profile-icon {
+  width: 40px;
+  height: 40px
 }
 .btn-reset {
   cursor: pointer;
@@ -6757,6 +6786,34 @@ body {
 .password-btn._active {
   background: url(../img/eye.svg) center/100% auto no-repeat
 }
+.toggle {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  border: 2px solid currentColor;
+  width: 50px;
+  height: 30px;
+  color: var(--gray);
+  transition: color .2s ease
+}
+.toggle::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 6px;
+  background-color: currentColor;
+  transition: right .2s ease,left .2s ease
+}
+.toggle._active {
+  color: var(--yellow)
+}
+.toggle._active::before {
+  left: calc(100% - 22px)
+}
 .header {
   position: absolute;
   left: 0;
@@ -6837,6 +6894,9 @@ body {
   cursor: pointer;
   transition: color .2s ease
 }
+.header__profile[aria-expanded=true] {
+  color: var(--magenta)
+}
 .header__profile-icon {
   width: 40px;
   height: 40px
@@ -6844,6 +6904,27 @@ body {
 .header__profile-arrow {
   width: 20px;
   height: 20px
+}
+.header__profile-dropdown {
+  padding: 24px;
+  box-shadow: 8px 8px 0 0 #000;
+  border-radius: 8px;
+  border: 1px solid #000;
+  width: 225px
+}
+.header__profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px
+}
+.header__profile-list a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  transition: color .2s ease
 }
 .hero {
   position: relative;
@@ -7281,6 +7362,36 @@ body {
   line-height: 24px;
   text-decoration: underline;
   transition: color .2s ease
+}
+.orders {
+  padding: 80px 0
+}
+.orders__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px
+}
+.orders__toggle-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%
+}
+.orders__fix-price {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--magenta)
+}
+.orders__fix-price svg {
+  width: 32px;
+  height: 32px;
+  color: var(--yellow)
 }
 .footer {
   padding: 60px 0;
@@ -12392,60 +12503,22 @@ body {
     font-size: 14px;
     line-height: 20px
   }
-}
-@media (max-width:576px) {
-  .hero__right {
-    right: -20px
+  .orders__title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: 1.04px
   }
-  .qr {
-    padding-bottom: 360px
+  .orders__head {
+    margin-bottom: 20px
   }
-  .qr__body {
-    max-width: 300px
+  .orders__toggle-title {
+    font-size: 18px
   }
-  .qr__content br {
-    display: none
-  }
-  .qr__content::before {
-    right: -40px;
-    bottom: -55px;
-    -webkit-transform: rotate(60deg);
-    transform: rotate(60deg)
-  }
-  .sys-pay {
-    min-height: 640px
-  }
-  .sys-pay__face {
-    right: 10px;
-    bottom: 0;
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-  }
-  .sys-pay__cloud {
-    width: 25px
-  }
-  .sys-pay__percent-c {
-    width: 60px
-  }
-  .sys-pay__flash-rm {
-    width: 25px;
-    right: 25px;
-    bottom: -130px
-  }
-  .sys-pay__flash-rc {
-    width: 45px
-  }
-  .online-pay {
-    min-height: 640px
-  }
-  .online-pay__recorder {
-    bottom: 60px;
-    left: 50px;
-    width: 95px
-  }
-  .online-pay__arm {
-    right: -75px;
-    bottom: -25px
+  .orders__fix-price {
+    font-size: 16px;
+    line-height: 20px
   }
 }
 @media (max-width:575.98px) {
@@ -12534,6 +12607,70 @@ body {
 @media (max-width:575.98px)and (prefers-reduced-motion:reduce) {
   .offcanvas-sm {
     transition: none
+  }
+}
+@media (max-width:575px) {
+  .hero__right {
+    right: -20px
+  }
+  .qr {
+    padding-bottom: 360px
+  }
+  .qr__body {
+    max-width: 300px
+  }
+  .qr__content br {
+    display: none
+  }
+  .qr__content::before {
+    right: -40px;
+    bottom: -55px;
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg)
+  }
+  .sys-pay {
+    min-height: 640px
+  }
+  .sys-pay__face {
+    right: 10px;
+    bottom: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+  .sys-pay__cloud {
+    width: 25px
+  }
+  .sys-pay__percent-c {
+    width: 60px
+  }
+  .sys-pay__flash-rm {
+    width: 25px;
+    right: 25px;
+    bottom: -130px
+  }
+  .sys-pay__flash-rc {
+    width: 45px
+  }
+  .online-pay {
+    min-height: 640px
+  }
+  .online-pay__recorder {
+    bottom: 60px;
+    left: 50px;
+    width: 95px
+  }
+  .online-pay__arm {
+    right: -75px;
+    bottom: -25px
+  }
+  .orders__toggle-wrapper {
+    width: 100%
+  }
+  .orders__fix-price {
+    width: 100%
+  }
+  .orders__fix-price svg {
+    margin-left: auto
   }
 }
 @media (max-width:479px) {
@@ -12779,6 +12916,9 @@ body {
   .header__profile:hover {
     color: var(--magenta)
   }
+  .header__profile-list a:hover {
+    color: var(--magenta)
+  }
   .qr__content a:hover {
     background-color: #fff
   }
@@ -12788,6 +12928,9 @@ body {
   .login__repair-password:hover {
     color: var(--magenta);
     text-decoration: none
+  }
+  .orders__fix-price a:hover {
+    text-decoration: underline
   }
   .footer__policy:hover {
     text-decoration: none
@@ -12833,6 +12976,9 @@ body {
   .header__profile:active {
     color: var(--magenta)
   }
+  .header__profile-list a:active {
+    color: var(--magenta)
+  }
   .qr__content a:active {
     background-color: #fff
   }
@@ -12842,6 +12988,9 @@ body {
   .login__repair-password:active {
     color: var(--magenta);
     text-decoration: none
+  }
+  .orders__fix-price a:active {
+    text-decoration: underline
   }
   .footer__policy:active {
     text-decoration: none

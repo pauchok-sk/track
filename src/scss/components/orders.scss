@@ -1,0 +1,67 @@
+.orders {
+  padding: 80px 0px;
+  &__title {
+    @include tablet {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 125%;
+      letter-spacing: 1.04px;
+    }
+  }
+  &__head {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
+  &__toggle-wrapper {
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__toggle-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__fix-price {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--magenta);
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include tablet-min {
+      width: 100%;
+    }
+
+    a {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      color: var(--yellow);
+      @include tablet-min {
+        margin-left: auto;
+      }
+    }
+  }
+}

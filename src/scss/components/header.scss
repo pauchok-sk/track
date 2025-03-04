@@ -3,11 +3,11 @@
   left: 0;
   right: 0;
   top: 0;
-  
+
   background-color: transparent;
   color: black;
   padding: 24px 0px;
-  
+
   z-index: 50;
   @include laptop-min {
     padding: 20px 0px;
@@ -105,13 +105,19 @@
       height: 30px;
       height: 3px;
       background-color: currentColor;
-      transition: transform .2s ease, opacity .2s ease, border-radius .2s ease;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        border-radius 0.2s ease;
     }
   }
   &__profile {
     cursor: pointer;
-    transition: color .2s ease;
+    transition: color 0.2s ease;
     @include hover {
+      color: var(--magenta);
+    }
+    &[aria-expanded="true"] {
       color: var(--magenta);
     }
   }
@@ -122,5 +128,30 @@
   &__profile-arrow {
     width: 20px;
     height: 20px;
+  }
+  &__profile-dropdown {
+    padding: 24px;
+    box-shadow: 8px 8px 0px 0px #000;
+    border-radius: 8px;
+    border: 1px solid black;
+    width: 225px;
+  }
+  &__profile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      transition: color .2s ease;
+      @include hover {
+        color: var(--magenta);
+      }
+    }
   }
 }
