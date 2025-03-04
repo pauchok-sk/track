@@ -1,5 +1,8 @@
 .orders {
   padding: 80px 0px;
+  @include tablet {
+    padding: 60px 0px;
+  }
   &__title {
     @include tablet {
       text-align: center;
@@ -62,6 +65,176 @@
       @include tablet-min {
         margin-left: auto;
       }
+    }
+  }
+  &__nav {
+    @include laptop-middle {
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+  }
+  &__nav-btn {
+    display: block;
+    position: relative;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 140%;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--yellow);
+    }
+    @include tablet {
+      font-size: 16px;
+      padding: 16px 12px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: currentColor;
+    }
+    &::before {
+      height: 4px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      z-index: 2;
+    }
+    &::after {
+      height: 1px;
+      z-index: 1;
+    }
+
+    &._active {
+      color: var(--yellow);
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  &__card {
+    display: flex;
+    gap: 40px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 2px solid white;
+    @include laptop-middle {
+      gap: 24px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__card-num {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--magenta);
+    @include laptop-middle {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__date-time {
+    align-self: start;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--yellow);
+    @include laptop-middle {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include laptop-min {
+      margin-left: auto;
+      align-self: center;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__card-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    @include laptop-middle {
+      font-size: 20px;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__card-right {
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+  &__card-price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    min-width: 120px;
+    text-align: end;
+    @include laptop-middle {
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: 0.8px;
+    }
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+  &__status {
+    padding: 16px 24px;
+    background-color: var(--magenta);
+    border-radius: 8px;
+    color: black;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    @include laptop-middle {
+      padding: 12px 24px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 12px 35px;
+    }
+  }
+  &__reject {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--yellow);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--magenta);
+    }
+    @include laptop-middle {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 }

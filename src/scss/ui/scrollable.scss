@@ -1,0 +1,11 @@
+._scrollable {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  @media (min-width: 992px) {
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+}
