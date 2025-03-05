@@ -1,1 +1,0 @@
-function passwordBtn(){const t=document.querySelectorAll(".password-btn");t.length&&t.forEach((t=>{t.addEventListener("click",(s=>{const e=t.closest(".input-control").querySelector(".input");t.classList.contains("_active")?(e.type="password",t.classList.remove("_active")):(e.type="text",t.classList.add("_active"))}))}))}passwordBtn();

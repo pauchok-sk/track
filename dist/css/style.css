@@ -6562,6 +6562,9 @@ body {
 .text-gray {
   color: var(--gray)
 }
+.text-tg {
+  color: var(--tg)
+}
 .pointer {
   cursor: pointer
 }
@@ -6718,6 +6721,11 @@ body {
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 1.6px
+}
+.m-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%
 }
 .text {
   font-size: 20px;
@@ -7629,6 +7637,52 @@ body {
   bottom: 10px;
   z-index: -1
 }
+.screen__tamplates {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 30px;
+  margin-top: 40px
+}
+.screen__template {
+  grid-column: 2 span
+}
+.screen__template a,
+.screen__template button {
+  transition: color .2s ease
+}
+.screen__template-gallery {
+  position: relative;
+  display: block;
+  padding-bottom: 55%;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid #fff
+}
+.screen__template-qr {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1
+}
+.screen__template-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.screen__template-btn {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: var(--yellow)
+}
+.screen__template-btn svg {
+  width: 100%;
+  height: 100%
+}
 .footer {
   padding: 60px 0;
   font-size: 14px;
@@ -7644,6 +7698,86 @@ body {
 }
 .footer p {
   margin: 0
+}
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0
+}
+[data-tippy-root] {
+  max-width: calc(100vw - 10px)
+}
+.tippy-box {
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: visibility,opacity,-webkit-transform;
+  transition-property: transform,visibility,opacity;
+  transition-property: transform,visibility,opacity,-webkit-transform
+}
+.tippy-box[data-placement^=top]>.tippy-arrow {
+  bottom: 0
+}
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  -webkit-transform-origin: center top;
+  transform-origin: center top
+}
+.tippy-box[data-placement^=bottom]>.tippy-arrow {
+  top: 0
+}
+.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom
+}
+.tippy-box[data-placement^=left]>.tippy-arrow {
+  right: 0
+}
+.tippy-box[data-placement^=left]>.tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  -webkit-transform-origin: center left;
+  transform-origin: center left
+}
+.tippy-box[data-placement^=right]>.tippy-arrow {
+  left: 0
+}
+.tippy-box[data-placement^=right]>.tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  -webkit-transform-origin: center right;
+  transform-origin: center right
+}
+.tippy-box[data-inertia][data-state=visible] {
+  transition-timing-function: cubic-bezier(.54,1.5,.38,1.11)
+}
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: #333
+}
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid
+}
+.tippy-content {
+  position: relative;
+  padding: 5px 9px;
+  z-index: 1
 }
 @media (min-width:481px) {
   .online-pay__logo:first-child {
@@ -12356,6 +12490,9 @@ body {
   .s-title {
     font-size: 26px
   }
+  .m-title {
+    font-size: 20px
+  }
   .header {
     padding: 20px 0
   }
@@ -12501,6 +12638,9 @@ body {
   .screen__head-info {
     text-align: center
   }
+  .screen__template {
+    grid-column: 3 span
+  }
 }
 @media (max-width:767.98px) {
   .table-responsive-md {
@@ -12603,6 +12743,9 @@ body {
     font-size: 20px;
     line-height: 150%;
     letter-spacing: .8px
+  }
+  .m-title {
+    font-size: 18px
   }
   .text {
     font-size: 16px;
@@ -13035,6 +13178,9 @@ body {
   .orders__fix-price svg {
     margin-left: auto
   }
+  .screen__template {
+    grid-column: 6 span
+  }
 }
 @media (max-width:479px) {
   .hero__star {
@@ -13112,7 +13258,7 @@ body {
     width: 100%
   }
   .screen {
-    padding: 30px 0
+    padding-top: 30px
   }
   .screen__empty .button {
     width: -webkit-fit-content;
@@ -13322,6 +13468,10 @@ body {
   .orders__delete:hover {
     color: var(--magenta)
   }
+  .screen__template a:hover,
+  .screen__template button:hover {
+    color: var(--magenta)
+  }
   .footer__policy:hover {
     text-decoration: none
   }
@@ -13395,6 +13545,10 @@ body {
     color: var(--magenta)
   }
   .orders__delete:active {
+    color: var(--magenta)
+  }
+  .screen__template a:active,
+  .screen__template button:active {
     color: var(--magenta)
   }
   .footer__policy:active {

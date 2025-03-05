@@ -7,6 +7,7 @@ import { getOrdersAnimate, heroAnimate, backgroundParallax, stirringsElements } 
 import mediaAdaptive from "./files/mediaAdaptive.js";
 import { passwordBtn } from "./files/password-btn.js";
 import scrollables from "./files/scrollables.js";
+import copyBtn from "./files/copyBtn.js";
 
 spoller();
 burger();
@@ -14,7 +15,7 @@ burger();
 heroAnimate();
 backgroundParallax();
 stirringsElements();
-
 mediaAdaptive();
 passwordBtn();
 scrollables();
+copyBtn();
