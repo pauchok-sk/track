@@ -23,6 +23,9 @@
 @import "./ui/toggle";
 @import "./ui/scrollable";
 @import "./ui/pagination";
+@import "./ui/btn-back";
+@import "./ui/video";
+@import "./ui/slider-nav";
 
 // components
 @import "./components/header";
@@ -36,5 +39,6 @@
 @import "./components/login";
 @import "./components/orders";
 @import "./components/screen";
+@import "./components/template";
 
 @import "./components/footer";

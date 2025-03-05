@@ -1,0 +1,41 @@
+.slider-btn {
+  @include flex-center;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.5);
+  width: 40px;
+  height: 40px;
+
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  z-index: 10;
+  transition: background-color .2s ease;
+
+  @include hover {
+    background-color: rgb(255, 255, 255, 0.8);
+  }
+
+  &._prev {
+    left: 8px;
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+  &._next {
+    right: 8px;
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

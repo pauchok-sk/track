@@ -53,6 +53,16 @@
   &[type="number"] {
     -moz-appearance: textfield;
   }
+
+  &._big {
+    font-size: 20px;
+    line-height: 24px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 }
 
 .password-btn {

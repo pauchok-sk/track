@@ -1,0 +1,115 @@
+<section class="template">
+  <div class="container">
+    <button class="btn-back">
+      <svg>
+        <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+      </svg>
+      <span>Назад</span>
+    </button>
+    <h1 class="title s-title text-center text-md-start mb-4">
+      Редактировать шаблон
+    </h1>
+    <label for="name-template" class="m-title mb-2 mb-md-3"
+      >Название шаблона</label
+    >
+    <input type="text" id="name-template" value="Шаблон 1" class="input _big" />
+
+    <div class="template__wrapper">
+      <form action="#" class="template__settings">
+        <h3 class="t-title mb-4">Настройки шаблона</h3>
+        <div class="template__settings-block">
+          <h4 class="m-title mb-4">Фоновое видео</h4>
+          <div class="swiper template__previews mb-4">
+            <div class="slider-btn _prev">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+              </svg>
+            </div>
+            <div class="swiper-wrapper">
+              <div
+                data-video-btn="template-video"
+                data-src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true"
+                data-poster="@img/template-img.jpg"
+                class="swiper-slide template__preview-btn _active"
+                style="
+                  background: url(&quot;@img/template-img.jpg&quot;) 0 0 / cover
+                    no-repeat;
+                "
+              ></div>
+              <div
+                data-video-btn="template-video"
+                data-src="//github.com/mediaelement/mediaelement-files/blob/master/echo-hereweare.mp4?raw=true"
+                data-poster="@img/template-img-2.jpg"
+                class="swiper-slide template__preview-btn"
+                style="
+                  background: url(&quot;@img/template-img-2.jpg&quot;) 0 0 /
+                    cover no-repeat;
+                "
+              ></div>
+              <div
+                data-video-btn="template-video"
+                data-src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true"
+                data-poster="@img/template-img.jpg"
+                class="swiper-slide template__preview-btn"
+                style="
+                  background: url(&quot;@img/template-img.jpg&quot;) 0 0 / cover
+                    no-repeat;
+                "
+              ></div>
+              <div
+                data-video-btn="template-video"
+                data-src="//github.com/mediaelement/mediaelement-files/blob/master/echo-hereweare.mp4?raw=true"
+                data-poster="@img/template-img-2.jpg"
+                class="swiper-slide template__preview-btn"
+                style="
+                  background: url(&quot;@img/template-img-2.jpg&quot;) 0 0 /
+                    cover no-repeat;
+                "
+              ></div>
+              <div
+                data-video-btn="template-video"
+                data-src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true"
+                data-poster="@img/template-img.jpg"
+                class="swiper-slide template__preview-btn"
+                style="
+                  background: url(&quot;@img/template-img.jpg&quot;) 0 0 / cover
+                    no-repeat;
+                "
+              ></div>
+              <div
+                data-video-btn="template-video"
+                data-src="//github.com/mediaelement/mediaelement-files/blob/master/echo-hereweare.mp4?raw=true"
+                data-poster="@img/template-img-2.jpg"
+                class="swiper-slide template__preview-btn"
+                style="
+                  background: url(&quot;@img/template-img-2.jpg&quot;) 0 0 /
+                    cover no-repeat;
+                "
+              ></div>
+            </div>
+            <div class="slider-btn _next">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <input type="file" id="template-video" class="d-none" />
+          <label for="template-video" class="button _yellow"
+            >Загрузить своё видео</label
+          >
+        </div>
+      </form>
+      <div class="template__preview">
+        <h3 class="t-title mb-4">Предварительный просмотр</h3>
+        <div class="template__video-wrapper video">
+          <div class="video__btn"></div>
+          <video data-video="template-video" poster="@img/template-img.jpg" class="video__main">
+            <source
+              src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true"
+            />
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
