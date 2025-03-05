@@ -99,20 +99,14 @@
 
 	<main>
 
-		<section class="orders">
+		<section class="orders _empty">
 			<div class="container">
 				<h1 class="title s-title mb-4 orders__title">Заказы</h1>
 				<div class="orders__head">
 					<div class="d-flex align-items-center justify-content-between justify-content-sm-start gap-4 flex-row-reverse flex-sm-row orders__toggle-wrapper">
-						<div class="toggle _active"></div>
+						<div class="toggle"></div>
 						<span class="orders__toggle-title">Приём заказов</span>
 					</div>
-					<a href="#" class="orders__fix-price">
-						<div>Стоимость после подтверждения</div>
-						<svg>
-							<use xlink:href="img/icons/icons.svg#icon-pen"></use>
-						</svg>
-					</a>
 				</div>
 				<ul class="list orders__nav mb-5 _scrollable">
 					<li>
@@ -125,84 +119,7 @@
 						<a href="#" class="orders__nav-btn">Отклонены</a>
 					</li>
 				</ul>
-				<div class="d-flex flex-column gap-3">
-					<div class="orders__card">
-						<span class="orders__card-num">1.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1">200 ₽</div>
-							<div class="orders__status order-3 order-lg-2">Исполнено</div>
-							<button class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
-						</div>
-					</div>
-					<div class="orders__card">
-						<span class="orders__card-num">2.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1">200 ₽</div>
-							<div class="orders__status order-3 order-lg-2">Исполнено</div>
-							<button class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
-						</div>
-					</div>
-					<div class="orders__card">
-						<span class="orders__card-num">3.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price">200 ₽</div>
-							<div class="d-flex align-items-center gap-2 text-magenta orders__pending-pay">
-								<div class="spinner-border" role="status"></div>
-								<span>Ожидает оплаты</span>
-							</div>
-							<button class="btn-reset orders__delete">
-								<svg>
-									<use xlink:href="img/icons/icons.svg#icon-trash"></use>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="orders__card">
-						<span class="orders__card-num">2.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<form class="d-flex align-items-center gap-3 gap-lg-0 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="input-control me-lg-2 order-1">
-								<input type="number" class="input" />
-								<span class="input-type">₽</span>
-							</div>
-							<button type="submit" class="button _blue me-lg-2 order-lg-2 order-3 orders__submit">Отправить</button>
-							<button type="button" class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
-						</form>
-					</div>
-				</div>
+				<img src="img/face-women.png" alt="image" class="orders__img">
 			</div>
 		</section>
 

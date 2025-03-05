@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250305130742" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250305130742" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header _white">
+		<div class="container d-flex lg:row lg:gap-3 align-items-center justify-content-between">
+			<div class="header__logo-wrapper col-xl-4">
+				<a href="/" class="header__logo">
+					<img src="img/disk.svg" alt="image" class="header__logo-disk _a-rotating" />
+					<div>Поставь<span>мой</span>трек</div>
+				</a>
+			</div>
+			<ul class="list col-xl-4 header__list">
+				<li><a href="#" class="text-magenta">Заказы</a></li>
+				<li><a href="#">Экран</a></li>
+				<li><a href="#">Платежи и баланс</a></li>
+			</ul>
+			<div class="d-none d-lg-flex align-items-center justify-content-end gap-4 col-xl-4">
+				<div class="dropdown">
+					<div class="header__profile d-flex align-items-center" data-bs-toggle="dropdown">
+						<svg class="header__profile-icon me-3">
+							<use xlink:href="img/icons/icons.svg#icon-user"></use>
+						</svg>
+						<span class="me-2">DJ Koreshok</span>
+						<svg class="header__profile-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</div>
+					<div class="dropdown-menu header__profile-dropdown">
+						<ul class="list header__profile-list">
+							<li><a href="#">Страница заказа</a></li>
+							<li><a href="#">Мой профиль</a></li>
+						</ul>
+						<button href="#" class="button _min _white _outline">Выход</button>
+					</div>
+				</div>
+			</div>
+			<button class="btn-reset header__burger-btn" id="burger-btn">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
+		</div>
+	</header>
+
+	<div class="burger pt-4 _black" id="burger">
+		<div class="d-flex flex-column h-100">
+			<div class="container flex-fill">
+				<ul class="list d-flex flex-column gap-3 burger__list mb-4">
+					<li><a href="#" class="text-magenta">Заказы</a></li>
+					<li><a href="#">Экран</a></li>
+					<li><a href="#">Платежи и баланс</a></li>
+				</ul>
+				<div class="burger__line"></div>
+				<ul class="list d-flex flex-column gap-3 burger__list mb-4">
+					<li><a href="#">Страница заказа</a></li>
+					<li><a href="#">Мой профиль</a></li>
+				</ul>
+			</div>
+			<div class="burger__footer">
+				<div class="d-flex align-items-center justify-content-center gap-3 mb-5">
+					<a href="#">
+						<img src="img/sbp.svg" alt="icon" />
+					</a>
+					<a href="#">
+						<img src="img/tpay.svg" alt="icon" />
+					</a>
+					<a href="#">
+						<img src="img/a-pay.svg" alt="icon" />
+					</a>
+					<a href="#">
+						<img src="img/s-pay.svg" alt="icon" />
+					</a>
+				</div>
+				<div class="d-flex align-items-center justify-content-between">
+					<a href="#" class="burger__profile">
+						<svg class="burger__profile-icon">
+							<use xlink:href="img/icons/icons.svg#icon-user"></use>
+						</svg>
+						<span>DJ Koreshok</span>
+					</a>
+					<button class="button _white _outline">Выйти</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="orders">
+			<div class="container">
+				<h1 class="title s-title mb-4 orders__title">Заказы</h1>
+				<div class="orders__head">
+					<div class="d-flex align-items-center justify-content-between justify-content-sm-start gap-4 flex-row-reverse flex-sm-row orders__toggle-wrapper">
+						<div class="toggle _active"></div>
+						<span class="orders__toggle-title">Приём заказов</span>
+					</div>
+					<a href="#" class="orders__fix-price">
+						<div>Фиксированная стоимость</div>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-pen"></use>
+						</svg>
+					</a>
+				</div>
+				<ul class="list orders__nav mb-5 _scrollable">
+					<li>
+						<a href="#" class="orders__nav-btn">Очередь заказов</a>
+					</li>
+					<li>
+						<a href="#" class="orders__nav-btn">Исполнены</a>
+					</li>
+					<li>
+						<a href="#" class="orders__nav-btn _active">Отклонены</a>
+					</li>
+				</ul>
+				<div class="d-flex flex-column gap-3">
+					<div class="orders__card align-items-start">
+						<div class="d-flex align-items-center gap-3 orders__date-time ms-0">
+							<span>28.01.2025</span>
+							<span>22:02</span>
+						</div>
+						<div class="orders__card-title flex-fill">
+							Худи – Джиган, Artik & Asti, NILETTO
+						</div>
+						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
+							<div class="orders__card-price order-1 text-gray">200 ₽</div>
+							<div class="text order-3 order-lg-2 text-yellow">Отклонён</div>
+							<div class="d-flex align-items-center gap-3 text text-yellow order-2 order-lg-3">
+								<span>28.01.2025</span>
+								<span>22:02</span>
+							</div>
+						</div>
+					</div>
+					<div class="orders__card align-items-start">
+						<div class="d-flex align-items-center gap-3 orders__date-time ms-0">
+							<span>28.01.2025</span>
+							<span>22:02</span>
+						</div>
+						<div class="orders__card-title flex-fill">
+							Худи – Джиган, Artik & Asti, NILETTO
+						</div>
+						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
+							<div class="orders__card-price order-1 text-gray">200 ₽</div>
+							<div class="text order-3 order-lg-2 text-yellow text-lg-nowrap text-end">Отменён заказчиком</div>
+							<div class="d-flex align-items-center gap-3 text text-yellow order-2 order-lg-3">
+								<span>28.01.2025</span>
+								<span>22:02</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="button orders__btn-more _yellow">Показать еще</a>
+				<div class="d-flex align-items-center justify-content-center justify-content-md-between gap-4 mt-5">
+					<a href="#" class="pagination-arrow _prev _disabled">
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
+						</svg>
+					</a>
+					<a href="#" class="pagination-item _active">1</a>
+					<a href="#" class="pagination-item">2</a>
+					<a href="#" class="pagination-item">3</a>
+					<div class="pagination-item d-none d-md-block">...</div>
+					<a href="#" class="pagination-item d-none d-md-block">32</a>
+					<a href="#" class="pagination-arrow _next">
+						<svg>
+							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="row flex-xl-row flex-column justify-content-center text-center text-xl-start gap-xl-0 gap-4">
+				<div class="col-xl">
+					<p>2025 © поставьмойтрек.рф</p>
+				</div>
+				<div class="col-xl text-center">
+					<a href="#" class="footer__policy">Политика обработки персональных данных</a>
+				</div>
+				<div class="col-xl">
+					<a href="#" target="_blank" class="footer__dev mx-auto ms-xl-0 ms-xl-auto w-fit d-flex align-items-center">
+						<img src="img/dev-logo.svg" alt="icon" class="me-2" />
+						<span>Разработка сайта – Вангер.рф</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js?_v=20250305130742"></script>
+</body>
+
+</html>

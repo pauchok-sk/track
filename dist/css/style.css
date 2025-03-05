@@ -6470,7 +6470,8 @@ template {
   --red: #f52344;
   --l-red: #ffc3cd;
   --robin: #00cfd9;
-  --gray: #ababab
+  --gray-l: #ababab;
+  --gray: #8b8b8b
 }
 html {
   box-sizing: border-box
@@ -6554,6 +6555,12 @@ body {
 }
 .text-robin {
   color: var(--robin)
+}
+.text-yellow {
+  color: var(--yellow)
+}
+.text-gray {
+  color: var(--gray)
 }
 .pointer {
   cursor: pointer
@@ -6811,7 +6818,7 @@ body {
   border: 2px solid currentColor;
   width: 50px;
   height: 30px;
-  color: var(--gray);
+  color: var(--gray-l);
   transition: color .2s ease
 }
 .toggle::before {
@@ -6834,6 +6841,53 @@ body {
   display: flex;
   white-space: nowrap;
   overflow-x: auto
+}
+.pagination-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid hsla(0,0%,100%,.5);
+  color: var(--yellow);
+  flex-shrink: 0;
+  transition: color .2s ease,border-color .2s ease
+}
+.pagination-arrow._disabled {
+  pointer-events: none;
+  border-color: hsla(0,0%,100%,.3);
+  color: hsla(0,0%,100%,.3)
+}
+.pagination-arrow svg {
+  width: 24px;
+  height: 24px
+}
+.pagination-arrow._prev svg {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.pagination-arrow._next svg {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+.pagination-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  font-size: 20px;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 30px;
+  transition: color .2s ease
+}
+.pagination-item._active {
+  color: var(--yellow)
+}
+.pagination-item:nth-last-child(-n+2) {
+  display: none
 }
 .header {
   position: absolute;
@@ -7385,7 +7439,13 @@ body {
   transition: color .2s ease
 }
 .orders {
-  padding: 80px 0
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  z-index: 1
+}
+.orders._empty {
+  min-height: calc(100vh - 100px)
 }
 .orders__head {
   display: flex;
@@ -7473,6 +7533,9 @@ body {
   font-weight: 600;
   line-height: 140%
 }
+.orders__card-right .text:nth-child(2) {
+  max-width: 95px
+}
 .orders__card-right .input-control {
   width: 140px;
   height: auto
@@ -7534,6 +7597,15 @@ body {
 .orders__delete svg {
   width: 100%;
   height: 100%
+}
+.orders__btn-more {
+  margin: 40px auto 0 auto
+}
+.orders__img {
+  position: absolute;
+  bottom: 0;
+  right: -80px;
+  z-index: -1
 }
 .footer {
   padding: 60px 0;
@@ -12056,7 +12128,7 @@ body {
     line-height: 24px
   }
   .orders__card-title {
-    font-size: 20px
+    font-size: 18px
   }
   .orders__card-price {
     font-size: 20px;
@@ -12071,6 +12143,9 @@ body {
   .orders__reject {
     font-size: 18px;
     line-height: 22px
+  }
+  .orders__img {
+    width: 400px
   }
 }
 @media (max-width:1199.98px) {
@@ -12512,6 +12587,17 @@ body {
   .input {
     line-height: 20px
   }
+  .pagination-arrow {
+    width: 48px;
+    height: 48px
+  }
+  .pagination-item {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px
+  }
   .header__logo {
     gap: 8px;
     font-size: 16px
@@ -12736,9 +12822,6 @@ body {
     font-size: 16px;
     line-height: 20px
   }
-  .orders__card-title {
-    font-size: 18px
-  }
   .orders__card-right .input {
     min-height: 48px;
     font-size: 16px;
@@ -12761,6 +12844,10 @@ body {
   .orders__submit {
     padding-left: 35px;
     padding-right: 35px
+  }
+  .orders__img {
+    width: 295px;
+    right: -40px
   }
 }
 @media (max-width:575.98px) {
@@ -12986,6 +13073,10 @@ body {
   .login__content {
     max-width: 310px
   }
+  .orders__btn-more {
+    margin-top: 32px;
+    width: 100%
+  }
   .footer {
     font-size: 12px;
     line-height: 20px
@@ -13149,6 +13240,12 @@ body {
   .password-btn:hover {
     opacity: .7
   }
+  .pagination-arrow:hover {
+    border-color: var(--yellow)
+  }
+  .pagination-item:hover {
+    color: var(--yellow)
+  }
   .header__list a:hover {
     color: var(--magenta)
   }
@@ -13217,6 +13314,12 @@ body {
   }
   .password-btn:active {
     opacity: .7
+  }
+  .pagination-arrow:active {
+    border-color: var(--yellow)
+  }
+  .pagination-item:active {
+    color: var(--yellow)
   }
   .header__list a:active {
     color: var(--magenta)

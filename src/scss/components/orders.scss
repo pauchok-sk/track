@@ -1,8 +1,16 @@
 .orders {
+  position: relative;
+  overflow: hidden;
   padding: 80px 0px;
+  z-index: 1;
   @include tablet {
     padding: 60px 0px;
   }
+
+  &._empty {
+    min-height: calc(100vh - 100px);
+  }
+
   &__title {
     @include tablet {
       text-align: center;
@@ -167,18 +175,21 @@
     font-weight: 600;
     line-height: 140%;
     @include laptop-middle {
-      font-size: 20px;
+      font-size: 18px;
     }
     @include laptop-min {
       width: 100%;
-    }
-    @include tablet {
-      font-size: 18px;
     }
   }
   &__card-right {
     @include laptop-min {
       width: 100%;
+    }
+
+    .text {
+      &:nth-child(2) {
+        max-width: 95px;
+      }
     }
 
     .input-control {
@@ -206,7 +217,7 @@
       font-size: 20px;
       font-weight: 600;
       line-height: 24px;
-      right: 24px;
+      right: 24px; 
       @include tablet {
         font-size: 16px;
         line-height: 20px;
@@ -297,6 +308,26 @@
     @include tablet {
       padding-left: 35px;
       padding-right: 35px;
+    }
+  }
+  &__btn-more {
+    margin: 40px auto 0px auto;
+    @include mobile {
+      margin-top: 32px;
+      width: 100%;
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+    z-index: -1;
+    @include laptop-middle {
+      width: 400px;
+    }
+    @include tablet {
+      width: 295px;
+      right: -40px;
     }
   }
 }
