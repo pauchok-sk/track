@@ -7914,7 +7914,79 @@ body {
   -webkit-transform: translateX(-50%,-50%);
   transform: translateX(-50%,-50%)
 }
+.template__orders {
+  --offset: 16px;
+  position: absolute;
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(0,0,0,.5);
+  max-width: 175px;
+  overflow-y: auto;
+  z-index: 10
+}
+.template__orders._left {
+  left: var(--offset);
+  top: var(--offset);
+  bottom: var(--offset)
+}
+.template__orders._right {
+  right: var(--offset);
+  top: var(--offset);
+  bottom: var(--offset)
+}
+.template__orders._bottom {
+  left: 0;
+  right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  bottom: 0;
+  max-width: none
+}
+.template__orders._bottom .template__orders-list {
+  flex-direction: row;
+  gap: 20px
+}
+.template__orders._top {
+  left: 0;
+  right: 0;
+  top: 0;
+  max-width: none;
+  padding-top: 8px;
+  padding-bottom: 8px
+}
+.template__orders._top .template__orders-list {
+  flex-direction: row;
+  gap: 20px
+}
+.template__orders::-webkit-scrollbar {
+  width: 0;
+  height: 0
+}
+.template__orders-title {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  color: var(--yellow);
+  margin-bottom: 12px
+}
+.template__orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: decimal;
+  padding-left: 16px
+}
+.template__orders-list li {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px
+}
+.template__orders-list li span {
+  font-weight: 500
+}
 .template__preview {
+  position: sticky;
+  top: 100px;
   flex: 1
 }
 .footer {
@@ -12712,10 +12784,18 @@ body {
   .hero__recorder-big {
     width: 360px
   }
+  .template__orders {
+    max-width: 160px
+  }
 }
 @media (max-width:1200px) {
   .main-title {
     font-size: 48px
+  }
+  .video__btn {
+    width: 45px;
+    height: 45px;
+    background-size: 15px auto
   }
   .hero__music {
     left: 30px;
@@ -12774,6 +12854,14 @@ body {
   }
   .template__video-wrapper {
     height: 255px
+  }
+  .template__orders-title {
+    font-size: 12px;
+    line-height: normal
+  }
+  .template__orders-list li {
+    font-size: 12px;
+    line-height: normal
   }
 }
 @media (max-width:1199.98px) {
@@ -13117,7 +13205,20 @@ body {
     gap: 32px
   }
   .template__video-wrapper {
-    height: 210px
+    height: 240px
+  }
+  .template__qr {
+    width: 54px
+  }
+  .template__dj {
+    width: 54px
+  }
+  .template__orders {
+    padding: 10px;
+    max-width: 125px
+  }
+  .template__preview {
+    position: static
   }
 }
 @media (max-width:767.98px) {
@@ -13277,11 +13378,6 @@ body {
   .btn-back svg {
     width: 16px;
     height: 16px
-  }
-  .video__btn {
-    width: 45px;
-    height: 45px;
-    background-size: 15px auto
   }
   .slider-btn {
     display: none
@@ -13566,13 +13662,19 @@ body {
     height: 315px
   }
   .template__video-wrapper {
-    height: auto
+    height: auto;
+    min-height: 210px
   }
-  .template__qr {
-    width: 54px
+  .template__orders {
+    max-width: 175px
   }
-  .template__dj {
-    width: 54px
+  .template__orders-title {
+    font-size: 14px;
+    line-height: 20px
+  }
+  .template__orders-list li {
+    font-size: 14px;
+    line-height: 20px
   }
 }
 @media (max-width:575.98px) {
@@ -13729,6 +13831,14 @@ body {
   .screen__template {
     grid-column: 6 span
   }
+  .template__orders-title {
+    font-size: 10px;
+    line-height: 12px
+  }
+  .template__orders-list li {
+    font-size: 10px;
+    line-height: 12px
+  }
 }
 @media (max-width:479px) {
   .hero__star {
@@ -13812,6 +13922,11 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content
+  }
+  .template__orders {
+    --offset: 8px;
+    max-width: 115px;
+    padding: 8px
   }
   .footer {
     font-size: 12px;

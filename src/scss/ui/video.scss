@@ -33,7 +33,7 @@
     @include hover {
       background-color: var(--yellow);
     }
-    @include tablet {
+    @include laptop-middle {
       width: 45px;
       height: 45px;
       background-size: 15px auto;

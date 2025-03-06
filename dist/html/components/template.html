@@ -79,7 +79,31 @@
 				</div>
 
 				<div class="template__settings-block">
-					<h4 class="m-title mb-4">Логотип DJ</h4>
+					<div class="d-flex align-items-center justify-content-between">
+						<h4 class="m-title mb-4">Список заказов</h4>
+						<div class="toggle"></div>
+					</div>
+
+					<div class="d-flex flex-column gap-3">
+						<input type="radio" name="place-orders" id="orders-left" checked value='["topLeft", "bottomLeft"]' class="input-radio" data-template-toggle="template-orders" />
+						<label for="orders-left" class="text btn-radio">Слева</label>
+
+						<input type="radio" name="place-orders" id="orders-right" value='["topRight", "bottomRight"]' class="input-radio" data-template-toggle="template-orders" />
+						<label for="orders-right" class="text btn-radio">Справа</label>
+
+						<input type="radio" name="place-orders" id="orders-bottom" value='["bottomLeft", "bottomRight"]' class="input-radio" data-template-toggle="template-orders" />
+						<label for="orders-bottom" class="text btn-radio">Внизу</label>
+
+						<input type="radio" name="place-orders" id="orders-top" value='["topLeft", "topRight"]' class="input-radio" data-template-toggle="template-orders" />
+						<label for="orders-top" class="text btn-radio">Наверху</label>
+					</div>
+				</div>
+
+				<div class="template__settings-block">
+					<div class="d-flex align-items-center justify-content-between">
+						<h4 class="m-title mb-4">Логотип DJ</h4>
+						<div class="toggle"></div>
+					</div>
 
 					<div class="d-flex flex-column gap-3">
 						<input type="radio" name="place-dj" id="dj-center" value="center" class="input-radio" data-template-toggle="template-dj" />
@@ -101,6 +125,14 @@
 			<div class="template__preview">
 				<h3 class="t-title mb-4">Предварительный просмотр</h3>
 				<div class="template__video-wrapper video">
+					<div class="template__orders" id="template-orders">
+						<div class="template__orders-title">На очереди:</div>
+						<ul class="list template__orders-list">
+							<li>Худи <br /><span>Джиган, Artik & Asti, NILETTO</span></li>
+							<li>Sigma Boy <br /><span>Betsy, Мария Янковская</span></li>
+							<li>Матушка <br /><span>Татьяна Куртукова</span></li>
+						</ul>
+					</div>
 					<img src="img/qr-simple.png" alt="icon" class="template__qr" id="template-qr" />
 					<img src="img/logo-dj.png" alt="icon" class="template__qr" id="template-dj" />
 					<div class="video__btn"></div>

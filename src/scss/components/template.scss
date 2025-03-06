@@ -78,19 +78,20 @@
       height: 255px;
     }
     @include laptop-min {
-      height: 210px;
+      height: 240px;
     }
     @include tablet {
       height: 315px;
     }
     @include tablet {
       height: auto;
+      min-height: 210px;
     }
   }
   &__qr {
     position: absolute;
     width: 80px;
-    @include tablet {
+    @include laptop-min {
       width: 54px;
     }
 
@@ -114,7 +115,7 @@
   &__dj {
     position: absolute;
     width: 75px;
-    @include tablet {
+    @include laptop-min {
       width: 54px;
     }
 
@@ -140,11 +141,130 @@
       transform: translateX(-50%, -50%);
     }
   }
+  &__orders {
+    --offset: 16px;
 
+    position: absolute;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 175px;
+    overflow-y: auto;
+    z-index: 10;
+    @include laptop {
+      max-width: 160px;
+    }
+    @include laptop-min {
+      padding: 10px;
+      max-width: 125px;
+    }
+    @include tablet {
+      max-width: 175px;
+    }
+    @include mobile {
+      --offset: 8px;
+      max-width: 115px;
+      padding: 8px;
+    }
 
+    &._left {
+      left: var(--offset);
+      top: var(--offset);
+      bottom: var(--offset);
+    }
+    &._right {
+      right: var(--offset);
+      top: var(--offset);
+      bottom: var(--offset);
+    }
+    &._bottom {
+      left: 0;
+      right: 0;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      bottom: 0;
+      max-width: none;
 
+      .template__orders-list {
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+    &._top {
+      left: 0;
+      right: 0;
+      top: 0;
+      max-width: none;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      .template__orders-list {
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  &__orders-title {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    color: var(--yellow);
+    margin-bottom: 12px;
+    @include laptop-middle {
+      font-size: 12px;
+      line-height: normal;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @include tablet-min {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+  &__orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: decimal;
+    padding-left: 16px;
+
+    li {
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 20px;
+      @include laptop-middle {
+        font-size: 12px;
+        line-height: normal;
+      }
+      @include tablet {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @include tablet-min {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
 
   &__preview {
+    position: sticky;
+    top: 100px;
     flex: 1;
+
+    @include laptop-min {
+      position: static;
+    }
   }
 }
