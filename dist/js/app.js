@@ -12137,7 +12137,7 @@
             const places = {
                 topRight: {
                     id: "",
-                    value: flase
+                    value: false
                 },
                 bottomRight: {
                     id: "",
@@ -12148,6 +12148,10 @@
                     value: false
                 },
                 topLeft: {
+                    id: "",
+                    value: false
+                },
+                center: {
                     id: "",
                     value: false
                 }
@@ -12185,7 +12189,7 @@
         changePlace(item, place) {
             if (!item) return;
             if (!this.places[place]) return;
-            item.classList.remove("_top-right", "_top-left", "_bottom-left", "_bottom-right");
+            item.classList.remove("_top-right", "_top-left", "_bottom-left", "_bottom-right", "_center");
             switch (place) {
               case "topRight":
                 this.setPlace(item, "topRight", "_top-right");
@@ -12201,6 +12205,10 @@
 
               case "topLeft":
                 this.setPlace(item, "topLeft", "_top-left");
+                break;
+
+              case "center":
+                this.setPlace(item, "center", "_center");
                 break;
 
               default:

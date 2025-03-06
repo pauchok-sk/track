@@ -77,11 +77,32 @@
 						<label for="qr-bottom-left" class="text btn-radio">Нижний Левый угол</label>
 					</div>
 				</div>
+
+				<div class="template__settings-block">
+					<h4 class="m-title mb-4">Логотип DJ</h4>
+
+					<div class="d-flex flex-column gap-3">
+						<input type="radio" name="place-dj" id="dj-center" value="center" class="input-radio" data-template-toggle="template-dj" />
+						<label for="dj-center" class="text btn-radio">По центру экрана</label>
+
+						<input type="radio" name="place-dj" id="dj-top-right" value="topRight" class="input-radio" data-template-toggle="template-dj" />
+						<label for="dj-top-right" class="text btn-radio">Верхний Правый угол</label>
+
+						<input type="radio" name="place-dj" id="dj-top-left" value="topLeft" class="input-radio" data-template-toggle="template-dj" />
+						<label for="dj-top-left" class="text btn-radio">Верхний Левый угол</label>
+
+						<input type="radio" name="place-dj" id="dj-bottom-right" value="bottomRight" class="input-radio" checked data-template-toggle="template-dj" />
+						<label for="dj-bottom-right" class="text btn-radio">Нижний Правый угол</label>
+						<input type="radio" name="place-dj" id="dj-bottom-left" value="bottomLeft" class="input-radio" data-template-toggle="template-dj" />
+						<label for="dj-bottom-left" class="text btn-radio">Нижний Левый угол</label>
+					</div>
+				</div>
 			</form>
 			<div class="template__preview">
 				<h3 class="t-title mb-4">Предварительный просмотр</h3>
 				<div class="template__video-wrapper video">
 					<img src="img/qr-simple.png" alt="icon" class="template__qr" id="template-qr" />
+					<img src="img/logo-dj.png" alt="icon" class="template__qr" id="template-dj" />
 					<div class="video__btn"></div>
 					<video data-video="template-video" poster="img/template-img.jpg" class="video__main">
 						<source src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" />

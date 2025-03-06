@@ -111,6 +111,35 @@
       top: 16px;
     }
   }
+  &__dj {
+    position: absolute;
+    width: 75px;
+    @include tablet {
+      width: 54px;
+    }
+
+    &._top-right {
+      top: 16px;
+      right: 16px;
+    }
+    &._bottom-right {
+      bottom: 16px;
+      right: 16px;
+    }
+    &._bottom-left {
+      left: 16px;
+      bottom: 16px;
+    }
+    &._top-left {
+      left: 16px;
+      top: 16px;
+    }
+    &._center {
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%, -50%);
+    }
+  }
 
 
 

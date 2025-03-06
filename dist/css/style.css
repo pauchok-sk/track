@@ -7888,6 +7888,32 @@ body {
   left: 16px;
   top: 16px
 }
+.template__dj {
+  position: absolute;
+  width: 75px
+}
+.template__dj._top-right {
+  top: 16px;
+  right: 16px
+}
+.template__dj._bottom-right {
+  bottom: 16px;
+  right: 16px
+}
+.template__dj._bottom-left {
+  left: 16px;
+  bottom: 16px
+}
+.template__dj._top-left {
+  left: 16px;
+  top: 16px
+}
+.template__dj._center {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%,-50%);
+  transform: translateX(-50%,-50%)
+}
 .template__preview {
   flex: 1
 }
@@ -13543,6 +13569,9 @@ body {
     height: auto
   }
   .template__qr {
+    width: 54px
+  }
+  .template__dj {
     width: 54px
   }
 }

@@ -5,7 +5,7 @@ class TempalteConstrucor {
     const places = {
       topRight: {
         id: "",
-        value: flase,
+        value: false,
       },
       bottomRight: {
         id: "",
@@ -16,6 +16,10 @@ class TempalteConstrucor {
         value: false,
       },
       topLeft: {
+        id: "",
+        value: false,
+      },
+      center: {
         id: "",
         value: false,
       },
@@ -34,7 +38,7 @@ class TempalteConstrucor {
       set: (target, place, value) => {
         const isBusy = target[place].value;
 
-        const {id} = value;
+        const { id } = value;
 
         if (!isBusy) {
           // освобождаем предыдущее место
@@ -63,7 +67,8 @@ class TempalteConstrucor {
     this.templateButtons.forEach((btn) => {
       const value = btn.value;
       // если место уже занято
-      const isDisabled = this.places[value].value === true && btn.checked === false;
+      const isDisabled =
+        this.places[value].value === true && btn.checked === false;
 
       if (isDisabled) {
         btn.setAttribute("disabled", "");
@@ -83,7 +88,8 @@ class TempalteConstrucor {
       "_top-right",
       "_top-left",
       "_bottom-left",
-      "_bottom-right"
+      "_bottom-right",
+      "_center"
     );
 
     switch (place) {
@@ -103,6 +109,10 @@ class TempalteConstrucor {
         this.setPlace(item, "topLeft", "_top-left");
         break;
 
+      case "center":
+        this.setPlace(item, "center", "_center");
+        break;
+
       default:
         break;
     }
@@ -114,8 +124,12 @@ class TempalteConstrucor {
 
       // если место занято, то кидаем ошибку и дизейблим input
       if (isBusy) {
-        const currInputs = document.querySelectorAll(`[data-template-toggle="${item.id}"]`);
-        const currInput = Array.from(currInputs).find(input => input.value === place);
+        const currInputs = document.querySelectorAll(
+          `[data-template-toggle="${item.id}"]`
+        );
+        const currInput = Array.from(currInputs).find(
+          (input) => input.value === place
+        );
 
         currInput.checked = false;
         currInput.setAttribute("disabled", "");
