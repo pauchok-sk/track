@@ -90,3 +90,58 @@
   color: black;
   right: 20px;
 }
+
+.input-radio {
+  display: none;
+  &:checked + label {
+    &::after {
+      display: block;
+    }
+  }
+  &[disabled] + label {
+    pointer-events: none;
+    color: var(--gray);
+    &::before {
+      border-color: var(--gray);
+    }
+  }
+}
+.btn-radio {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 48px;
+
+  @include tablet {
+    padding-left: 40px;
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+  }
+  &::before {
+    width: 32px;
+    height: 32px;
+    left: 0;
+    border: 2px solid var(--yellow);
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &::after {
+    width: 16px;
+    height: 16px;
+    background-color: var(--yellow);
+    left: 8px;
+    display: none;
+    @include tablet {
+      width: 12px;
+      height: 12px;
+      left: 6px;
+    }
+  }
+}

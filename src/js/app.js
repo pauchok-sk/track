@@ -11,6 +11,7 @@ import copyBtn from "./files/copyBtn.js";
 import btnBack from "./files/btn-back.js";
 import sliders from "./files/sliders.js";
 import { videoPlayer, videoSrc } from "./files/video.js";
+import { templateConstructor } from "./files/template.js";
 
 spoller();
 burger();
@@ -26,3 +27,4 @@ btnBack();
 sliders();
 videoSrc();
 videoPlayer();
+templateConstructor();

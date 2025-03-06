@@ -16,7 +16,8 @@
 
     <div class="template__wrapper">
       <form action="#" class="template__settings">
-        <h3 class="t-title mb-4">Настройки шаблона</h3>
+        <h3 class="title template__settings-title">Настройки шаблона</h3>
+
         <div class="template__settings-block">
           <h4 class="m-title mb-4">Фоновое видео</h4>
           <div class="swiper template__previews mb-4">
@@ -98,12 +99,77 @@
             >Загрузить своё видео</label
           >
         </div>
+
+        <div class="template__settings-block">
+          <h4 class="m-title mb-4">Расположение QR-кода</h4>
+
+          <div class="d-flex flex-column gap-3">
+            <input
+              type="radio"
+              name="place-qr"
+              id="qr-top-right"
+              value="topRight"
+              class="input-radio"
+              checked
+              data-template-toggle="template-qr"
+            />
+            <label for="qr-top-right" class="text btn-radio"
+              >Верхний Правый угол</label
+            >
+
+            <input
+              type="radio"
+              name="place-qr"
+              id="qr-top-left"
+              value="topLeft"
+              class="input-radio"
+              data-template-toggle="template-qr"
+            />
+            <label for="qr-top-left" class="text btn-radio"
+              >Верхний Левый угол</label
+            >
+
+            <input
+              type="radio"
+              name="place-qr"
+              id="qr-bottom-right"
+              value="bottomRight"
+              class="input-radio"
+              data-template-toggle="template-qr"
+            />
+            <label for="qr-bottom-right" class="text btn-radio"
+              >Нижний Правый угол</label
+            >
+
+            <input
+              type="radio"
+              name="place-qr"
+              id="qr-bottom-left"
+              value="bottomLeft"
+              class="input-radio"
+              data-template-toggle="template-qr"
+            />
+            <label for="qr-bottom-left" class="text btn-radio"
+              >Нижний Левый угол</label
+            >
+          </div>
+        </div>
       </form>
       <div class="template__preview">
         <h3 class="t-title mb-4">Предварительный просмотр</h3>
         <div class="template__video-wrapper video">
+          <img
+            src="@img/qr-simple.png"
+            alt="icon"
+            class="template__qr"
+            id="template-qr"
+          />
           <div class="video__btn"></div>
-          <video data-video="template-video" poster="@img/template-img.jpg" class="video__main">
+          <video
+            data-video="template-video"
+            poster="@img/template-img.jpg"
+            class="video__main"
+          >
             <source
               src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true"
             />
