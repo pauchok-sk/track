@@ -68,3 +68,13 @@
     font-size: 18px;
   }
 }
+
+.min-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  @include tablet {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

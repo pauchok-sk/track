@@ -8,8 +8,8 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250307020823" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250307020823" />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250310130423" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250310130423" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -113,8 +113,8 @@
 				<label for="name-template" class="m-title mb-2 mb-md-3">Название шаблона</label>
 				<input type="text" id="name-template" value="Шаблон 1" class="input _big" />
 
-				<div class="template__wrapper">
-					<form action="#" class="template__settings">
+				<form data-spollers class="template__wrapper">
+					<div action="#" class="template__settings">
 						<h3 class="title template__settings-title">Настройки шаблона</h3>
 
 						<div class="template__settings-block">
@@ -180,49 +180,135 @@
 						</div>
 
 						<div class="template__settings-block">
-							<div class="d-flex align-items-center justify-content-between">
-								<h4 class="m-title mb-4">Список заказов</h4>
+							<div class="d-flex align-items-center justify-content-between" data-spoller data-template-item-toggle="template-orders">
+								<h4 class="m-title mb-0">Список заказов</h4>
 								<div class="toggle"></div>
 							</div>
 
-							<div class="d-flex flex-column gap-3">
-								<input type="radio" name="place-orders" id="orders-left" checked value='["topLeft", "bottomLeft"]' class="input-radio" data-template-toggle="template-orders" />
-								<label for="orders-left" class="text btn-radio">Слева</label>
+							<div>
+								<div class="d-flex flex-column gap-3 pt-4">
+									<input type="radio" name="place-orders" id="orders-left" value='["topLeft", "bottomLeft"]' class="input-radio" data-template-toggle="template-orders" />
+									<label for="orders-left" class="text btn-radio">Слева</label>
 
-								<input type="radio" name="place-orders" id="orders-right" value='["topRight", "bottomRight"]' class="input-radio" data-template-toggle="template-orders" />
-								<label for="orders-right" class="text btn-radio">Справа</label>
+									<input type="radio" name="place-orders" id="orders-right" value='["topRight", "bottomRight"]' class="input-radio" data-template-toggle="template-orders" />
+									<label for="orders-right" class="text btn-radio">Справа</label>
 
-								<input type="radio" name="place-orders" id="orders-bottom" value='["bottomLeft", "bottomRight"]' class="input-radio" data-template-toggle="template-orders" />
-								<label for="orders-bottom" class="text btn-radio">Внизу</label>
+									<input type="radio" name="place-orders" id="orders-bottom" value='["bottomLeft", "bottomRight"]' class="input-radio" data-template-toggle="template-orders" />
+									<label for="orders-bottom" class="text btn-radio">Внизу</label>
 
-								<input type="radio" name="place-orders" id="orders-top" value='["topLeft", "topRight"]' class="input-radio" data-template-toggle="template-orders" />
-								<label for="orders-top" class="text btn-radio">Наверху</label>
+									<input type="radio" name="place-orders" id="orders-top" value='["topLeft", "topRight"]' class="input-radio" data-template-toggle="template-orders" />
+									<label for="orders-top" class="text btn-radio">Наверху</label>
+								</div>
 							</div>
 						</div>
 
 						<div class="template__settings-block">
-							<div class="d-flex align-items-center justify-content-between">
-								<h4 class="m-title mb-4">Логотип DJ</h4>
+							<div class="d-flex align-items-center justify-content-between" data-spoller data-template-item-toggle="template-dj">
+								<h4 class="m-title mb-0">Логотип DJ</h4>
 								<div class="toggle"></div>
 							</div>
 
-							<div class="d-flex flex-column gap-3">
-								<input type="radio" name="place-dj" id="dj-center" value="center" class="input-radio" data-template-toggle="template-dj" />
-								<label for="dj-center" class="text btn-radio">По центру экрана</label>
+							<div>
+								<div class="d-flex flex-column gap-3 pt-4">
+									<input type="radio" name="place-dj" id="dj-center" value="center" class="input-radio" data-template-toggle="template-dj" />
+									<label for="dj-center" class="text btn-radio">По центру экрана</label>
 
-								<input type="radio" name="place-dj" id="dj-top-right" value="topRight" class="input-radio" data-template-toggle="template-dj" />
-								<label for="dj-top-right" class="text btn-radio">Верхний Правый угол</label>
+									<input type="radio" name="place-dj" id="dj-top-right" value="topRight" class="input-radio" data-template-toggle="template-dj" />
+									<label for="dj-top-right" class="text btn-radio">Верхний Правый угол</label>
 
-								<input type="radio" name="place-dj" id="dj-top-left" value="topLeft" class="input-radio" data-template-toggle="template-dj" />
-								<label for="dj-top-left" class="text btn-radio">Верхний Левый угол</label>
+									<input type="radio" name="place-dj" id="dj-top-left" value="topLeft" class="input-radio" data-template-toggle="template-dj" />
+									<label for="dj-top-left" class="text btn-radio">Верхний Левый угол</label>
 
-								<input type="radio" name="place-dj" id="dj-bottom-right" value="bottomRight" class="input-radio" checked data-template-toggle="template-dj" />
-								<label for="dj-bottom-right" class="text btn-radio">Нижний Правый угол</label>
-								<input type="radio" name="place-dj" id="dj-bottom-left" value="bottomLeft" class="input-radio" data-template-toggle="template-dj" />
-								<label for="dj-bottom-left" class="text btn-radio">Нижний Левый угол</label>
+									<input type="radio" name="place-dj" id="dj-bottom-right" value="bottomRight" class="input-radio" data-template-toggle="template-dj" />
+									<label for="dj-bottom-right" class="text btn-radio">Нижний Правый угол</label>
+									<input type="radio" name="place-dj" id="dj-bottom-left" value="bottomLeft" class="input-radio" data-template-toggle="template-dj" />
+									<label for="dj-bottom-left" class="text btn-radio">Нижний Левый угол</label>
+								</div>
 							</div>
 						</div>
-					</form>
+
+						<div class="template__settings-block">
+							<div class="d-flex align-items-center justify-content-between _spoller-active" data-spoller>
+								<h4 class="m-title mb-0">Текст на экране</h4>
+								<div class="toggle"></div>
+							</div>
+
+							<div>
+								<div class="pt-4">
+									<div class="mb-4">
+										<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+											<h5 class="min-title mb-0 w-mob-full">Заголовок</h5>
+											<div class="d-flex gap-2">
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-text-type"></use>
+													</svg>
+												</button>
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-large-small"></use>
+													</svg>
+												</button>
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-text-bold"></use>
+													</svg>
+												</button>
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-text-italic"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<textarea class="input" rows="3"></textarea>
+									</div>
+									<div>
+										<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
+											<h5 class="min-title w-mob-full mb-0">
+												Подпись под заголовком
+											</h5>
+											<div class="d-flex gap-2">
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-text-type"></use>
+													</svg>
+												</button>
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-large-small"></use>
+													</svg>
+												</button>
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-text-bold"></use>
+													</svg>
+												</button>
+												<button class="editor-btn">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#icon-text-italic"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<textarea class="input" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="template__settings-nav d-none d-md-block">
+							<div class="align-items-center justify-content-between d-flex">
+								<button type="submit" class="button">Сохранить</button>
+								<a href="#" class="btn-simple">Отменить</a>
+							</div>
+							<a href="#" class="text template__delete-template">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-trash"></use>
+								</svg>
+								<span>Удалить шаблон</span>
+							</a>
+						</div>
+					</div>
 					<div class="template__preview">
 						<h3 class="t-title mb-4">Предварительный просмотр</h3>
 						<div class="template__video-wrapper video">
@@ -235,14 +321,26 @@
 								</ul>
 							</div>
 							<img src="img/qr-simple.png" alt="icon" class="template__qr" id="template-qr" />
-							<img src="img/logo-dj.png" alt="icon" class="template__qr" id="template-dj" />
+							<img src="img/logo-dj.png" alt="icon" class="template__dj" id="template-dj" />
 							<div class="video__btn"></div>
 							<video data-video="template-video" poster="img/template-img.jpg" class="video__main">
 								<source src="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" />
 							</video>
 						</div>
 					</div>
-				</div>
+					<div class="template__settings-nav d-block d-md-none w-100">
+						<div class="align-items-center flex-column d-flex gap-4">
+							<button type="submit" class="button w-100">Сохранить</button>
+							<a href="#" class="btn-simple">Отменить</a>
+						</div>
+						<a href="#" class="text template__delete-template mx-auto">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-trash"></use>
+							</svg>
+							<span>Удалить шаблон</span>
+						</a>
+					</div>
+				</form>
 			</div>
 		</section>
 
@@ -267,7 +365,7 @@
 		</div>
 	</footer>
 
-	<script src="js/app.min.js?_v=20250307020823"></script>
+	<script src="js/app.min.js?_v=20250310130423"></script>
 </body>
 
 </html>

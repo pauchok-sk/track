@@ -82,16 +82,36 @@ class TempalteConstrucor {
 
           return true;
         } else {
-          return false;
+          target[place] = {
+            id: "",
+            value: false,
+          };
+
+          this.handleDisabledTemplateButtons();
+
+          return true;
         }
       },
     });
+  }
+
+  clearPlace(id) {
+    for (let key in this.places) {
+      if (this.places[key]["id"] === id) {
+        this.places[key] = {
+          id: "",
+          value: false,
+        };
+      }
+    }
   }
 
   handleDisabledTemplateButtons() {
     this.templateButtons.forEach((btn) => {
       let valuePlace = btn.value.replace(/'/g, '"');
       const id = btn.dataset.templateToggle;
+
+      let isChecked = false;
 
       if (isJSON(valuePlace)) {
         valuePlace = JSON.parse(valuePlace);
@@ -237,8 +257,11 @@ class TempalteConstrucor {
 }
 
 export function templateConstructor() {
-  if (document.querySelector(".template")) {
+  const template = document.querySelector(".template");
+
+  if (template) {
     const templateButtons = document.querySelectorAll("[data-template-toggle]");
+    const buttonsSpoller = template.querySelectorAll("[data-spoller]");
 
     const constructor = new TempalteConstrucor(templateButtons);
 
@@ -255,6 +278,31 @@ export function templateConstructor() {
 
         btn.addEventListener("change", () => {
           constructor.changePlace(currentItem, btn.value);
+
+          if (window.getComputedStyle(currentItem).display === "none") {
+            currentItem.style.display = "block";
+          }
+        });
+      });
+    }
+
+    if (buttonsSpoller.length) {
+      buttonsSpoller.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.templateItemToggle;
+
+          if (!id) return;
+
+          const currentItem = document.querySelector(`#${id}`);
+          const buttons = document.querySelectorAll(
+            `[data-template-toggle="${id}"]`
+          );
+
+          if (window.getComputedStyle(currentItem).display === "block") {
+            currentItem.style.display = "none";
+            constructor.clearPlace(id);
+            buttons.forEach(btn => btn.checked = false);
+          }
         });
       });
     }
