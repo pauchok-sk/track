@@ -12,6 +12,7 @@
 
 // widgets
 @import "./widgets/burger";
+@import "./widgets/conclusion-funds";
 
 // ui
 @import "./ui/button";
@@ -27,6 +28,9 @@
 @import "./ui/video";
 @import "./ui/slider-nav";
 @import "./ui/editor-btn";
+@import "./ui/nav-links";
+@import "./ui/modal";
+@import "./ui/tab";
 
 // components
 @import "./components/header";
@@ -41,5 +45,6 @@
 @import "./components/orders";
 @import "./components/screen";
 @import "./components/template";
+@import "./components/payments";
 
 @import "./components/footer";

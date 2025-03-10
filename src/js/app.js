@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import "./lib/bootstrap.min.js";
+import "./lib/inputmask.min.js";
 
 import spoller from "./files/spoller.js";
 import burger from "./files/burger.js";
@@ -12,6 +13,8 @@ import btnBack from "./files/btn-back.js";
 import sliders from "./files/sliders.js";
 import { videoPlayer, videoSrc } from "./files/video.js";
 import { templateConstructor } from "./files/template.js";
+import tab from "./files/tab.js";
+import inputmask from "./files/inputmask.js";
 
 spoller();
 burger();
@@ -28,3 +31,5 @@ sliders();
 videoSrc();
 videoPlayer();
 templateConstructor();
+tab();
+inputmask();

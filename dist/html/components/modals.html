@@ -1,0 +1,73 @@
+<div class="modal fade" id="conclusion-funds" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="conclusion-funds">
+				<h3 class="t-title text-center mb-2">Заявка на вывод средств</h3>
+				<p class="text-center sm-text mb-5">
+					Заявки на вывод осуществляются вручную модератором в течении
+					<span class="text-magenta">24 часов</span>.
+					<br />
+					Обязательно
+					<span class="text-yellow">внимательно проверьте</span> указанные вами
+					реквизиты иначе можете потерять ваши средства.
+				</p>
+				<form action="#" class="conclusion-funds__form">
+					<div class="conclusion-funds__form-wrapper">
+						<div class="conclusion-funds__block">
+							<div class="conclusion-funds__block-container">
+								<div class="conclusion-funds__block-title">Текущий баланс:</div>
+								<div class="conclusion-funds__balance-wrapper mb-3">
+									<div class="m-title text-magenta">25 000 ₽</div>
+								</div>
+								<div class="conclusion-funds__block-title">Сумма вывода:</div>
+								<div class="input-control mb-3">
+									<input type="number" class="input _big text-end" />
+									<div class="input-type">₽</div>
+								</div>
+								<div class="text-center sm-text mb-1">
+									Комиссия за вывод средств: 0 ₽
+								</div>
+								<div class="text-center sm-text">
+									Итого будет зачислено: 0 ₽
+								</div>
+							</div>
+						</div>
+						<div class="conclusion-funds__block tab-container">
+							<div class="conclusion-funds__block-container">
+								<div class="conclusion-funds__block-title">
+									Вывести на счёт в банке:
+								</div>
+								<input type="text" placeholder="Наименование банка" class="input _big mb-3" />
+								<div class="conclusion-funds__nav">
+									<div data-tab-btn="tel" class="conclusion-funds__nav-btn _active">
+										Телефон
+									</div>
+									<div data-tab-btn="card" class="conclusion-funds__nav-btn">
+										Карта
+									</div>
+								</div>
+								<div data-tab="tel" class="_open">
+									<input type="tel" placeholder="+ 7 (___) ___ __-__" class="input _big" />
+								</div>
+								<div data-tab="card">
+									<input type="tel" data-mask-card placeholder="0000 0000 0000 0000" class="input _big" />
+								</div>
+
+								<input type="checkbox" id="remember-requisites" class="conclusion-funds__requisites-input" />
+								<label for="remember-requisites" class="conclusion-funds__requisites-label">
+									Запомнить реквизиты
+								</label>
+							</div>
+						</div>
+					</div>
+					<button type="submit" disabled class="button _yellow conclusion-funds__form-btn">Создать заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

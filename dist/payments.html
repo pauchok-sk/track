@@ -99,26 +99,90 @@
 
 	<main>
 
-		<section class="screen">
+		<section class="payments">
 			<div class="container">
-				<div class="d-flex align-items-start justify-content-center justify-content-lg-between gap-4 flex-wrap">
-					<div class="screen__head-info">
-						<h1 class="title s-title mb-3">Шаблоны экранов</h1>
-						<p class="text">
-							Вы можете настроить интерактивный экран для вывода на ТВ или
-							сценический экран. Экран будет доступен с любого устройства, для этого
-							нужно будет открыть его по сгенерированной ссылке.
-						</p>
+				<div class="payments__body">
+					<h1 class="title s-title text-center text-md-start mb-3 payments__title">
+						Платежи и баланс
+					</h1>
+					<ul class="list nav-links mb-5 _scrollable">
+						<li>
+							<a href="#" class="nav-links__btn _active">Баланс</a>
+						</li>
+						<li>
+							<a href="#" class="nav-links__btn">Заявки на вывод</a>
+						</li>
+						<li>
+							<a href="#" class="nav-links__btn">Транзакции</a>
+						</li>
+					</ul>
+					<div class="payments__balance-wrapper">
+						<h4 class="m-title text-center mb-4">Текущий баланс</h4>
+						<div class="title main-title text-center text-magenta mb-4">
+							25 000 ₽
+						</div>
+						<button data-bs-toggle="modal" data-bs-target="#conclusion-funds" class="button _yellow mx-auto">Оставить заявку на вывод</button>
 					</div>
-					<a href="#" class="button">Создать шаблон</a>
-				</div>
-				<div class="d-flex flex-column justify-content-center align-items-center text-center screen__empty">
-					<div class="text mb-4">Пока нет ни одного шаблона</div>
-					<a href="#" class="button _yellow">Создать</a>
+					<h4 class="m-title mb-3">Режим оплаты заказов</h4>
+
+					<input type="radio" name="mode-payment" id="fix-price" checked class="input-radio payments__input-radio" />
+					<label for="fix-price" class="btn-radio payments__mode-btn">
+						<div class="text mb-2">Фиксированная стоимость</div>
+						<p class="sm-text">
+							Стоимость каждого заказа будет равна указанной вами сумме.
+						</p>
+						<form action="#" class="d-none mt-2 gap-2 align-items-stretch">
+							<div class="input-control">
+								<input type="number" class="input _big" />
+								<span class="input-type">₽</span>
+							</div>
+							<button type="submit" class="button _yellow">Сохранить</button>
+						</form>
+					</label>
+
+					<input type="radio" name="mode-payment" id="after-price" class="input-radio payments__input-radio" />
+					<label for="after-price" class="btn-radio payments__mode-btn">
+						<div class="text mb-2">Стоимость после подтверждения</div>
+						<p class="sm-text">
+							Стоимость заказа вы указываете когда обрабатываете заявку.
+						</p>
+						<form action="#" class="d-none mt-2 gap-2 align-items-stretch">
+							<div class="input-control">
+								<input type="number" class="input _big" />
+								<span class="input-type">₽</span>
+							</div>
+							<button type="submit" class="button _yellow">Сохранить</button>
+						</form>
+					</label>
+
+					<input type="radio" name="mode-payment" id="wish-price" class="input-radio payments__input-radio" />
+					<label for="wish-price" class="btn-radio payments__mode-btn">
+						<div class="text mb-2">Стоимость по желанию</div>
+						<p class="sm-text">
+							Стоимость заказа определяют заказчики, на своё усмотрение. Минимум -
+							100 руб.
+						</p>
+						<form action="#" class="d-none mt-2 gap-2 align-items-stretch">
+							<div class="input-control">
+								<input type="number" class="input _big" />
+								<span class="input-type">₽</span>
+							</div>
+							<button type="submit" class="button _yellow">Сохранить</button>
+						</form>
+					</label>
+
+					<input type="radio" name="mode-payment" id="free-price" class="input-radio payments__input-radio" />
+					<label for="free-price" class="btn-radio payments__mode-btn">
+						<div class="text mb-2">Стоимость по желанию</div>
+						<p class="sm-text">
+							Стоимость заказа определяют заказчики, на своё усмотрение. Минимум -
+							100 руб.
+						</p>
+					</label>
 				</div>
 			</div>
-			<img src="img/tv-purple.png" alt="icon" class="stirring-el screen__tv">
 		</section>
+
 
 	</main>
 	<div class="modal fade" id="conclusion-funds" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">

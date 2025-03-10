@@ -58,9 +58,20 @@
     font-size: 20px;
     line-height: 24px;
 
+    padding-top: 14px;
+    padding-bottom: 14px;
+
     @include tablet {
       font-size: 16px;
       line-height: 20px;
+    }
+
+    & + .input-type {
+      font-size: 20px;
+      line-height: 24px;
+      @include tablet {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -120,7 +131,8 @@ textarea.input {
     padding-left: 40px;
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     content: "";
     border-radius: 50%;

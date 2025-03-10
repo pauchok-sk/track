@@ -6636,6 +6636,99 @@ body {
   width: 40px;
   height: 40px
 }
+.conclusion-funds {
+  max-width: 810px;
+  width: 100%;
+  margin: 0 auto
+}
+.conclusion-funds__form-wrapper {
+  display: flex
+}
+.conclusion-funds__block {
+  flex: 1;
+  padding: 32px 0
+}
+.conclusion-funds__block:first-child {
+  border-right: 1px solid hsla(0,0%,100%,.1)
+}
+.conclusion-funds__block:nth-child(2) .conclusion-funds__block-container {
+  margin-left: auto
+}
+.conclusion-funds__block-container {
+  max-width: 330px;
+  width: 100%;
+  padding: 0 15px
+}
+.conclusion-funds__block-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 8px
+}
+.conclusion-funds__balance-wrapper {
+  text-align: center;
+  width: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #fff
+}
+.conclusion-funds__nav {
+  display: flex;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid #fff;
+  margin-bottom: 16px
+}
+.conclusion-funds__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px
+}
+.conclusion-funds__nav-btn._active {
+  color: #000;
+  background-color: var(--yellow)
+}
+.conclusion-funds__requisites-input {
+  display: none
+}
+.conclusion-funds__requisites-input:checked+label::before {
+  border: none;
+  width: 26px;
+  height: 26px;
+  background: url(../img/check-rect.svg) top 0 left 0/100% auto no-repeat
+}
+.conclusion-funds__requisites-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 32px;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px
+}
+.conclusion-funds__requisites-label::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid var(--yellow)
+}
+.conclusion-funds__form-btn {
+  max-width: 300px;
+  width: 100%!important;
+  margin: 32px auto 0 auto
+}
 .btn-reset {
   cursor: pointer;
   background-color: rgba(0,0,0,0);
@@ -6692,6 +6785,11 @@ body {
 }
 .button._outline {
   border: 3px solid #000
+}
+.button[disabled] {
+  pointer-events: none;
+  background-color: hsla(0,0%,100%,.1)!important;
+  color: var(--gray)
 }
 .btn-simple {
   text-underline-offset: 3px;
@@ -6817,6 +6915,12 @@ body {
   -moz-appearance: textfield
 }
 .input._big {
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px
+}
+.input._big+.input-type {
   font-size: 20px;
   line-height: 24px
 }
@@ -7083,6 +7187,70 @@ textarea.input {
 .editor-btn svg {
   width: 24px;
   height: 24px
+}
+.nav-links__btn {
+  display: block;
+  position: relative;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  transition: color .2s ease
+}
+.nav-links__btn::after,
+.nav-links__btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: currentColor
+}
+.nav-links__btn::before {
+  height: 4px;
+  opacity: 0;
+  transition: opacity .2s ease;
+  z-index: 2
+}
+.nav-links__btn::after {
+  height: 1px;
+  z-index: 1
+}
+.nav-links__btn._active {
+  color: var(--yellow)
+}
+.nav-links__btn._active::before {
+  opacity: 1
+}
+.modal-dialog {
+  max-width: calc(100% - 40px);
+  width: 960px;
+  margin-left: auto!important;
+  margin-right: auto!important
+}
+.modal-content {
+  padding: 38px;
+  border-radius: 16px;
+  background-color: #000;
+  border: 1px solid #fff
+}
+.modal-close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 20px;
+  transition: opacity .2s ease
+}
+.modal-close svg {
+  width: 100%;
+  height: 100%
+}
+[data-tab] {
+  display: none
+}
+[data-tab]._open {
+  display: block
 }
 .header {
   position: absolute;
@@ -7669,40 +7837,6 @@ textarea.input {
   height: 32px;
   color: var(--yellow)
 }
-.orders__nav-btn {
-  display: block;
-  position: relative;
-  padding: 16px 24px;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 140%;
-  transition: color .2s ease
-}
-.orders__nav-btn::after,
-.orders__nav-btn::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: currentColor
-}
-.orders__nav-btn::before {
-  height: 4px;
-  opacity: 0;
-  transition: opacity .2s ease;
-  z-index: 2
-}
-.orders__nav-btn::after {
-  height: 1px;
-  z-index: 1
-}
-.orders__nav-btn._active {
-  color: var(--yellow)
-}
-.orders__nav-btn._active::before {
-  opacity: 1
-}
 .orders__card {
   display: flex;
   gap: 40px;
@@ -8071,6 +8205,45 @@ textarea.input {
 }
 .template [data-spoller]._spoller-active .toggle::before {
   left: calc(100% - 22px)
+}
+.payments {
+  padding: 80px 0 100px 0
+}
+.payments__body {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto
+}
+.payments__balance-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-direction: column;
+  padding: 30px 15px;
+  border-radius: 16px;
+  border: 1px solid #fff
+}
+.payments__input-radio:checked+label form {
+  display: flex!important
+}
+.payments__mode-btn {
+  display: block
+}
+.payments__mode-btn:not(:last-child) {
+  margin-bottom: 16px
+}
+.payments__mode-btn::after {
+  top: 8px
+}
+.payments__mode-btn .input-control {
+  height: auto;
+  width: 345px
+}
+.payments__mode-btn .input {
+  height: 100%;
+  border: none;
+  text-align: end
 }
 .footer {
   padding: 60px 0;
@@ -12880,6 +13053,10 @@ textarea.input {
     height: 45px;
     background-size: 15px auto
   }
+  .nav-links {
+    margin: 0 -20px;
+    padding: 0 20px
+  }
   .hero__music {
     left: 30px;
     bottom: 75px
@@ -12896,10 +13073,6 @@ textarea.input {
   .hero__recorder-big {
     width: 220px;
     bottom: -65px
-  }
-  .orders__nav {
-    margin: 0 -20px;
-    padding: 0 20px
   }
   .orders__card {
     gap: 24px
@@ -13300,6 +13473,9 @@ textarea.input {
     padding: 10px;
     max-width: 125px
   }
+  .payments {
+    padding: 60px 0
+  }
 }
 @media (max-width:767.98px) {
   .table-responsive-md {
@@ -13390,6 +13566,36 @@ textarea.input {
   }
 }
 @media (max-width:767px) {
+  .conclusion-funds__form-wrapper {
+    flex-wrap: wrap;
+    gap: 32px
+  }
+  .conclusion-funds__block {
+    flex: none;
+    padding: 0;
+    width: 100%
+  }
+  .conclusion-funds__block:first-child {
+    border-right: none
+  }
+  .conclusion-funds__block-container {
+    max-width: 500px;
+    margin: 0 auto!important;
+    padding: 0
+  }
+  .conclusion-funds__block-title {
+    font-size: 18px
+  }
+  .conclusion-funds__balance-wrapper {
+    padding: 16px
+  }
+  .conclusion-funds__nav-btn {
+    font-size: 16px;
+    padding: 12px
+  }
+  .conclusion-funds__form-btn {
+    margin-top: 24px
+  }
   .button {
     font-size: 16px;
     min-height: 44px
@@ -13434,6 +13640,9 @@ textarea.input {
     font-size: 16px;
     line-height: 20px
   }
+  .input._big+.input-type {
+    font-size: 16px
+  }
   .btn-radio {
     padding-left: 40px
   }
@@ -13468,6 +13677,10 @@ textarea.input {
   }
   .slider-btn {
     display: none
+  }
+  .nav-links__btn {
+    font-size: 16px;
+    padding: 16px 12px
   }
   .header__logo {
     gap: 8px;
@@ -13678,10 +13891,6 @@ textarea.input {
     font-size: 16px;
     line-height: 20px
   }
-  .orders__nav-btn {
-    font-size: 16px;
-    padding: 16px 12px
-  }
   .orders__card {
     gap: 16px
   }
@@ -13778,6 +13987,22 @@ textarea.input {
   }
   .template__preview {
     position: static
+  }
+  .payments {
+    padding-top: 32px
+  }
+  .payments__title {
+    font-size: 26px;
+    letter-spacing: 1.04px
+  }
+  .payments__mode-btn::after {
+    top: 6px
+  }
+  .payments__mode-btn .input-control {
+    width: 260px
+  }
+  .payments__mode-btn .button {
+    flex: 1
   }
 }
 @media (max-width:575.98px) {
@@ -13945,10 +14170,16 @@ textarea.input {
     font-size: 10px;
     line-height: 12px
   }
+  .payments__mode-btn .input-control {
+    width: calc(50% - 5px)
+  }
 }
 @media (max-width:479px) {
   .w-mob-full {
     width: 100%
+  }
+  .conclusion-funds__form-btn {
+    max-width: none
   }
   .hero__star {
     width: 34px;
@@ -14176,6 +14407,9 @@ textarea.input {
   .burger__list a:hover {
     color: var(--magenta)
   }
+  .conclusion-funds__nav-btn:hover {
+    color: var(--yellow)
+  }
   .button:hover {
     background-color: var(--cian)
   }
@@ -14222,6 +14456,12 @@ textarea.input {
   .editor-btn:hover {
     border-color: var(--magenta)
   }
+  .nav-links__btn:hover {
+    color: var(--yellow)
+  }
+  .modal-close:hover {
+    opacity: .6
+  }
   .header__list a:hover {
     color: var(--magenta)
   }
@@ -14246,9 +14486,6 @@ textarea.input {
   }
   .orders__fix-price:hover {
     text-decoration: underline
-  }
-  .orders__nav-btn:hover {
-    color: var(--yellow)
   }
   .orders__reject:hover {
     color: var(--magenta)
@@ -14276,6 +14513,9 @@ textarea.input {
 @media (hover:none) {
   .burger__list a:active {
     color: var(--magenta)
+  }
+  .conclusion-funds__nav-btn:active {
+    color: var(--yellow)
   }
   .button:active {
     background-color: var(--cian)
@@ -14323,6 +14563,12 @@ textarea.input {
   .editor-btn:active {
     border-color: var(--magenta)
   }
+  .nav-links__btn:active {
+    color: var(--yellow)
+  }
+  .modal-close:active {
+    opacity: .6
+  }
   .header__list a:active {
     color: var(--magenta)
   }
@@ -14347,9 +14593,6 @@ textarea.input {
   }
   .orders__fix-price:active {
     text-decoration: underline
-  }
-  .orders__nav-btn:active {
-    color: var(--yellow)
   }
   .orders__reject:active {
     color: var(--magenta)
