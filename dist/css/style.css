@@ -6565,6 +6565,12 @@ body {
 .text-tg {
   color: var(--tg)
 }
+.border-red {
+  border-color: var(--red)!important
+}
+.border-cian {
+  border-color: var(--cian)!important
+}
 .pointer {
   cursor: pointer
 }
@@ -6835,6 +6841,11 @@ body {
   line-height: 140%
 }
 .m-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%
+}
+.f-title {
   font-size: 24px;
   font-weight: 600;
   line-height: 140%
@@ -8251,6 +8262,33 @@ textarea.input {
   height: 100%;
   border: none;
   text-align: end
+}
+.payments__orders-money {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+.payments__orders-card {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #fff
+}
+.payments__more-btn {
+  margin: 56px auto 0 auto
+}
+.payments__transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px
+}
+.payments__transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 29px 24px;
+  border-radius: 16px;
+  border: 1px solid #fff
 }
 .footer {
   padding: 60px 0;
@@ -13573,6 +13611,9 @@ textarea.input {
   }
 }
 @media (max-width:767px) {
+  .unbounded-md {
+    font-family: Unbounded,sans-serif
+  }
   .conclusion-funds__form-wrapper {
     flex-wrap: wrap;
     gap: 32px
@@ -13627,6 +13668,11 @@ textarea.input {
   }
   .m-title {
     font-size: 18px
+  }
+  .f-title {
+    line-height: 150%;
+    font-size: 20px;
+    letter-spacing: .8px
   }
   .min-title {
     font-size: 18px;
@@ -14011,6 +14057,15 @@ textarea.input {
   .payments__mode-btn .button {
     flex: 1
   }
+  .payments__more-btn {
+    margin-top: 16px
+  }
+  .payments__transaction .text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .8px
+  }
 }
 @media (max-width:575.98px) {
   .table-responsive-sm {
@@ -14274,6 +14329,13 @@ textarea.input {
     --offset: 8px;
     max-width: 115px;
     padding: 8px
+  }
+  .payments__more-btn {
+    width: 100%
+  }
+  .payments__transaction {
+    align-items: start;
+    padding: 24px
   }
   .footer {
     font-size: 12px;

@@ -67,4 +67,49 @@
       }
     }
   }
+
+  &__orders-money {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__orders-card {
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid white;
+  }
+  &__more-btn {
+    margin: 56px auto 0px auto;
+    @include tablet {
+      margin-top: 16px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__transaction {
+    @include flex-between;
+    gap: 15px;
+    padding: 29px 24px;
+    border-radius: 16px;
+    border: 1px solid white;
+    @include mobile {
+      align-items: start;
+      padding: 24px;
+    }
+
+    .text {
+      @include tablet {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
 }

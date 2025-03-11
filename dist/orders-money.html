@@ -8,8 +8,8 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250311105047" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250311105047" />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250311115527" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250311115527" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -116,7 +116,48 @@
 							<a href="#" class="nav-links__btn">Транзакции</a>
 						</li>
 					</ul>
-
+					<div class="payments__orders-money">
+						<div class="payments__orders-card">
+							<div class="d-flex align-items-center justify-content-between mb-2">
+								<div class="sm-text text-yellow">28.01.2025</div>
+								<div class="sm-text">Принята в работу</div>
+							</div>
+							<div class="f-title unbounded-md">15 000 ₽</div>
+						</div>
+						<div class="payments__orders-card border-red">
+							<div class="d-flex align-items-center justify-content-between mb-2">
+								<div class="sm-text text-yellow">28.01.2025</div>
+								<div class="sm-text text-red">Отклонена</div>
+							</div>
+							<div class="f-title unbounded-md mb-2">15 000 ₽</div>
+							<div class="sm-text text-red">Счёт получателя заблокирован</div>
+						</div>
+						<div class="payments__orders-card border-cian">
+							<div class="d-flex align-items-center justify-content-between mb-2">
+								<div class="sm-text text-yellow">28.01.2025</div>
+								<div class="sm-text text-cian">Принята в работу</div>
+							</div>
+							<div class="f-title unbounded-md">25 000 ₽</div>
+						</div>
+					</div>
+					<button class="button _yellow payments__more-btn">Показать ещё</button>
+					<div class="d-flex align-items-center justify-content-center justify-content-md-between gap-3 gap-md-4 mt-5">
+						<a href="#" class="pagination-arrow _prev _disabled">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</a>
+						<a href="#" class="pagination-item _active">1</a>
+						<a href="#" class="pagination-item">2</a>
+						<a href="#" class="pagination-item">3</a>
+						<div class="pagination-item d-none d-md-flex">...</div>
+						<a href="#" class="pagination-item d-none d-md-flex">32</a>
+						<a href="#" class="pagination-arrow _next">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -372,7 +413,7 @@
 		</div>
 	</footer>
 
-	<script src="js/app.min.js?_v=20250311105047"></script>
+	<script src="js/app.min.js?_v=20250311115527"></script>
 </body>
 
 </html>

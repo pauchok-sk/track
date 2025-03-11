@@ -31,7 +31,22 @@
   color: var(--tg);
 }
 
+.border-red {
+  border-color: var(--red) !important;
+}
+.border-cian {
+  border-color: var(--cian) !important;
+}
+
 // cursor
 .pointer {
   cursor: pointer;
+}
+
+// fonts
+
+.unbounded-md {
+  @include tablet {
+    font-family: "Unbounded", sans-serif;
+  }
 }
