@@ -7228,6 +7228,9 @@ textarea.input {
   margin-left: auto!important;
   margin-right: auto!important
 }
+.modal-dialog._min {
+  width: 640px
+}
 .modal-content {
   padding: 38px;
   border-radius: 16px;
@@ -7245,6 +7248,10 @@ textarea.input {
 .modal-close svg {
   width: 100%;
   height: 100%
+}
+.modal-close-btn {
+  max-width: 300px;
+  width: 100%
 }
 [data-tab] {
   display: none

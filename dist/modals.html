@@ -97,90 +97,14 @@
 		</div>
 	</div>
 
-	<main>
+	<main style="min-height: 100vh; padding: 100px 0px;">
 
-		<section class="orders">
-			<div class="container">
-				<h1 class="title s-title mb-4 orders__title">Заказы</h1>
-				<div class="orders__head">
-					<div class="d-flex align-items-center justify-content-between justify-content-sm-start gap-4 flex-row-reverse flex-sm-row orders__toggle-wrapper">
-						<div class="toggle _active"></div>
-						<span class="orders__toggle-title">Приём заказов</span>
-					</div>
-					<a href="#" class="orders__fix-price">
-						<div>Фиксированная стоимость</div>
-						<svg>
-							<use xlink:href="img/icons/icons.svg#icon-pen"></use>
-						</svg>
-					</a>
-				</div>
-				<ul class="list nav-links mb-5 _scrollable">
-					<li>
-						<a href="#" class="nav-links__btn">Очередь заказов</a>
-					</li>
-					<li>
-						<a href="#" class="nav-links__btn">Исполнены</a>
-					</li>
-					<li>
-						<a href="#" class="nav-links__btn _active">Отклонены</a>
-					</li>
-				</ul>
-				<div class="d-flex flex-column gap-3">
-					<div class="orders__card align-items-start">
-						<div class="d-flex align-items-center gap-3 orders__date-time ms-0">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1 text-gray">200 ₽</div>
-							<div class="text order-3 order-lg-2 text-yellow">Отклонён</div>
-							<div class="d-flex align-items-center gap-3 text text-yellow order-2 order-lg-3">
-								<span>28.01.2025</span>
-								<span>22:02</span>
-							</div>
-						</div>
-					</div>
-					<div class="orders__card align-items-start">
-						<div class="d-flex align-items-center gap-3 orders__date-time ms-0">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1 text-gray">200 ₽</div>
-							<div class="text order-3 order-lg-2 text-yellow text-lg-nowrap text-end">Отменён заказчиком</div>
-							<div class="d-flex align-items-center gap-3 text text-yellow order-2 order-lg-3">
-								<span>28.01.2025</span>
-								<span>22:02</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a href="#" class="button orders__btn-more _yellow">Показать еще</a>
-				<div class="d-flex align-items-center justify-content-center justify-content-md-between gap-4 mt-5">
-					<a href="#" class="pagination-arrow _prev _disabled">
-						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
-						</svg>
-					</a>
-					<a href="#" class="pagination-item _active">1</a>
-					<a href="#" class="pagination-item">2</a>
-					<a href="#" class="pagination-item">3</a>
-					<div class="pagination-item d-none d-md-block">...</div>
-					<a href="#" class="pagination-item d-none d-md-block">32</a>
-					<a href="#" class="pagination-arrow _next">
-						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</section>
+		<div class="container d-flex gap-3 flex-wrap">
+			<button data-bs-toggle="modal" data-bs-target="#conclusion-funds" class="button _yellow">Оставить заявку на вывод</button>
+			<button data-bs-toggle="modal" data-bs-target="#conclusion-funds-error" class="button _yellow">Оставить заявку на вывод (недостаточно средств)</button>
+			<button data-bs-toggle="modal" data-bs-target="#conclusion-funds-requisites" class="button _yellow">Оставить заявку на вывод (запомненные реквизиты)</button>
+			<button data-bs-toggle="modal" data-bs-target="#conclusion-notification" class="button _yellow">Уведомление</button>
+		</div>
 
 	</main>
 	<div class="modal fade" id="conclusion-funds" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">

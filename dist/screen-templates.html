@@ -8,8 +8,8 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250310182510" rel="stylesheet" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250310182510" />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Unbounded:wght@200..900&display=swap&_v=20250311105047" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250311105047" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -294,6 +294,79 @@
 										<input type="tel" data-mask-card placeholder="0000 0000 0000 0000" class="input _big" />
 									</div>
 
+									<input type="checkbox" id="remember-requisites-2" class="conclusion-funds__requisites-input" />
+									<label for="remember-requisites-2" class="conclusion-funds__requisites-label">
+										Запомнить реквизиты
+									</label>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="button _yellow conclusion-funds__form-btn">
+							Создать заявку
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="conclusion-funds-error" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="conclusion-funds">
+					<h3 class="t-title text-center mb-2">Заявка на вывод средств</h3>
+					<p class="text-center sm-text mb-5">
+						Заявки на вывод осуществляются вручную модератором в течении
+						<span class="text-magenta">24 часов</span>.
+						<br />
+						Обязательно
+						<span class="text-yellow">внимательно проверьте</span> указанные вами
+						реквизиты иначе можете потерять ваши средства.
+					</p>
+					<form action="#" class="conclusion-funds__form">
+						<div class="conclusion-funds__form-wrapper">
+							<div class="conclusion-funds__block">
+								<div class="conclusion-funds__block-container">
+									<div class="conclusion-funds__block-title">Текущий баланс:</div>
+									<div class="conclusion-funds__balance-wrapper mb-3">
+										<div class="m-title text-red">25 000 ₽</div>
+									</div>
+									<div class="conclusion-funds__block-title">Сумма вывода:</div>
+									<div class="input-control mb-3">
+										<input type="number" class="input _big text-end _error" value="125000" />
+										<div class="input-type">₽</div>
+									</div>
+									<div class="text-center sm-text mb-1 text-red">
+										Комиссия за вывод средств: 0 ₽
+									</div>
+								</div>
+							</div>
+							<div class="conclusion-funds__block tab-container">
+								<div class="conclusion-funds__block-container">
+									<div class="conclusion-funds__block-title">
+										Вывести на счёт в банке:
+									</div>
+									<input type="text" placeholder="Наименование банка" class="input _big mb-3" />
+									<div class="conclusion-funds__nav">
+										<div data-tab-btn="tel" class="conclusion-funds__nav-btn _active">
+											Телефон
+										</div>
+										<div data-tab-btn="card" class="conclusion-funds__nav-btn">
+											Карта
+										</div>
+									</div>
+									<div data-tab="tel" class="_open">
+										<input type="tel" placeholder="+ 7 (___) ___ __-__" class="input _big" />
+									</div>
+									<div data-tab="card">
+										<input type="tel" data-mask-card placeholder="0000 0000 0000 0000" class="input _big" />
+									</div>
+
 									<input type="checkbox" id="remember-requisites" class="conclusion-funds__requisites-input" />
 									<label for="remember-requisites" class="conclusion-funds__requisites-label">
 										Запомнить реквизиты
@@ -301,9 +374,92 @@
 								</div>
 							</div>
 						</div>
-						<button type="submit" disabled class="button _yellow conclusion-funds__form-btn">Создать заявку</button>
+						<button type="submit" disabled class="button _yellow conclusion-funds__form-btn">
+							Создать заявку
+						</button>
 					</form>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="conclusion-funds-requisites" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<div class="conclusion-funds">
+					<h3 class="t-title text-center mb-2">Заявка на вывод средств</h3>
+					<p class="text-center sm-text mb-5">
+						Заявки на вывод осуществляются вручную модератором в течении
+						<span class="text-magenta">24 часов</span>.
+						<br />
+						Обязательно
+						<span class="text-yellow">внимательно проверьте</span> указанные вами
+						реквизиты иначе можете потерять ваши средства.
+					</p>
+					<form action="#" class="conclusion-funds__form">
+						<div class="conclusion-funds__form-wrapper">
+							<div class="conclusion-funds__block">
+								<div class="conclusion-funds__block-container">
+									<div class="conclusion-funds__block-title">Текущий баланс:</div>
+									<div class="conclusion-funds__balance-wrapper mb-3">
+										<div class="m-title text-magenta">25 000 ₽</div>
+									</div>
+									<div class="conclusion-funds__block-title">Сумма вывода:</div>
+									<div class="input-control mb-3">
+										<input type="number" class="input _big text-end" />
+										<div class="input-type">₽</div>
+									</div>
+									<div class="text-center sm-text mb-1">
+										Комиссия за вывод средств: 0 ₽
+									</div>
+									<div class="text-center sm-text">
+										Итого будет зачислено: 0 ₽
+									</div>
+								</div>
+							</div>
+							<div class="conclusion-funds__block tab-container">
+								<div class="conclusion-funds__block-container">
+									<div class="conclusion-funds__block-title">
+										Вывести на счёт в банке:
+									</div>
+									<div class="text text-yellow mb-4 mb-md-5">Сбер</div>
+									<div class="conclusion-funds__block-title">Телефон:</div>
+									<div class="text text-yellow mb-4 mb-md-5">
+										+ 7 (123) 456 78-90
+									</div>
+									<a href="#" class="btn-simple">Изменить реквизиты</a>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="button _yellow conclusion-funds__form-btn">
+							Создать заявку
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="conclusion-notification" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">
+		<div class="modal-dialog _min">
+			<div class="modal-content">
+				<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<p class="text text-center mb-4">
+					У вас есть <span class="text-yellow">неисполненные заявки</span>,
+					сначала закройте их, чтобы сменить режим оплаты
+				</p>
+				<button data-bs-dismiss="modal" aria-label="Close" class="button _yellow mx-auto modal-close-btn">
+					Понятно
+				</button>
 			</div>
 		</div>
 	</div>
@@ -327,7 +483,7 @@
 		</div>
 	</footer>
 
-	<script src="js/app.min.js?_v=20250310182510"></script>
+	<script src="js/app.min.js?_v=20250311105047"></script>
 </body>
 
 </html>

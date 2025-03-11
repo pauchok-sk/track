@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header-white.html')
+    <main style="min-height: 100vh; padding: 100px 0px;">
+      
+      <div class="container d-flex gap-3 flex-wrap">
+        <button data-bs-toggle="modal" data-bs-target="#conclusion-funds" class="button _yellow">Оставить заявку на вывод</button>
+        <button data-bs-toggle="modal" data-bs-target="#conclusion-funds-error" class="button _yellow">Оставить заявку на вывод (недостаточно средств)</button>
+        <button data-bs-toggle="modal" data-bs-target="#conclusion-funds-requisites" class="button _yellow">Оставить заявку на вывод (запомненные реквизиты)</button>
+        <button data-bs-toggle="modal" data-bs-target="#conclusion-notification" class="button _yellow">Уведомление</button>
+      </div>
+
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
