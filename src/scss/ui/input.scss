@@ -104,6 +104,26 @@ textarea.input {
   color: black;
   right: 20px;
 }
+.input-copy {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  right: 20px;
+  color: black;
+  transition: color .2s ease;
+  @include hover {
+    color: var(--magenta);
+  }
+  @include pressed {
+    color: var(--cian);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .input-radio {
   display: none;

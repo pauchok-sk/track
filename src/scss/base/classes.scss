@@ -2,8 +2,8 @@
   width: fit-content !important;
 }
 .w-mob-full {
-  @include mobile {
-    width: 100%;
+  @include tablet-min {
+    width: 100% !important;
   }
 }
 

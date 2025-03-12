@@ -99,88 +99,87 @@
 
 	<main>
 
-		<section class="orders">
+		<section class="order">
 			<div class="container">
-				<h1 class="title s-title mb-4 orders__title">Заказы</h1>
-				<div class="orders__head">
-					<div class="d-flex align-items-center justify-content-between justify-content-sm-start gap-4 flex-row-reverse flex-sm-row orders__toggle-wrapper">
-						<div class="toggle _active"></div>
-						<span class="orders__toggle-title">Приём заказов</span>
-					</div>
-					<a href="#" class="orders__fix-price">
-						<div>Фиксированная стоимость</div>
-						<svg>
-							<use xlink:href="img/icons/icons.svg#icon-pen"></use>
-						</svg>
-					</a>
-				</div>
-				<ul class="list nav-links mb-5 _scrollable">
-					<li>
-						<a href="#" class="nav-links__btn">Очередь заказов</a>
-					</li>
-					<li>
-						<a href="#" class="nav-links__btn">Исполнены</a>
-					</li>
-					<li>
-						<a href="#" class="nav-links__btn _active">Отклонены</a>
-					</li>
-				</ul>
-				<div class="d-flex flex-column gap-3">
-					<div class="orders__card align-items-start">
-						<div class="d-flex align-items-center gap-3 orders__date-time ms-0">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1 text-gray">200 ₽</div>
-							<div class="text order-3 order-lg-2 text-yellow">Отклонён</div>
-							<div class="d-flex align-items-center gap-3 text text-yellow order-2 order-lg-3">
-								<span>28.01.2025</span>
-								<span>22:02</span>
+				<form class="order__form">
+					<h1 class="title s-title mb-5">Страница заказа</h1>
+					<div class="order__item">
+						<h4 class="m-title mb-3">Лого для страницы заказа</h4>
+						<div class="order__logo" id="order-logo-wrapper">
+							<div class="d-flex align-items-center flex-wrap gap-3 justify-content-center justify-content-sm-start">
+								<input type="file" accept="image/png, image/jpeg, image/jpg" id="order-logo-download" class="d-none" />
+								<label class="button w-mob-full _yellow" for="order-logo-download">Загрузить лого</label>
+								<div class="text" id="order-logo-type">
+									.jpg, .png, макс. 512х512px
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="orders__card align-items-start">
-						<div class="d-flex align-items-center gap-3 orders__date-time ms-0">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-between flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1 text-gray">200 ₽</div>
-							<div class="text order-3 order-lg-2 text-yellow text-lg-nowrap text-end">Отменён заказчиком</div>
-							<div class="d-flex align-items-center gap-3 text text-yellow order-2 order-lg-3">
-								<span>28.01.2025</span>
-								<span>22:02</span>
+					<div class="order__item">
+						<h4 class="m-title mb-3">ТГ-бот</h4>
+						<a href="https://kakayatossylka.com/tgbot" target="_blank" class="btn-simple d-block mb-3">https://kakayatossylka.com/tgbot</a>
+						<a href="#" class="button _yellow w-mob-full">Активировать бота</a>
+					</div>
+					<div class="order__item">
+						<h4 class="m-title mb-3">Адрес страницы</h4>
+						<div class="input-control">
+							<input type="text" value="https://поставьмойтрек.рф/dj_koreshok" class="input" id="input-url" />
+							<div class="input-copy" data-copy-input="input-url">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-copy"></use>
+								</svg>
 							</div>
 						</div>
 					</div>
-				</div>
-				<a href="#" class="button orders__btn-more _yellow">Показать еще</a>
-				<div class="d-flex align-items-center justify-content-center justify-content-md-between gap-3 gap-md-4 mt-5">
-					<a href="#" class="pagination-arrow _prev _disabled">
-						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
-						</svg>
-					</a>
-					<a href="#" class="pagination-item _active">1</a>
-					<a href="#" class="pagination-item">2</a>
-					<a href="#" class="pagination-item">3</a>
-					<div class="pagination-item d-none d-md-block">...</div>
-					<a href="#" class="pagination-item d-none d-md-block">32</a>
-					<a href="#" class="pagination-arrow _next">
-						<svg>
-							<use xlink:href='img/icons/icons.svg#icon-arrow'></use>
-						</svg>
-					</a>
-				</div>
+					<div class="order__item">
+						<h4 class="m-title mb-3">Персональный QR для страницы заказа</h4>
+						<div class="d-flex flex-column flex-sm-row gap-4">
+							<img src="img/qr-big.jpg" alt="image" class="order__qr" />
+							<div class="d-flex flex-column">
+								<div class="flex-fill mb-3">
+									<input type="radio" value="img/qr.png" checked name="qr-type" id="qr-png" class="input-radio" />
+									<label for="qr-png" class="btn-radio order__qr-btn mb-3">PNG</label>
+
+									<input type="radio" value="img/a-pay.svg" name="qr-type" id="qr-svg" class="input-radio" />
+									<label for="qr-svg" class="btn-radio order__qr-btn mb-3">SVG</label>
+
+									<input type="radio" value="img/qr.pdf" name="qr-type" id="qr-pdf" class="input-radio" />
+									<label for="qr-pdf" class="btn-radio order__qr-btn mb-3">PDF</label>
+
+									<input type="radio" value="img/cloud.png" name="qr-type" id="qr-eps" class="input-radio" />
+									<label for="qr-eps" class="btn-radio order__qr-btn mb-3">EPS</label>
+								</div>
+								<a href="img/qr.png" download class="button _yellow w-mob-full order__qr-download" id="qr-download">Скачать</a>
+							</div>
+						</div>
+					</div>
+					<div class="order__item">
+						<h4 class="m-title mb-3">Режим страницы заказа</h4>
+
+						<input type="radio" value="img/qr.png" checked name="mode-order-page" id="mode-confirm" class="input-radio" />
+						<label for="mode-confirm" class="btn-radio text mb-3">С подтверждением</label>
+						<input type="radio" value="img/qr.png" name="mode-order-page" id="mode-confirm-off" class="input-radio" />
+						<label for="mode-confirm-off" class="btn-radio text mb-3">Без подтверждения</label>
+					</div>
+					<div class="order__item">
+						<h4 class="m-title mb-2">Текстовое приветствие для страницы заказа</h4>
+						<p class="sm-text mb-3">
+							Figma ipsum component variant main layer. Invite plugin object plugin
+							create pen plugin mask inspect. Fill frame blur strikethrough draft
+							star align flows pixel vector.
+						</p>
+						<div class="input-control">
+							<textarea placeholder="Текст" rows="4" class="input"></textarea>
+						</div>
+					</div>
+					<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-3">
+						<button type="submit" class="button w-mob-full">Сохранить изменения</button>
+						<a href="#" class="btn-simple">Отменить</a>
+					</div>
+				</form>
 			</div>
 		</section>
+
 
 	</main>
 	<div class="modal fade" id="conclusion-funds" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">

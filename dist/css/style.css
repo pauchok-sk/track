@@ -6805,6 +6805,9 @@ body {
   text-decoration: underline;
   transition: color .2s ease
 }
+.btn-simple:active {
+  color: var(--cian)
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -6957,6 +6960,22 @@ textarea.input {
   line-height: 24px;
   color: #000;
   right: 20px
+}
+.input-copy {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  right: 20px;
+  color: #000;
+  transition: color .2s ease
+}
+.input-copy:active {
+  color: var(--cian)
+}
+.input-copy svg {
+  width: 100%;
+  height: 100%
 }
 .input-radio {
   display: none
@@ -8290,6 +8309,37 @@ textarea.input {
   border-radius: 16px;
   border: 1px solid #fff
 }
+.order {
+  padding: 80px 0
+}
+.order__form {
+  max-width: 560px;
+  margin: 0 auto
+}
+.order__item {
+  margin-bottom: 40px
+}
+.order__logo .button {
+  min-width: 200px
+}
+.order__logo-img {
+  display: block;
+  max-width: 512px;
+  max-height: 512px;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.order__qr {
+  width: 256px;
+  border-radius: 8px
+}
+.order__qr-btn {
+  font-size: 20px;
+  font-weight: 600
+}
+.order__qr-download {
+  min-width: 200px
+}
 .footer {
   padding: 60px 0;
   font-size: 14px;
@@ -8305,86 +8355,6 @@ textarea.input {
 }
 .footer p {
   margin: 0
-}
-.tippy-box[data-animation=fade][data-state=hidden] {
-  opacity: 0
-}
-[data-tippy-root] {
-  max-width: calc(100vw - 10px)
-}
-.tippy-box {
-  position: relative;
-  background-color: #333;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.4;
-  white-space: normal;
-  outline: 0;
-  transition-property: visibility,opacity,-webkit-transform;
-  transition-property: transform,visibility,opacity;
-  transition-property: transform,visibility,opacity,-webkit-transform
-}
-.tippy-box[data-placement^=top]>.tippy-arrow {
-  bottom: 0
-}
-.tippy-box[data-placement^=top]>.tippy-arrow:before {
-  bottom: -7px;
-  left: 0;
-  border-width: 8px 8px 0;
-  border-top-color: initial;
-  -webkit-transform-origin: center top;
-  transform-origin: center top
-}
-.tippy-box[data-placement^=bottom]>.tippy-arrow {
-  top: 0
-}
-.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
-  top: -7px;
-  left: 0;
-  border-width: 0 8px 8px;
-  border-bottom-color: initial;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom
-}
-.tippy-box[data-placement^=left]>.tippy-arrow {
-  right: 0
-}
-.tippy-box[data-placement^=left]>.tippy-arrow:before {
-  border-width: 8px 0 8px 8px;
-  border-left-color: initial;
-  right: -7px;
-  -webkit-transform-origin: center left;
-  transform-origin: center left
-}
-.tippy-box[data-placement^=right]>.tippy-arrow {
-  left: 0
-}
-.tippy-box[data-placement^=right]>.tippy-arrow:before {
-  left: -7px;
-  border-width: 8px 8px 8px 0;
-  border-right-color: initial;
-  -webkit-transform-origin: center right;
-  transform-origin: center right
-}
-.tippy-box[data-inertia][data-state=visible] {
-  transition-timing-function: cubic-bezier(.54,1.5,.38,1.11)
-}
-.tippy-arrow {
-  width: 16px;
-  height: 16px;
-  color: #333
-}
-.tippy-arrow:before {
-  content: "";
-  position: absolute;
-  border-color: transparent;
-  border-style: solid
-}
-.tippy-content {
-  position: relative;
-  padding: 5px 9px;
-  z-index: 1
 }
 @font-face {
   font-family: swiper-icons;
@@ -8617,6 +8587,86 @@ textarea.input {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg)
   }
+}
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0
+}
+[data-tippy-root] {
+  max-width: calc(100vw - 10px)
+}
+.tippy-box {
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: visibility,opacity,-webkit-transform;
+  transition-property: transform,visibility,opacity;
+  transition-property: transform,visibility,opacity,-webkit-transform
+}
+.tippy-box[data-placement^=top]>.tippy-arrow {
+  bottom: 0
+}
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  -webkit-transform-origin: center top;
+  transform-origin: center top
+}
+.tippy-box[data-placement^=bottom]>.tippy-arrow {
+  top: 0
+}
+.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom
+}
+.tippy-box[data-placement^=left]>.tippy-arrow {
+  right: 0
+}
+.tippy-box[data-placement^=left]>.tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  -webkit-transform-origin: center left;
+  transform-origin: center left
+}
+.tippy-box[data-placement^=right]>.tippy-arrow {
+  left: 0
+}
+.tippy-box[data-placement^=right]>.tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  -webkit-transform-origin: center right;
+  transform-origin: center right
+}
+.tippy-box[data-inertia][data-state=visible] {
+  transition-timing-function: cubic-bezier(.54,1.5,.38,1.11)
+}
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: #333
+}
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid
+}
+.tippy-content {
+  position: relative;
+  padding: 5px 9px;
+  z-index: 1
 }
 @media (min-width:481px) {
   .online-pay__logo:first-child {
@@ -13521,6 +13571,9 @@ textarea.input {
   .payments {
     padding: 60px 0
   }
+  .order {
+    padding: 60px 0
+  }
 }
 @media (max-width:767.98px) {
   .table-responsive-md {
@@ -14156,6 +14209,9 @@ textarea.input {
   }
 }
 @media (max-width:575px) {
+  .w-mob-full {
+    width: 100%!important
+  }
   .hero__right {
     right: -20px
   }
@@ -14235,11 +14291,21 @@ textarea.input {
   .payments__mode-btn .input-control {
     width: calc(50% - 5px)
   }
+  .order__logo-img {
+    margin: 0 auto
+  }
+  .order__qr {
+    margin: 0 auto;
+    width: 240px;
+    margin-bottom: 40px
+  }
+  .order__qr-btn {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px
+  }
 }
 @media (max-width:479px) {
-  .w-mob-full {
-    width: 100%
-  }
   .conclusion-funds__form-btn {
     max-width: none
   }
@@ -14336,6 +14402,9 @@ textarea.input {
   .payments__transaction {
     align-items: start;
     padding: 24px
+  }
+  .order {
+    padding: 32px 0 40px 0
   }
   .footer {
     font-size: 12px;
@@ -14507,6 +14576,9 @@ textarea.input {
   .password-btn:hover {
     opacity: .7
   }
+  .input-copy:hover {
+    color: var(--magenta)
+  }
   .pagination-arrow:hover {
     border-color: var(--yellow)
   }
@@ -14613,6 +14685,9 @@ textarea.input {
   }
   .password-btn:active {
     opacity: .7
+  }
+  .input-copy:active {
+    color: var(--magenta)
   }
   .pagination-arrow:active {
     border-color: var(--yellow)

@@ -1,0 +1,156 @@
+<section class="order">
+  <div class="container">
+    <form class="order__form">
+      <h1 class="title s-title mb-5">Страница заказа</h1>
+      <div class="order__item">
+        <h4 class="m-title mb-3">Лого для страницы заказа</h4>
+        <div class="order__logo" id="order-logo-wrapper">
+          <img src="@img/dj-big.png" alt="image" class="order__logo-img mb-3">
+          <div
+            class="d-flex align-items-center flex-wrap gap-3 justify-content-center justify-content-sm-start"
+          >
+            <input
+              type="file"
+              accept="image/png, image/jpeg, image/jpg"
+              id="order-logo-download"
+              class="d-none"
+            />
+            <label class="button w-mob-full _yellow" for="order-logo-download"
+              >Сменить лого</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="order__item">
+        <h4 class="m-title mb-3">ТГ-бот</h4>
+        <div class="d-flex align-items-center flex-wrap gap-1 mb-3">
+          <div class="text w-mob-full">Привязан к ТГ: </div>
+          <a
+            href="#"
+            target="_blank"
+            class="btn-simple d-block"
+            >@DJ_Koreshok</a
+          >
+        </div>
+        <a href="#" class="button _yellow w-mob-full">Отвязать бота</a>
+      </div>
+      <div class="order__item">
+        <h4 class="m-title mb-3">Адрес страницы</h4>
+        <div class="input-control">
+          <input
+            type="text"
+            value="https://поставьмойтрек.рф/dj_koreshok"
+            class="input"
+            id="input-url"
+          />
+          <div class="input-copy" data-copy-input="input-url">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-copy"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="order__item">
+        <h4 class="m-title mb-3">Персональный QR для страницы заказа</h4>
+        <div class="d-flex flex-column flex-sm-row gap-4">
+          <img src="@img/qr-big.jpg" alt="image" class="order__qr" />
+          <div class="d-flex flex-column">
+            <div class="flex-fill mb-3">
+              <input
+                type="radio"
+                value="@img/qr.png"
+                checked
+                name="qr-type"
+                id="qr-png"
+                class="input-radio"
+              />
+              <label for="qr-png" class="btn-radio order__qr-btn mb-3"
+                >PNG</label
+              >
+
+              <input
+                type="radio"
+                value="@img/a-pay.svg"
+                name="qr-type"
+                id="qr-svg"
+                class="input-radio"
+              />
+              <label for="qr-svg" class="btn-radio order__qr-btn mb-3"
+                >SVG</label
+              >
+
+              <input
+                type="radio"
+                value="@img/qr.pdf"
+                name="qr-type"
+                id="qr-pdf"
+                class="input-radio"
+              />
+              <label for="qr-pdf" class="btn-radio order__qr-btn mb-3"
+                >PDF</label
+              >
+
+              <input
+                type="radio"
+                value="@img/cloud.png"
+                name="qr-type"
+                id="qr-eps"
+                class="input-radio"
+              />
+              <label for="qr-eps" class="btn-radio order__qr-btn mb-3"
+                >EPS</label
+              >
+            </div>
+            <a
+              href="@img/qr.png"
+              download
+              class="button _yellow w-mob-full order__qr-download"
+              id="qr-download"
+              >Скачать</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="order__item">
+        <h4 class="m-title mb-3">Режим страницы заказа</h4>
+
+        <input
+          type="radio"
+          value="@img/qr.png"
+          checked
+          name="mode-order-page"
+          id="mode-confirm"
+          class="input-radio"
+        />
+        <label for="mode-confirm" class="btn-radio text mb-3"
+          >С подтверждением</label
+        >
+        <input
+          type="radio"
+          value="@img/qr.png"
+          name="mode-order-page"
+          id="mode-confirm-off"
+          class="input-radio"
+        />
+        <label for="mode-confirm-off" class="btn-radio text mb-3"
+          >Без подтверждения</label
+        >
+      </div>
+      <div class="order__item">
+        <h4 class="m-title mb-2">Текстовое приветствие для страницы заказа</h4>
+        <p class="sm-text mb-3">
+          Figma ipsum component variant main layer. Invite plugin object plugin
+          create pen plugin mask inspect. Fill frame blur strikethrough draft
+          star align flows pixel vector.
+        </p>
+        <div class="input-control">
+          <textarea placeholder="Текст" rows="4" class="input"></textarea>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between gap-3">
+        <button type="submit" class="button w-mob-full">Сохранить изменения</button>
+        <a href="#" class="btn-simple">Отменить</a>
+      </div>
+    </form>
+  </div>
+</section>
