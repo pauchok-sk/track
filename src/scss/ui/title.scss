@@ -55,6 +55,14 @@
     line-height: 150%;
     letter-spacing: 0.8px;
   }
+
+  &._m-mobile {
+    @include mobile {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+  }
 }
 
 .m-title {

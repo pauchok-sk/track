@@ -209,7 +209,7 @@
 	</div>
 </div>
 
-<div class="modal fade" id="conclusion-notification" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">
+<div class="modal fade" id="conclusion-notification" tabindex="-1" aria-labelledby="conclusion-notification" aria-hidden="true">
 	<div class="modal-dialog _min">
 		<div class="modal-content">
 			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
@@ -224,6 +224,72 @@
 			<button data-bs-dismiss="modal" aria-label="Close" class="button _yellow mx-auto modal-close-btn">
 				Понятно
 			</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="change-password" tabindex="-1" aria-labelledby="change-password" aria-hidden="true">
+	<div class="modal-dialog _min">
+		<div class="modal-content">
+			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+			<h3 class="t-title _m-title text-center mb-4">Сменить пароль</h3>
+			<form action="#" class="w-100">
+				<div class="input-control">
+					<input type="password" placeholder="Пароль" class="input _big">
+					<div class="btn-reset password-btn"></div>
+				</div>
+				<button class="button mx-auto mt-5 _blue min-w-200 w-mob-full">Далее</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="change-password-error" tabindex="-1" aria-labelledby="change-password" aria-hidden="true">
+	<div class="modal-dialog _min">
+		<div class="modal-content">
+			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+			<h3 class="t-title _m-title text-center mb-4">Сменить пароль</h3>
+			<form action="#" class="w-100">
+				<div class="input-control">
+					<input type="password" placeholder="Пароль" class="input _big _error">
+					<div class="btn-reset password-btn"></div>
+				</div>
+				<div class="text-center text-red sm-text mt-3">Неверный пароль</div>
+				<button disabled class="button mx-auto mt-5 _blue min-w-200 w-mob-full">Далее</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="change-password-new" tabindex="-1" aria-labelledby="change-password" aria-hidden="true">
+	<div class="modal-dialog _min">
+		<div class="modal-content">
+			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</button>
+			<h3 class="t-title _m-title text-center mb-4">Сменить пароль</h3>
+			<form action="#" class="w-100">
+				<div class="input-control mb-2">
+					<input type="password" placeholder="Пароль" class="input _big">
+					<div class="btn-reset password-btn"></div>
+				</div>
+				<div class="input-control">
+					<input type="password" placeholder="Повторите пароль" class="input _big">
+					<div class="btn-reset password-btn"></div>
+				</div>
+				<button class="button mx-auto mt-4 _yellow min-w-200 w-mob-full">Сохранить</button>
+				<a href="#" class="btn-simple mx-auto w-fit mt-4">Отменить</a>
+			</form>
 		</div>
 	</div>
 </div>
