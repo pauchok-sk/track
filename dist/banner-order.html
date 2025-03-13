@@ -15,80 +15,66 @@
 
 <body class="body">
 	<header class="header">
-		<div class="container d-flex lg:row lg:gap-3 align-items-center justify-content-between">
-			<div class="header__logo-wrapper col-xl-4">
-				<a href="/" class="header__logo">
-					<img src="img/disk.svg" alt="image" class="header__logo-disk _a-rotating" />
-					<div>Поставь<span>мой</span>трек</div>
-				</a>
-			</div>
-			<ul class="list col-xl-4 header__list">
-				<li><a href="#">Получайте заказы</a></li>
-				<li><a href="#">Онлайн оплата</a></li>
-				<li><a href="#">FAQ</a></li>
-			</ul>
-			<div class="d-none d-lg-flex align-items-center justify-content-end gap-4 col-xl-4">
-				<a href="#" class="header__btn-reg">Регистрация</a>
-				<a href="#" class="button header__btn-login _min _white _outline">Вход</a>
-			</div>
-			<button class="btn-reset header__burger-btn" id="burger-btn">
-				<div></div>
-				<div></div>
-				<div></div>
-			</button>
+		<div class="container">
+			<a href="/" class="header__logo mx-auto w-fit">
+				<img src="img/disk.svg" alt="image" class="header__logo-disk _a-rotating" />
+				<div>Поставь<span>мой</span>трек</div>
+			</a>
 		</div>
 	</header>
-
-	<div class="burger pt-4" id="burger">
-		<div class="container d-flex flex-column h-100">
-			<ul class="list d-flex flex-column gap-3 burger__list mb-4 flex-fill">
-				<li><a href="#">Получайте заказы</a></li>
-				<li><a href="#">Онлайн оплата</a></li>
-				<li><a href="#">FAQ</a></li>
-			</ul>
-			<div class="d-flex align-items-center justify-content-center gap-3 mb-4">
-				<img src="img/sbp.svg" alt="icon">
-				<img src="img/tpay.svg" alt="icon">
-				<img src="img/a-pay.svg" alt="icon">
-				<img src="img/s-pay.svg" alt="icon">
-			</div>
-			<div class="burger__buttons">
-				<a href="#" class="button burger__btn mb-3">Зарегистрироваться</a>
-				<a href="#" class="button burger__btn _outline _white">Зарегистрироваться</a>
-			</div>
-		</div>
-	</div>
 	<main>
 
-		<section class="login">
+		<section class="banner-order section-parallax">
+			<img src="img/banner-bg.png" alt="bg" class="banner-order__bg position-absolute">
+
+			<img src="img/recorder-big.png" data-duration="70" alt="icon" class="banner-order__recorder-big position-absolute section-parallax-el">
+			<img src="img/pipe.png" alt="icon" class="banner-order__pipe position-absolute">
+			<img src="img/hero-right.png" data-duration="70" alt="image" class="banner-order__right position-absolut section-parallax-el" />
+
+			<img src="img/recorder.png" data-duration="70" alt="icon" class="banner-order__recorder position-absolute section-parallax-el">
+			<img src="img/radio.png" data-duration="170" alt="icon" class="banner-order__radio position-absolute section-parallax-el">
+
+
 			<div class="container">
-				<h1 class="title main-title text-center md-3 mb-md-5">Регистрация</h1>
-				<form action="#" class="login__form mx-auto">
-					<div class="d-flex flex-column gap-2">
-						<div class="input-control">
-							<input type="text" placeholder="Имя" class="input" />
+				<div class="banner-order__container d-flex align-items-center flex-column text-center">
+
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute">
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute">
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute">
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute">
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute">
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute">
+
+					<img src="img/flash-yellow.svg" alt="icon" class="stirring-el banner-order__flash-ly position-absolute">
+					<img src="img/flash-magenta.png" alt="icon" class="stirring-el banner-order__flash-lm position-absolute">
+					<img src="img/omg.png" alt="icon" class="stirring-el banner-order__omg position-absolute">
+					<img src="img/disko-circle-big.png" alt="icon" class="stirring-el banner-order__disko-circle position-absolute">
+					<img src="img/qr.png" alt="icon" class="stirring-el banner-order__qr position-absolute">
+
+					<img src="img/flash-magenta.png" alt="icon" class="stirring-el banner-order__flash-rm position-absolute">
+					<img src="img/flash-yellow.svg" alt="icon" class="stirring-el banner-order__flash-ry position-absolute">
+
+					<img src="img/smile.png" alt="icon" class="stirring-el banner-order__smile position-absolute">
+
+					<h1 class="title main-title mb-3 banner-order__title">Закажи <br> <span>свой</span> трек</h1>
+					<p class="text mb-4">
+						Сделайте свой заказ, DJ установит стоимость исполнения, заказ будет
+						принят после оплаты указанной суммы
+					</p>
+					<form action="#" class="d-flex flex-column align-items-sm-center banner-order__form">
+						<div class="input-control flex-column align-items-start w-100">
+							<textarea placeholder="Название композиции и исполнитель" class="input" rows="2"></textarea>
+							<div class="sm-text ps-4 mt-2">Максимум 70 символов</div>
 						</div>
-						<div class="input-control">
-							<input type="email" placeholder="E-mail" class="input" />
-						</div>
-						<div class="input-control">
-							<input type="password" placeholder="Пароль" class="input" />
-							<div class="btn-reset password-btn"></div>
-						</div>
-						<div class="input-control">
-							<input type="password" placeholder="Повторите пароль" class="input _error" />
-							<div class="btn-reset password-btn"></div>
-						</div>
+						<button type="submit" class="button _yellow mt-3">Отправить заявку</button>
+					</form>
+					<div class="banner-order__socials">
+						<img src="img/sbp.svg" alt="image" class="banner-order__social-icon">
+						<img src="img/tpay.svg" alt="image" class="banner-order__social-icon">
+						<img src="img/a-pay.svg" alt="image" class="banner-order__social-icon">
+						<img src="img/s-pay.svg" alt="image" class="banner-order__social-icon">
 					</div>
-					<button class="button mx-auto mt-3 mt-md-5">Зарегистрироваться</button>
-				</form>
-				<p class="text text-center mt-5 login__question">
-					Уже есть аккаунт? <a href="#">Войти</a>
-				</p>
-				<p class="sm-text text-center mt-5 login__policy mx-auto">
-					Создавая аккаунт, вы соглашаетесь с
-					<a href="#">политикой обработки персональных данных</a>
-				</p>
+				</div>
 			</div>
 		</section>
 

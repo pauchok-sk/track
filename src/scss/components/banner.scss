@@ -1,0 +1,332 @@
+.banner-order {
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0px 65px 0px;
+  background-color: var(--tg);
+  color: black;
+  min-height: 720px;
+  z-index: 1;
+  @include tablet {
+    min-height: 640px;
+    padding-top: 100px;
+  }
+
+  &__bg {
+    width: 1200px;
+    left: 50%;
+    bottom: 0;
+    min-width: 925px;
+    transform: translate(-50%, 50%);
+    z-index: -2;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    z-index: 1;
+    @include laptop-middle {
+      position: static;
+    }
+  }
+  // ---
+  &__star {
+    @include tablet {
+      width: 35px;
+    }
+    &:first-child {
+      top: 235px;
+      left: -160px;
+      @include laptop-middle {
+        top: 30px;
+        left: 30px;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    &:nth-child(2) {
+      top: 205px;
+      left: -360px;
+      @include laptop {
+        left: -275px;
+      }
+      @include laptop-middle {
+        top: 200px;
+        left: 50px;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    &:nth-child(3) {
+      top: 45px;
+      left: -90px;
+      @include laptop {
+        top: 92px;
+        left: -65px;
+      }
+      @include laptop-middle {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    &:nth-child(4) {
+      top: -55px;
+      right: -110px;
+      @include laptop-middle {
+        right: 35px;
+        top: auto;
+        bottom: 285px;
+      }
+    }
+    &:nth-child(5) {
+      right: -350px;
+      top: 65px;
+      @include laptop {
+        right: -260px;
+      }
+      @include laptop-middle {
+        bottom: 210px;
+        right: 3px;
+        top: auto;
+        z-index: 1;
+      }
+    }
+    &:nth-child(6) {
+      top: 280px;
+      right: -180px;
+      @include tablet {
+        left: 44px;
+        bottom: 40px;
+        top: auto;
+        right: auto;
+      }
+    }
+  }
+
+  &__flash-lm {
+    top: -80px;
+    left: -250px;
+    z-index: -1;
+    @include laptop {
+      left: 5px;
+      top: 0;
+    }
+    @include laptop-middle {
+      left: 90px;
+      top: 100px;
+    }
+    @include tablet {
+      width: 30px;
+      left: 55px;
+    }
+  }
+  &__flash-ly {
+    top: -30px;
+    left: -330px;
+    z-index: -1;
+    @include laptop {
+      left: -60px;
+      top: 25px;
+    }
+    @include laptop-middle {
+      left: 10px;
+      top: 120px;
+    }
+    @include tablet {
+      width: 50px;
+    }
+  }
+  &__omg {
+    top: 20px;
+    transform: rotate(-13deg);
+    left: -300px;
+    @include laptop-middle {
+      display: none;
+    }
+  }
+  &__disko-circle {
+    right: -310px;
+    width: 250px;
+    top: -255px;
+    z-index: -1;
+    @include laptop-middle {
+      width: 160px;
+      right: -20px;
+      top: -30px;
+    }
+    @include tablet {
+      width: 110px;
+      top: -5px;
+    }
+  }
+  &__qr {
+    right: -250px;
+    top: 165px;
+    @include laptop {
+      right: 100px;
+      top: 206px;
+    }
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__flash-rm {
+    transform: scale(1, -1);
+    right: -340px;
+    top: 260px;
+    @include laptop {
+      right: 40px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__flash-ry {
+    transform: scale(1, -1);
+    right: -400px;
+    top: 310px;
+    @include laptop {
+      display: none;
+    }
+  }
+  &__recorder-big {
+    right: 60px;
+    bottom: -110px;
+    z-index: -1;
+    @include laptop {
+      width: 360px;
+    }
+    @include laptop-middle {
+      width: 220px;
+      bottom: -65px;
+    }
+    @include tablet {
+      width: 260px;
+      bottom: -65px;
+      right: 15px;
+    }
+  }
+  &__pipe {
+    right: -20px;
+    bottom: 0;
+    z-index: -1;
+    @include laptop-middle {
+      width: 120px;
+    }
+    @include tablet {
+      width: 90px;
+      right: -30px;
+    }
+  }
+  &__right {
+    display: none;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    @include laptop {
+      width: 245px;
+    }
+    @include laptop-middle {
+      width: 150px;
+    }
+    @include laptop-min {
+      right: -30px;
+    }
+    @include tablet {
+      display: block;
+      width: 185px;
+      right: 0;
+    }
+    @include tablet-min {
+      right: -20px;
+    }
+  }
+  &__smile {
+    left: -270px;
+    top: 240px;
+    transform: rotate(22deg);
+  }
+  &__radio {
+    z-index: 10;
+    left: 0;
+    bottom: -45px;
+    @include laptop {
+      width: 360px;
+    }
+    @include laptop-middle {
+      left: -120px;
+    }
+    @include laptop-min {
+      width: 280px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__recorder {
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+    z-index: 15;
+    @include laptop-min {
+      bottom: 0;
+      width: 80px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // ---
+  &__title {
+    span {
+      text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black,
+        6px 6px 0px black;
+      color: var(--magenta);
+      @include laptop-min {
+        text-shadow:
+          -1px -1px 0 black,
+          1px -1px 0 black,
+          -1px 1px 0 black,
+          1px 1px 0 black,
+          4px 4px 0px black;
+      }
+    }
+  }
+  &__form {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  &__socials {
+    @include flex-center;
+    width: 100%;
+    position: relative;
+    gap: 30px;
+    margin-top: 50px;
+    z-index: 10;
+    @include tablet-min {
+      justify-content: start;
+      gap: 16px;
+    }
+  }
+  &__social-icon {
+    @media (min-width: 768px) {
+      width: 100px;
+      &:nth-child(3) {
+        width: 50px;
+      }
+      &:nth-child(4) {
+        width: 90px;
+      }
+    }
+  }
+}

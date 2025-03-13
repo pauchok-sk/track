@@ -8358,6 +8358,143 @@ textarea.input {
 .profile__form {
   width: 100%
 }
+.banner-order {
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0 65px 0;
+  background-color: var(--tg);
+  color: #000;
+  min-height: 720px;
+  z-index: 1
+}
+.banner-order__bg {
+  width: 1200px;
+  left: 50%;
+  bottom: 0;
+  min-width: 925px;
+  -webkit-transform: translate(-50%,50%);
+  transform: translate(-50%,50%);
+  z-index: -2
+}
+.banner-order__container {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  z-index: 1
+}
+.banner-order__star:first-child {
+  top: 235px;
+  left: -160px
+}
+.banner-order__star:nth-child(2) {
+  top: 205px;
+  left: -360px
+}
+.banner-order__star:nth-child(3) {
+  top: 45px;
+  left: -90px
+}
+.banner-order__star:nth-child(4) {
+  top: -55px;
+  right: -110px
+}
+.banner-order__star:nth-child(5) {
+  right: -350px;
+  top: 65px
+}
+.banner-order__star:nth-child(6) {
+  top: 280px;
+  right: -180px
+}
+.banner-order__flash-lm {
+  top: -80px;
+  left: -250px;
+  z-index: -1
+}
+.banner-order__flash-ly {
+  top: -30px;
+  left: -330px;
+  z-index: -1
+}
+.banner-order__omg {
+  top: 20px;
+  -webkit-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+  left: -300px
+}
+.banner-order__disko-circle {
+  right: -310px;
+  width: 250px;
+  top: -255px;
+  z-index: -1
+}
+.banner-order__qr {
+  right: -250px;
+  top: 165px
+}
+.banner-order__flash-rm {
+  -webkit-transform: scale(1,-1);
+  transform: scale(1,-1);
+  right: -340px;
+  top: 260px
+}
+.banner-order__flash-ry {
+  -webkit-transform: scale(1,-1);
+  transform: scale(1,-1);
+  right: -400px;
+  top: 310px
+}
+.banner-order__recorder-big {
+  right: 60px;
+  bottom: -110px;
+  z-index: -1
+}
+.banner-order__pipe {
+  right: -20px;
+  bottom: 0;
+  z-index: -1
+}
+.banner-order__right {
+  display: none;
+  right: 0;
+  bottom: 0;
+  z-index: -2
+}
+.banner-order__smile {
+  left: -270px;
+  top: 240px;
+  -webkit-transform: rotate(22deg);
+  transform: rotate(22deg)
+}
+.banner-order__radio {
+  z-index: 10;
+  left: 0;
+  bottom: -45px
+}
+.banner-order__recorder {
+  position: absolute;
+  left: 0;
+  bottom: -55px;
+  z-index: 15
+}
+.banner-order__title span {
+  text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,6px 6px 0 #000;
+  color: var(--magenta)
+}
+.banner-order__form {
+  max-width: 560px;
+  width: 100%
+}
+.banner-order__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  gap: 30px;
+  margin-top: 50px;
+  z-index: 10
+}
 .footer {
   padding: 60px 0;
   font-size: 14px;
@@ -10437,6 +10574,15 @@ textarea.input {
   }
   .text-md-center {
     text-align: center!important
+  }
+  .banner-order__social-icon {
+    width: 100px
+  }
+  .banner-order__social-icon:nth-child(3) {
+    width: 50px
+  }
+  .banner-order__social-icon:nth-child(4) {
+    width: 90px
   }
 }
 @media (min-width:992px) {
@@ -13156,6 +13302,43 @@ textarea.input {
   .template__orders {
     max-width: 160px
   }
+  .banner-order__star:nth-child(2) {
+    left: -275px
+  }
+  .banner-order__star:nth-child(3) {
+    top: 92px;
+    left: -65px
+  }
+  .banner-order__star:nth-child(5) {
+    right: -260px
+  }
+  .banner-order__flash-lm {
+    left: 5px;
+    top: 0
+  }
+  .banner-order__flash-ly {
+    left: -60px;
+    top: 25px
+  }
+  .banner-order__qr {
+    right: 100px;
+    top: 206px
+  }
+  .banner-order__flash-rm {
+    right: 40px
+  }
+  .banner-order__flash-ry {
+    display: none
+  }
+  .banner-order__recorder-big {
+    width: 360px
+  }
+  .banner-order__right {
+    width: 245px
+  }
+  .banner-order__radio {
+    width: 360px
+  }
 }
 @media (max-width:1200px) {
   .main-title {
@@ -13231,6 +13414,60 @@ textarea.input {
   .template__orders-list li {
     font-size: 12px;
     line-height: normal
+  }
+  .banner-order__container {
+    position: static
+  }
+  .banner-order__star:first-child {
+    top: 30px;
+    left: 30px
+  }
+  .banner-order__star:nth-child(2) {
+    top: 200px;
+    left: 50px
+  }
+  .banner-order__star:nth-child(3) {
+    display: none
+  }
+  .banner-order__star:nth-child(4) {
+    right: 35px;
+    top: auto;
+    bottom: 285px
+  }
+  .banner-order__star:nth-child(5) {
+    bottom: 210px;
+    right: 3px;
+    top: auto;
+    z-index: 1
+  }
+  .banner-order__flash-lm {
+    left: 90px;
+    top: 100px
+  }
+  .banner-order__flash-ly {
+    left: 10px;
+    top: 120px
+  }
+  .banner-order__omg {
+    display: none
+  }
+  .banner-order__disko-circle {
+    width: 160px;
+    right: -20px;
+    top: -30px
+  }
+  .banner-order__recorder-big {
+    width: 220px;
+    bottom: -65px
+  }
+  .banner-order__pipe {
+    width: 120px
+  }
+  .banner-order__right {
+    width: 150px
+  }
+  .banner-order__radio {
+    left: -120px
   }
 }
 @media (max-width:1199.98px) {
@@ -13594,6 +13831,22 @@ textarea.input {
   }
   .profile {
     padding: 60px 0
+  }
+  .banner-order__qr {
+    display: none
+  }
+  .banner-order__right {
+    right: -30px
+  }
+  .banner-order__radio {
+    width: 280px
+  }
+  .banner-order__recorder {
+    bottom: 0;
+    width: 80px
+  }
+  .banner-order__title span {
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,4px 4px 0 #000
   }
 }
 @media (max-width:767.98px) {
@@ -14140,6 +14393,62 @@ textarea.input {
     line-height: 150%;
     letter-spacing: .8px
   }
+  .banner-order {
+    min-height: 640px;
+    padding-top: 100px
+  }
+  .banner-order__star {
+    width: 35px
+  }
+  .banner-order__star:first-child {
+    display: none
+  }
+  .banner-order__star:nth-child(2) {
+    display: none
+  }
+  .banner-order__star:nth-child(3) {
+    display: none
+  }
+  .banner-order__star:nth-child(6) {
+    left: 44px;
+    bottom: 40px;
+    top: auto;
+    right: auto
+  }
+  .banner-order__flash-lm {
+    width: 30px;
+    left: 55px
+  }
+  .banner-order__flash-ly {
+    width: 50px
+  }
+  .banner-order__disko-circle {
+    width: 110px;
+    top: -5px
+  }
+  .banner-order__flash-rm {
+    display: none
+  }
+  .banner-order__recorder-big {
+    width: 260px;
+    bottom: -65px;
+    right: 15px
+  }
+  .banner-order__pipe {
+    width: 90px;
+    right: -30px
+  }
+  .banner-order__right {
+    display: block;
+    width: 185px;
+    right: 0
+  }
+  .banner-order__radio {
+    display: none
+  }
+  .banner-order__recorder {
+    display: none
+  }
 }
 @media (max-width:575.98px) {
   .table-responsive-sm {
@@ -14328,6 +14637,13 @@ textarea.input {
   .profile {
     padding: 32px 0;
     min-height: calc(100vh - 80px)
+  }
+  .banner-order__right {
+    right: -20px
+  }
+  .banner-order__socials {
+    justify-content: start;
+    gap: 16px
   }
 }
 @media (max-width:479px) {

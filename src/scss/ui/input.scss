@@ -111,7 +111,7 @@ textarea.input {
   height: 24px;
   right: 20px;
   color: black;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
   @include hover {
     color: var(--magenta);
   }
