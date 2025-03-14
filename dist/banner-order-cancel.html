@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
@@ -14,182 +14,144 @@
 </head>
 
 <body class="body">
-	<header class="header _white">
-		<div class="container d-flex lg:row lg:gap-3 align-items-center justify-content-between">
-			<div class="header__logo-wrapper col-xl-4">
-				<a href="/" class="header__logo">
-					<img src="img/disk.svg" alt="image" class="header__logo-disk _a-rotating" />
-					<div>Поставь<span>мой</span>трек</div>
-				</a>
-			</div>
-			<ul class="list col-xl-4 header__list">
-				<li><a href="#" class="text-magenta">Заказы</a></li>
-				<li><a href="#">Экран</a></li>
-				<li><a href="#">Платежи и баланс</a></li>
-			</ul>
-			<div class="d-none d-lg-flex align-items-center justify-content-end gap-4 col-xl-4">
-				<div class="dropdown">
-					<div class="header__profile d-flex align-items-center" data-bs-toggle="dropdown">
-						<svg class="header__profile-icon me-3">
-							<use xlink:href="img/icons/icons.svg#icon-user"></use>
-						</svg>
-						<span class="me-2">DJ Koreshok</span>
-						<svg class="header__profile-arrow">
-							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-						</svg>
-					</div>
-					<div class="dropdown-menu header__profile-dropdown">
-						<ul class="list header__profile-list">
-							<li><a href="#">Страница заказа</a></li>
-							<li><a href="#">Мой профиль</a></li>
-						</ul>
-						<button href="#" class="button _min _white _outline">Выход</button>
-					</div>
-				</div>
-			</div>
-			<button class="btn-reset header__burger-btn" id="burger-btn">
-				<div></div>
-				<div></div>
-				<div></div>
-			</button>
+	<header class="header">
+		<div class="container">
+			<a href="/" class="header__logo mx-auto w-fit">
+				<img src="img/disk.svg" alt="image" class="header__logo-disk _a-rotating" />
+				<div>Поставь<span>мой</span>трек</div>
+			</a>
 		</div>
 	</header>
-
-	<div class="burger pt-4 _black" id="burger">
-		<div class="d-flex flex-column h-100">
-			<div class="container flex-fill">
-				<ul class="list d-flex flex-column gap-3 burger__list mb-4">
-					<li><a href="#" class="text-magenta">Заказы</a></li>
-					<li><a href="#">Экран</a></li>
-					<li><a href="#">Платежи и баланс</a></li>
-				</ul>
-				<div class="burger__line"></div>
-				<ul class="list d-flex flex-column gap-3 burger__list mb-4">
-					<li><a href="#">Страница заказа</a></li>
-					<li><a href="#">Мой профиль</a></li>
-				</ul>
-			</div>
-			<div class="burger__footer">
-				<div class="d-flex align-items-center justify-content-center gap-3 mb-5">
-					<img src="img/sbp.svg" alt="icon">
-					<img src="img/tpay.svg" alt="icon">
-					<img src="img/a-pay.svg" alt="icon">
-					<img src="img/s-pay.svg" alt="icon">
-				</div>
-				<div class="d-flex align-items-center justify-content-between">
-					<a href="#" class="burger__profile">
-						<svg class="burger__profile-icon">
-							<use xlink:href="img/icons/icons.svg#icon-user"></use>
-						</svg>
-						<span>DJ Koreshok</span>
-					</a>
-					<button class="button _white _outline">Выйти</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<main>
+		<section class="banner-order section-parallax pb-0 d-flex align-items-center justify-content-end flex-column">
+			<img src="img/banner-bg.png" alt="bg" class="banner-order__bg position-absolute" />
 
-		<section class="orders">
+			<img src="img/recorder-big.png" data-duration="70" alt="icon" class="banner-order__recorder-big position-absolute section-parallax-el _min" />
+			<img src="img/pipe.png" alt="icon" class="banner-order__pipe position-absolute" />
+			<img src="img/hero-right.png" data-duration="70" alt="image" class="banner-order__right position-absolute z-3 _min" />
+
+			<img src="img/recorder.png" data-duration="70" alt="icon" class="banner-order__recorder position-absolute section-parallax-el" />
+			<img src="img/radio.png" data-duration="170" alt="icon" class="banner-order__radio position-absolute section-parallax-el" />
+			<img src="img/disko-circle-big.png" alt="icon" class="stirring-el banner-order__disko-circle position-absolute" />
+
 			<div class="container">
-				<h1 class="title s-title mb-4 orders__title">Заказы</h1>
-				<div class="orders__head">
-					<div class="d-flex align-items-center justify-content-between justify-content-sm-start gap-4 flex-row-reverse flex-sm-row orders__toggle-wrapper">
-						<div class="toggle _active"></div>
-						<span class="orders__toggle-title">Приём заказов</span>
-					</div>
-					<a href="#" class="orders__fix-price">
-						<div>Бесплатно</div>
-						<svg>
-							<use xlink:href="img/icons/icons.svg#icon-pen"></use>
-						</svg>
-					</a>
-				</div>
-				<ul class="list nav-links mb-5 _scrollable">
-					<li>
-						<a href="#" class="nav-links__btn _active">Очередь заказов</a>
-					</li>
-					<li>
-						<a href="#" class="nav-links__btn">Исполнены</a>
-					</li>
-					<li>
-						<a href="#" class="nav-links__btn">Отклонены</a>
-					</li>
-				</ul>
-				<div class="d-flex flex-column gap-3">
-					<div class="orders__card">
-						<span class="orders__card-num">1.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
+				<div class="banner-order__container d-flex align-items-center flex-column text-center _white">
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute _min" />
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute _min" />
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute _min" />
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute _min" />
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute _min" />
+					<img src="img/star.svg" alt="icon" class="stirring-el banner-order__star position-absolute _min" />
+
+					<img src="img/flash-yellow.svg" alt="icon" class="stirring-el banner-order__flash-ly position-absolute" />
+					<img src="img/flash-magenta.png" alt="icon" class="stirring-el banner-order__flash-lm position-absolute" />
+					<img src="img/omg.png" alt="icon" class="stirring-el banner-order__omg position-absolute" />
+					<img src="img/qr.png" alt="icon" class="stirring-el banner-order__qr position-absolute" />
+
+					<img src="img/flash-magenta.png" alt="icon" class="stirring-el banner-order__flash-rm position-absolute" />
+					<img src="img/flash-yellow.svg" alt="icon" class="stirring-el banner-order__flash-ry position-absolute" />
+
+					<img src="img/smile.png" alt="icon" class="stirring-el banner-order__smile position-absolute" />
+					<h1 class="title main-title mb-5 mb-md-4 banner-order__title text-center">
+						Закажи <br />
+						<span>свой</span> трек
+					</h1>
+					<div class="banner-order__wrapper">
+						<div class="banner-order__head">
+							<h3 class="t-title mt-0 mb-4 _s-mobile">
+								Спасибо, <br> ваш заказ принят!
+							</h3>
 						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
+						<a href="#" class="button mx-auto">Заказать ещё</a>
+						<div class="d-flex align-items-center gap-2 text justify-content-center mt-5">
+							<span>Статус заказа:</span>
+							<span class="text-red">Отменён</span>
 						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1">200 ₽</div>
-							<div class="orders__status order-3 order-lg-2">Исполнено</div>
-							<button class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
-						</div>
-					</div>
-					<div class="orders__card">
-						<span class="orders__card-num">2.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1">200 ₽</div>
-							<div class="orders__status order-3 order-lg-2">Исполнено</div>
-							<button class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
-						</div>
-					</div>
-					<div class="orders__card">
-						<span class="orders__card-num">3.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1">200 ₽</div>
-							<div class="orders__status order-3 order-lg-2">Исполнено</div>
-							<button class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
-						</div>
-					</div>
-					<div class="orders__card">
-						<span class="orders__card-num">4.</span>
-						<div class="d-flex align-items-center gap-3 orders__date-time">
-							<span>28.01.2025</span>
-							<span>22:02</span>
-						</div>
-						<div class="orders__card-title flex-fill">
-							Худи – Джиган, Artik & Asti, NILETTO
-						</div>
-						<div class="d-flex align-items-center gap-3 gap-lg-4 flex-wrap justify-content-lg-start justify-content-center flex-lg-nowrap orders__card-right">
-							<div class="orders__card-price order-1">200 ₽</div>
-							<div class="orders__status order-3 order-lg-2">Исполнено</div>
-							<button class="btn-reset orders__reject order-lg-3 order-2">
-								Отклонить
-							</button>
+						<div class="sm-text mt-2">Нет такого трека</div>
+						<div class="banner-order__socials justify-content-center">
+							<img src="img/sbp.svg" alt="image" class="banner-order__social-icon" />
+							<img src="img/tpay.svg" alt="image" class="banner-order__social-icon" />
+							<img src="img/a-pay.svg" alt="image" class="banner-order__social-icon" />
+							<img src="img/s-pay.svg" alt="image" class="banner-order__social-icon" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
+
+		<section class="questions bg-yellow">
+			<div class="container">
+				<h2 class="title s-title text-center mb-5">ЧаВо</h2>
+
+				<div class="questions__accordion" id="accordionQuestions">
+					<div class="questions__item">
+						<h2 class="accordion-header" id="question-1">
+							<button class="questions__accordion-button btn-reset" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-questions-1" aria-controls="collapse-questions-1">
+								<span>Как принимать заказы?</span>
+								<div class="questions__accordion-plus"></div>
+							</button>
+						</h2>
+						<div id="collapse-questions-1" class="collapse" aria-labelledby="question-1" data-bs-parent="#accordionQuestions">
+							<div class="questions__accordion-body">
+								<p>
+									<strong>Это тело аккордеона первого элемента.</strong> По
+									умолчанию оно скрыто, пока плагин сворачивания не добавит
+									соответствующие классы, которые мы используем для стилизации
+									каждого элемента. Эти классы управляют общим внешним видом,
+									а также отображением и скрытием с помощью переходов CSS. Вы
+									можете изменить все это с помощью собственного CSS или
+									переопределить наши переменные по умолчанию.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="questions__item">
+						<h2 class="accordion-header" id="question-2">
+							<button class="questions__accordion-button btn-reset" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-questions-2" aria-controls="collapse-questions-2">
+								<span>Как принимать заказы?</span>
+								<div class="questions__accordion-plus"></div>
+							</button>
+						</h2>
+						<div id="collapse-questions-2" class="collapse" aria-labelledby="question-2" data-bs-parent="#accordionQuestions">
+							<div class="questions__accordion-body">
+								<p>
+									<strong>Это тело аккордеона первого элемента.</strong> По
+									умолчанию оно скрыто, пока плагин сворачивания не добавит
+									соответствующие классы, которые мы используем для стилизации
+									каждого элемента. Эти классы управляют общим внешним видом,
+									а также отображением и скрытием с помощью переходов CSS. Вы
+									можете изменить все это с помощью собственного CSS или
+									переопределить наши переменные по умолчанию.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="questions__item">
+						<h2 class="accordion-header" id="question-3">
+							<button class="questions__accordion-button btn-reset" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-questions-3" aria-controls="collapse-questions-3">
+								<span>Как принимать заказы?</span>
+								<div class="questions__accordion-plus"></div>
+							</button>
+						</h2>
+						<div id="collapse-questions-3" class="collapse" aria-labelledby="question-3" data-bs-parent="#accordionQuestions">
+							<div class="questions__accordion-body">
+								<p>
+									<strong>Это тело аккордеона первого элемента.</strong> По
+									умолчанию оно скрыто, пока плагин сворачивания не добавит
+									соответствующие классы, которые мы используем для стилизации
+									каждого элемента. Эти классы управляют общим внешним видом,
+									а также отображением и скрытием с помощью переходов CSS. Вы
+									можете изменить все это с помощью собственного CSS или
+									переопределить наши переменные по умолчанию.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="button _yellow mt-5 mx-auto">Задать вопрос</a>
+			</div>
+		</section>
 
 	</main>
 	<div class="modal fade" id="conclusion-funds" tabindex="-1" aria-labelledby="conclusion-funds" aria-hidden="true">

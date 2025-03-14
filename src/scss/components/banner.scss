@@ -25,7 +25,7 @@
     max-width: 640px;
     margin: 0 auto;
     z-index: 1;
-    @include laptop-middle {
+    @include laptop {
       position: static;
     }
   }
@@ -33,6 +33,11 @@
   &__star {
     @include tablet {
       width: 35px;
+    }
+    @include tablet-min {
+      &._min {
+        width: 22px;
+      }
     }
     &:first-child {
       top: 235px;
@@ -76,10 +81,17 @@
     &:nth-child(4) {
       top: -55px;
       right: -110px;
+      z-index: 10;
       @include laptop-middle {
         right: 35px;
         top: auto;
         bottom: 285px;
+      }
+      @include tablet {
+        &._min {
+          bottom: 180px;
+          right: 10px;
+        }
       }
     }
     &:nth-child(5) {
@@ -92,17 +104,28 @@
         bottom: 210px;
         right: 3px;
         top: auto;
-        z-index: 1;
+        z-index: 10;
+      }
+      @include tablet {
+        &._min {
+          bottom: 140px;
+          right: -8px;
+        }
       }
     }
     &:nth-child(6) {
       top: 280px;
       right: -180px;
+      z-index: 10;
       @include tablet {
         left: 44px;
         bottom: 40px;
         top: auto;
         right: auto;
+
+        &._min {
+          left: 160px;
+        }
       }
     }
   }
@@ -112,10 +135,6 @@
     left: -250px;
     z-index: -1;
     @include laptop {
-      left: 5px;
-      top: 0;
-    }
-    @include laptop-middle {
       left: 90px;
       top: 100px;
     }
@@ -144,16 +163,16 @@
     top: 20px;
     transform: rotate(-13deg);
     left: -300px;
-    @include laptop-middle {
+    @include laptop {
       display: none;
     }
   }
   &__disko-circle {
-    right: -310px;
+    right: 80px;
     width: 250px;
-    top: -255px;
+    top: -115px;
     z-index: -1;
-    @include laptop-middle {
+    @include laptop {
       width: 160px;
       right: -20px;
       top: -30px;
@@ -196,13 +215,19 @@
   &__recorder-big {
     right: 60px;
     bottom: -110px;
-    z-index: -1;
-    @include laptop {
+    z-index: 10;
+    @media (max-width: 1439px) {
       width: 360px;
     }
     @include laptop-middle {
       width: 220px;
       bottom: -65px;
+    }
+    @include laptop-min {
+      &._min {
+        width: 175px;
+        bottom: -55px;
+      }
     }
     @include tablet {
       width: 260px;
@@ -213,8 +238,8 @@
   &__pipe {
     right: -20px;
     bottom: 0;
-    z-index: -1;
-    @include laptop-middle {
+    z-index: 10;
+    @media (max-width: 1439px) {
       width: 120px;
     }
     @include tablet {
@@ -230,7 +255,7 @@
     @include laptop {
       width: 245px;
     }
-    @include laptop-middle {
+    @include laptop {
       width: 150px;
     }
     @include laptop-min {
@@ -240,6 +265,10 @@
       display: block;
       width: 185px;
       right: 0;
+
+      &._min {
+        width: 125px;
+      }
     }
     @include tablet-min {
       right: -20px;
@@ -282,6 +311,24 @@
   }
 
   // ---
+  &__wrapper {
+    background-color: white;
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 8px 8px 0px 0px #000;
+
+    @include laptop-min {
+      padding: 32px 24px;
+    }
+    @include tablet {
+      padding-bottom: 100px;
+    }
+  }
+  &__head {
+    max-width: 485px;
+    margin: 0 auto;
+  }
   &__title {
     span {
       text-shadow:
@@ -308,6 +355,8 @@
 
   &__socials {
     @include flex-center;
+    position: relative;
+    z-index: 10;
     width: 100%;
     position: relative;
     gap: 30px;
@@ -327,6 +376,16 @@
       &:nth-child(4) {
         width: 90px;
       }
+    }
+  }
+  &__price {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    @include tablet {
+      font-size: 32px;
+      letter-spacing: 1.28px;
     }
   }
 }

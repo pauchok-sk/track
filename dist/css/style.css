@@ -6574,8 +6574,18 @@ body {
 .border-cian {
   border-color: var(--cian)!important
 }
+.bg-yellow {
+  background-color: var(--yellow)!important
+}
 .pointer {
   cursor: pointer
+}
+.unbounded {
+  font-family: Unbounded,sans-serif
+}
+.text-show {
+  text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,6px 6px 0 #000;
+  color: var(--magenta)
 }
 .burger {
   position: fixed;
@@ -8396,7 +8406,8 @@ textarea.input {
 }
 .banner-order__star:nth-child(4) {
   top: -55px;
-  right: -110px
+  right: -110px;
+  z-index: 10
 }
 .banner-order__star:nth-child(5) {
   right: -350px;
@@ -8404,7 +8415,8 @@ textarea.input {
 }
 .banner-order__star:nth-child(6) {
   top: 280px;
-  right: -180px
+  right: -180px;
+  z-index: 10
 }
 .banner-order__flash-lm {
   top: -80px;
@@ -8423,9 +8435,9 @@ textarea.input {
   left: -300px
 }
 .banner-order__disko-circle {
-  right: -310px;
+  right: 80px;
   width: 250px;
-  top: -255px;
+  top: -115px;
   z-index: -1
 }
 .banner-order__qr {
@@ -8447,12 +8459,12 @@ textarea.input {
 .banner-order__recorder-big {
   right: 60px;
   bottom: -110px;
-  z-index: -1
+  z-index: 10
 }
 .banner-order__pipe {
   right: -20px;
   bottom: 0;
-  z-index: -1
+  z-index: 10
 }
 .banner-order__right {
   display: none;
@@ -8477,6 +8489,17 @@ textarea.input {
   bottom: -55px;
   z-index: 15
 }
+.banner-order__wrapper {
+  background-color: #fff;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 8px 8px 0 0 #000
+}
+.banner-order__head {
+  max-width: 485px;
+  margin: 0 auto
+}
 .banner-order__title span {
   text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,6px 6px 0 #000;
   color: var(--magenta)
@@ -8489,11 +8512,19 @@ textarea.input {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
   width: 100%;
   position: relative;
   gap: 30px;
   margin-top: 50px;
   z-index: 10
+}
+.banner-order__price {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 140%;
+  letter-spacing: 1.92px
 }
 .footer {
   padding: 60px 0;
@@ -13195,6 +13226,14 @@ textarea.input {
     top: 54%
   }
 }
+@media (max-width:1439px) {
+  .banner-order__recorder-big {
+    width: 360px
+  }
+  .banner-order__pipe {
+    width: 120px
+  }
+}
 @media (max-width:1399.98px) {
   .table-responsive-xxl {
     overflow-x: auto;
@@ -13302,6 +13341,9 @@ textarea.input {
   .template__orders {
     max-width: 160px
   }
+  .banner-order__container {
+    position: static
+  }
   .banner-order__star:nth-child(2) {
     left: -275px
   }
@@ -13313,12 +13355,20 @@ textarea.input {
     right: -260px
   }
   .banner-order__flash-lm {
-    left: 5px;
-    top: 0
+    left: 90px;
+    top: 100px
   }
   .banner-order__flash-ly {
     left: -60px;
     top: 25px
+  }
+  .banner-order__omg {
+    display: none
+  }
+  .banner-order__disko-circle {
+    width: 160px;
+    right: -20px;
+    top: -30px
   }
   .banner-order__qr {
     right: 100px;
@@ -13330,11 +13380,11 @@ textarea.input {
   .banner-order__flash-ry {
     display: none
   }
-  .banner-order__recorder-big {
-    width: 360px
-  }
   .banner-order__right {
     width: 245px
+  }
+  .banner-order__right {
+    width: 150px
   }
   .banner-order__radio {
     width: 360px
@@ -13415,9 +13465,6 @@ textarea.input {
     font-size: 12px;
     line-height: normal
   }
-  .banner-order__container {
-    position: static
-  }
   .banner-order__star:first-child {
     top: 30px;
     left: 30px
@@ -13438,33 +13485,15 @@ textarea.input {
     bottom: 210px;
     right: 3px;
     top: auto;
-    z-index: 1
-  }
-  .banner-order__flash-lm {
-    left: 90px;
-    top: 100px
+    z-index: 10
   }
   .banner-order__flash-ly {
     left: 10px;
     top: 120px
   }
-  .banner-order__omg {
-    display: none
-  }
-  .banner-order__disko-circle {
-    width: 160px;
-    right: -20px;
-    top: -30px
-  }
   .banner-order__recorder-big {
     width: 220px;
     bottom: -65px
-  }
-  .banner-order__pipe {
-    width: 120px
-  }
-  .banner-order__right {
-    width: 150px
   }
   .banner-order__radio {
     left: -120px
@@ -13647,6 +13676,9 @@ textarea.input {
   }
 }
 @media (max-width:991px) {
+  .text-show {
+    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,4px 4px 0 #000
+  }
   .main-title {
     font-size: 36px
   }
@@ -13835,6 +13867,10 @@ textarea.input {
   .banner-order__qr {
     display: none
   }
+  .banner-order__recorder-big._min {
+    width: 175px;
+    bottom: -55px
+  }
   .banner-order__right {
     right: -30px
   }
@@ -13844,6 +13880,9 @@ textarea.input {
   .banner-order__recorder {
     bottom: 0;
     width: 80px
+  }
+  .banner-order__wrapper {
+    padding: 32px 24px
   }
   .banner-order__title span {
     text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,4px 4px 0 #000
@@ -14409,11 +14448,22 @@ textarea.input {
   .banner-order__star:nth-child(3) {
     display: none
   }
+  .banner-order__star:nth-child(4)._min {
+    bottom: 180px;
+    right: 10px
+  }
+  .banner-order__star:nth-child(5)._min {
+    bottom: 140px;
+    right: -8px
+  }
   .banner-order__star:nth-child(6) {
     left: 44px;
     bottom: 40px;
     top: auto;
     right: auto
+  }
+  .banner-order__star:nth-child(6)._min {
+    left: 160px
   }
   .banner-order__flash-lm {
     width: 30px;
@@ -14443,11 +14493,21 @@ textarea.input {
     width: 185px;
     right: 0
   }
+  .banner-order__right._min {
+    width: 125px
+  }
   .banner-order__radio {
     display: none
   }
   .banner-order__recorder {
     display: none
+  }
+  .banner-order__wrapper {
+    padding-bottom: 100px
+  }
+  .banner-order__price {
+    font-size: 32px;
+    letter-spacing: 1.28px
   }
 }
 @media (max-width:575.98px) {
@@ -14638,6 +14698,9 @@ textarea.input {
     padding: 32px 0;
     min-height: calc(100vh - 80px)
   }
+  .banner-order__star._min {
+    width: 22px
+  }
   .banner-order__right {
     right: -20px
   }
@@ -14654,6 +14717,13 @@ textarea.input {
     font-size: 18px;
     font-weight: 600;
     line-height: 140%
+  }
+  .t-title._s-mobile {
+    font-family: Unbounded,sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .8px
   }
   .hero__star {
     width: 34px;

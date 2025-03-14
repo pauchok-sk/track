@@ -41,6 +41,10 @@
   border-color: var(--cian) !important;
 }
 
+.bg-yellow {
+  background-color: var(--yellow) !important;
+}
+
 // cursor
 .pointer {
   cursor: pointer;
@@ -48,8 +52,30 @@
 
 // fonts
 
+.unbounded {
+  font-family: "Unbounded", sans-serif;
+}
+
 .unbounded-md {
   @include tablet {
     font-family: "Unbounded", sans-serif;
+  }
+}
+
+.text-show {
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black,
+    6px 6px 0px black;
+  color: var(--magenta);
+  @include laptop-min {
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black,
+      4px 4px 0px black;
   }
 }
