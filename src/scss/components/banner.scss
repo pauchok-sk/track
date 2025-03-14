@@ -10,7 +10,11 @@
     min-height: 640px;
     padding-top: 100px;
   }
-
+  &._p-sm-bottom {
+    @include tablet {
+      padding-bottom: 115px;
+    }
+  }
   &__bg {
     width: 1200px;
     left: 50%;
@@ -323,6 +327,7 @@
     }
     @include tablet {
       padding-bottom: 100px;
+      min-height: 430px;
     }
   }
   &__head {
@@ -349,8 +354,10 @@
     }
   }
   &__form {
+    position: relative;
     max-width: 560px;
     width: 100%;
+    z-index: 10;
   }
 
   &__socials {

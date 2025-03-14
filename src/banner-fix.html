@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header-simple.html')
+    <main>
+      @@include('html/components/banner-fix.html')
+
+      <section class="questions bg-yellow">
+        <div class="container">
+          <h2 class="title s-title text-center mb-5">ЧаВо</h2>
+
+          <div class="questions__accordion" id="accordionQuestions">
+            <div class="questions__item">
+              <h2 class="accordion-header" id="question-1">
+                <button
+                  class="questions__accordion-button btn-reset"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-questions-1"
+                  aria-controls="collapse-questions-1"
+                >
+                  <span>Как принимать заказы?</span>
+                  <div class="questions__accordion-plus"></div>
+                </button>
+              </h2>
+              <div
+                id="collapse-questions-1"
+                class="collapse"
+                aria-labelledby="question-1"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="questions__accordion-body">
+                  <p>
+                    <strong>Это тело аккордеона первого элемента.</strong> По
+                    умолчанию оно скрыто, пока плагин сворачивания не добавит
+                    соответствующие классы, которые мы используем для стилизации
+                    каждого элемента. Эти классы управляют общим внешним видом,
+                    а также отображением и скрытием с помощью переходов CSS. Вы
+                    можете изменить все это с помощью собственного CSS или
+                    переопределить наши переменные по умолчанию.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="questions__item">
+              <h2 class="accordion-header" id="question-2">
+                <button
+                  class="questions__accordion-button btn-reset"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-questions-2"
+                  aria-controls="collapse-questions-2"
+                >
+                  <span>Как принимать заказы?</span>
+                  <div class="questions__accordion-plus"></div>
+                </button>
+              </h2>
+              <div
+                id="collapse-questions-2"
+                class="collapse"
+                aria-labelledby="question-2"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="questions__accordion-body">
+                  <p>
+                    <strong>Это тело аккордеона первого элемента.</strong> По
+                    умолчанию оно скрыто, пока плагин сворачивания не добавит
+                    соответствующие классы, которые мы используем для стилизации
+                    каждого элемента. Эти классы управляют общим внешним видом,
+                    а также отображением и скрытием с помощью переходов CSS. Вы
+                    можете изменить все это с помощью собственного CSS или
+                    переопределить наши переменные по умолчанию.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="questions__item">
+              <h2 class="accordion-header" id="question-3">
+                <button
+                  class="questions__accordion-button btn-reset"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse-questions-3"
+                  aria-controls="collapse-questions-3"
+                >
+                  <span>Как принимать заказы?</span>
+                  <div class="questions__accordion-plus"></div>
+                </button>
+              </h2>
+              <div
+                id="collapse-questions-3"
+                class="collapse"
+                aria-labelledby="question-3"
+                data-bs-parent="#accordionQuestions"
+              >
+                <div class="questions__accordion-body">
+                  <p>
+                    <strong>Это тело аккордеона первого элемента.</strong> По
+                    умолчанию оно скрыто, пока плагин сворачивания не добавит
+                    соответствующие классы, которые мы используем для стилизации
+                    каждого элемента. Эти классы управляют общим внешним видом,
+                    а также отображением и скрытием с помощью переходов CSS. Вы
+                    можете изменить все это с помощью собственного CSS или
+                    переопределить наши переменные по умолчанию.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="button _yellow mt-5 mx-auto">Задать вопрос</a>
+        </div>
+      </section>
+      
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

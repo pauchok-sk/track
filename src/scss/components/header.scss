@@ -154,4 +154,11 @@
       }
     }
   }
+  &__dj {
+    display: block;
+    width: 80px;
+    @include tablet {
+      width: 55px;
+    }
+  }
 }

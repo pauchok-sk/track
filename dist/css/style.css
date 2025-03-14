@@ -6583,8 +6583,8 @@ body {
 .unbounded {
   font-family: Unbounded,sans-serif
 }
-.text-show {
-  text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,6px 6px 0 #000;
+.text-shadow {
+  text-shadow: 6px 6px 0 #000;
   color: var(--magenta)
 }
 .burger {
@@ -6948,8 +6948,8 @@ body {
 .input._big {
   font-size: 20px;
   line-height: 24px;
-  padding-top: 14px;
-  padding-bottom: 14px
+  padding-top: 15px;
+  padding-bottom: 15px
 }
 .input._big+.input-type {
   font-size: 20px;
@@ -7417,6 +7417,10 @@ textarea.input {
   font-weight: 700;
   line-height: 32px;
   transition: color .2s ease
+}
+.header__dj {
+  display: block;
+  width: 80px
 }
 .hero {
   position: relative;
@@ -8505,8 +8509,10 @@ textarea.input {
   color: var(--magenta)
 }
 .banner-order__form {
+  position: relative;
   max-width: 560px;
-  width: 100%
+  width: 100%;
+  z-index: 10
 }
 .banner-order__socials {
   display: flex;
@@ -13676,8 +13682,8 @@ textarea.input {
   }
 }
 @media (max-width:991px) {
-  .text-show {
-    text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,4px 4px 0 #000
+  .text-shadow {
+    text-shadow: 4px 4px 0 #000
   }
   .main-title {
     font-size: 36px
@@ -13977,6 +13983,9 @@ textarea.input {
   }
 }
 @media (max-width:767px) {
+  .w-md-full {
+    width: 100%!important
+  }
   .unbounded-md {
     font-family: Unbounded,sans-serif
   }
@@ -14057,7 +14066,9 @@ textarea.input {
   }
   .input._big {
     font-size: 16px;
-    line-height: 20px
+    line-height: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px
   }
   .input._big+.input-type {
     font-size: 16px
@@ -14108,6 +14119,9 @@ textarea.input {
   .header__logo-disk {
     width: 32px;
     height: 32px
+  }
+  .header__dj {
+    width: 55px
   }
   .hero {
     padding-bottom: 160px
@@ -14436,6 +14450,9 @@ textarea.input {
     min-height: 640px;
     padding-top: 100px
   }
+  .banner-order._p-sm-bottom {
+    padding-bottom: 115px
+  }
   .banner-order__star {
     width: 35px
   }
@@ -14503,7 +14520,8 @@ textarea.input {
     display: none
   }
   .banner-order__wrapper {
-    padding-bottom: 100px
+    padding-bottom: 100px;
+    min-height: 430px
   }
   .banner-order__price {
     font-size: 32px;

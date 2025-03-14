@@ -1,6 +1,11 @@
 .w-fit {
   width: fit-content !important;
 }
+.w-md-full {
+  @include tablet {
+    width: 100% !important;
+  }
+}
 .w-mob-full {
   @include tablet-min {
     width: 100% !important;
@@ -62,20 +67,10 @@
   }
 }
 
-.text-show {
-  text-shadow:
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black,
-    1px 1px 0 black,
-    6px 6px 0px black;
+.text-shadow {
+  text-shadow: 6px 6px 0px black;
   color: var(--magenta);
   @include laptop-min {
-    text-shadow:
-      -1px -1px 0 black,
-      1px -1px 0 black,
-      -1px 1px 0 black,
-      1px 1px 0 black,
-      4px 4px 0px black;
+    text-shadow: 4px 4px 0px black;
   }
 }
