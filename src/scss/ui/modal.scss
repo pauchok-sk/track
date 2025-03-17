@@ -1,11 +1,17 @@
+.modal {
+  &.show._center {
+    
+  }
+}
+
 .modal-dialog {
-  max-width: calc(100% - 40px);
-  width: 960px;
+  max-width: calc(100% - 20px) !important;
+  width: 960px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 
   &._min {
-    width: 640px;
+    width: 640px !important;
   }
 }
 

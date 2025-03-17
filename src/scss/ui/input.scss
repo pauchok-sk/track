@@ -11,7 +11,7 @@
   background: white;
   width: 100%;
   background-color: white;
-  padding: 12px 45px 12px 20px;
+  padding: 12px 35px 12px 20px;
 
   font-size: 16px;
   font-weight: 600;
@@ -28,6 +28,10 @@
 
   &:focus {
     border-color: var(--cian);
+  }
+
+  &._pe-normal {
+    padding-right: 20px;
   }
 
   &[disabled] {

@@ -6711,11 +6711,14 @@ body {
   border-radius: 8px
 }
 .conclusion-funds__nav-btn._active {
-  color: #000;
-  background-color: var(--yellow)
+  color: #000!important;
+  background-color: var(--yellow)!important
 }
 .conclusion-funds__requisites-input {
   display: none
+}
+.conclusion-funds__requisites-input:checked+label {
+  color: var(--yellow)
 }
 .conclusion-funds__requisites-input:checked+label::before {
   border: none;
@@ -6748,6 +6751,11 @@ body {
   width: 100%!important;
   margin: 32px auto 0 auto
 }
+.conclusion-funds__block-remember {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%
+}
 .btn-reset {
   cursor: pointer;
   background-color: rgba(0,0,0,0);
@@ -6775,7 +6783,7 @@ body {
   font-size: 20px;
   color: #000;
   font-weight: 700;
-  transition: color .2s ease,background-color .2s ease
+  transition: color .2s linear,background-color .2s linear,background .2s linear!important
 }
 .button:active {
   background-color: #fff!important
@@ -6909,7 +6917,7 @@ body {
   background: #fff;
   width: 100%;
   background-color: #fff;
-  padding: 12px 45px 12px 20px;
+  padding: 12px 35px 12px 20px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -6917,6 +6925,9 @@ body {
 }
 .input:focus {
   border-color: var(--cian)
+}
+.input._pe-normal {
+  padding-right: 20px
 }
 .input[disabled]::-webkit-input-placeholder {
   opacity: .3
@@ -7270,13 +7281,13 @@ textarea.input {
   opacity: 1
 }
 .modal-dialog {
-  max-width: calc(100% - 40px);
-  width: 960px;
+  max-width: calc(100% - 20px)!important;
+  width: 960px!important;
   margin-left: auto!important;
   margin-right: auto!important
 }
 .modal-dialog._min {
-  width: 640px
+  width: 640px!important
 }
 .modal-content {
   padding: 38px;
@@ -14018,6 +14029,11 @@ textarea.input {
   }
   .conclusion-funds__form-btn {
     margin-top: 24px
+  }
+  .conclusion-funds__block-remember {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px
   }
   .button {
     font-size: 16px;

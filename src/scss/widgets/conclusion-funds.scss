@@ -83,18 +83,20 @@
     }
 
     &._active {
-      color: black;
-      background-color: var(--yellow);
+      color: black !important;
+      background-color: var(--yellow) !important;
     }
   }
   &__requisites-input {
     display: none;
     &:checked + label {
+      color: var(--yellow);
       &::before {
         border: none;
         width: 26px;
         height: 26px;
-        background: url("@img/check-rect.svg") top 0 left 0 / 100% auto no-repeat;
+        background: url("@img/check-rect.svg") top 0 left 0 / 100% auto
+          no-repeat;
       }
     }
   }
@@ -129,6 +131,16 @@
     }
     @include mobile {
       max-width: none;
+    }
+  }
+  &__block-remember {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    @include tablet {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
     }
   }
 }

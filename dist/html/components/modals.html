@@ -42,7 +42,7 @@
 								<div class="conclusion-funds__block-title">
 									Вывести на счёт в банке:
 								</div>
-								<input type="text" placeholder="Наименование банка" class="input _big mb-3" />
+								<input type="text" placeholder="Наименование банка" class="input _big mb-3 _pe-normal" />
 								<div class="conclusion-funds__nav">
 									<div data-tab-btn="tel" class="conclusion-funds__nav-btn _active">
 										Телефон
@@ -52,7 +52,7 @@
 									</div>
 								</div>
 								<div data-tab="tel" class="_open">
-									<input type="tel" placeholder="+ 7 (___) ___ __-__" class="input _big" />
+									<input type="tel" placeholder="+7 (___) ___ __-__" class="input _big" />
 								</div>
 								<div data-tab="card">
 									<input type="tel" data-mask-card placeholder="0000 0000 0000 0000" class="input _big" />
@@ -106,7 +106,7 @@
 									<div class="input-type">₽</div>
 								</div>
 								<div class="text-center sm-text mb-1 text-red">
-									Комиссия за вывод средств: 0 ₽
+									Недостаточно средств!
 								</div>
 							</div>
 						</div>
@@ -115,7 +115,7 @@
 								<div class="conclusion-funds__block-title">
 									Вывести на счёт в банке:
 								</div>
-								<input type="text" placeholder="Наименование банка" class="input _big mb-3" />
+								<input type="text" placeholder="Наименование банка" class="input _big mb-3 _pe-normal" />
 								<div class="conclusion-funds__nav">
 									<div data-tab-btn="tel" class="conclusion-funds__nav-btn _active">
 										Телефон
@@ -125,7 +125,7 @@
 									</div>
 								</div>
 								<div data-tab="tel" class="_open">
-									<input type="tel" placeholder="+ 7 (___) ___ __-__" class="input _big" />
+									<input type="tel" placeholder="+7 (___) ___ __-__" class="input _big" />
 								</div>
 								<div data-tab="card">
 									<input type="tel" data-mask-card placeholder="0000 0000 0000 0000" class="input _big" />
@@ -191,9 +191,9 @@
 								<div class="conclusion-funds__block-title">
 									Вывести на счёт в банке:
 								</div>
-								<div class="text text-yellow mb-4 mb-md-5">Сбер</div>
+								<div class="conclusion-funds__block-remember text-yellow mb-4 mb-md-5">Сбер</div>
 								<div class="conclusion-funds__block-title">Телефон:</div>
-								<div class="text text-yellow mb-4 mb-md-5">
+								<div class="conclusion-funds__block-remember text-yellow mb-4 mb-md-5">
 									+ 7 (123) 456 78-90
 								</div>
 								<a href="#" class="btn-simple">Изменить реквизиты</a>
@@ -210,14 +210,14 @@
 </div>
 
 <div class="modal fade" id="conclusion-notification" tabindex="-1" aria-labelledby="conclusion-notification" aria-hidden="true">
-	<div class="modal-dialog _min">
+	<div class="modal-dialog _min  modal-dialog-centered">
 		<div class="modal-content">
 			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
 				<svg>
 					<use xlink:href="img/icons/icons.svg#icon-close"></use>
 				</svg>
 			</button>
-			<p class="text text-center mb-4">
+			<p class="m-title text-center mb-4">
 				У вас есть <span class="text-yellow">неисполненные заявки</span>,
 				сначала закройте их, чтобы сменить режим оплаты
 			</p>
@@ -229,7 +229,7 @@
 </div>
 
 <div class="modal fade" id="change-password" tabindex="-1" aria-labelledby="change-password" aria-hidden="true">
-	<div class="modal-dialog _min">
+	<div class="modal-dialog _min modal-dialog-centered">
 		<div class="modal-content">
 			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
 				<svg>
@@ -238,18 +238,19 @@
 			</button>
 			<h3 class="t-title _m-title text-center mb-4">Сменить пароль</h3>
 			<form action="#" class="w-100">
+				<div class="m-title mb-2 mb-md-3">Текущий пароль:</div>
 				<div class="input-control">
 					<input type="password" placeholder="Пароль" class="input _big">
 					<div class="btn-reset password-btn"></div>
 				</div>
-				<button class="button mx-auto mt-5 _blue min-w-200 w-mob-full">Далее</button>
+				<button class="button mx-auto mt-4 _blue min-w-200 w-mob-full">Далее</button>
 			</form>
 		</div>
 	</div>
 </div>
 
 <div class="modal fade" id="change-password-error" tabindex="-1" aria-labelledby="change-password" aria-hidden="true">
-	<div class="modal-dialog _min">
+	<div class="modal-dialog _min modal-dialog-centered">
 		<div class="modal-content">
 			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
 				<svg>
@@ -258,19 +259,20 @@
 			</button>
 			<h3 class="t-title _m-title text-center mb-4">Сменить пароль</h3>
 			<form action="#" class="w-100">
+				<div class="m-title mb-2 mb-md-3">Текущий пароль:</div>
 				<div class="input-control">
 					<input type="password" placeholder="Пароль" class="input _big _error">
 					<div class="btn-reset password-btn"></div>
 				</div>
 				<div class="text-center text-red sm-text mt-3">Неверный пароль</div>
-				<button disabled class="button mx-auto mt-5 _blue min-w-200 w-mob-full">Далее</button>
+				<button disabled class="button mx-auto mt-4 _blue min-w-200 w-mob-full">Далее</button>
 			</form>
 		</div>
 	</div>
 </div>
 
 <div class="modal fade" id="change-password-new" tabindex="-1" aria-labelledby="change-password" aria-hidden="true">
-	<div class="modal-dialog _min">
+	<div class="modal-dialog _min modal-dialog-centered">
 		<div class="modal-content">
 			<button class="btn-reset modal-close" data-bs-dismiss="modal" aria-label="Close">
 				<svg>
@@ -279,6 +281,7 @@
 			</button>
 			<h3 class="t-title _m-title text-center mb-4">Сменить пароль</h3>
 			<form action="#" class="w-100">
+				<div class="m-title mb-2 mb-md-3">Придумайте новый пароль:</div>
 				<div class="input-control mb-2">
 					<input type="password" placeholder="Пароль" class="input _big">
 					<div class="btn-reset password-btn"></div>
