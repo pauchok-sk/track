@@ -41,6 +41,22 @@
     letter-spacing: 0.8px;
   }
 }
+.s-title-m {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 1.6px;
+  @include laptop {
+    font-size: 32px;
+  }
+  @include laptop-min {
+    font-size: 26px;
+  }
+  @include tablet {
+    font-size: 26px;
+    letter-spacing: 1.04px;
+  }
+}
 
 .t-title {
   font-size: 32px;

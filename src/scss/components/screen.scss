@@ -10,6 +10,13 @@
   @include mobile {
     padding-top: 30px;
   }
+  &__title {
+    @include tablet {
+      font-size: 26px;
+      line-height: 125%; 
+      letter-spacing: 1.04px;
+    }
+  }
   &__head-info {
     max-width: 790px;
     @include laptop-min {
@@ -53,8 +60,9 @@
       grid-column: 6 span;
     }
 
-    a, button {
-      transition: color .2s ease;
+    a,
+    button {
+      transition: color 0.2s ease;
       @include hover {
         color: var(--magenta);
       }
@@ -67,6 +75,10 @@
     border-radius: 2px;
     overflow: hidden;
     border: 1px solid white;
+    transition: opacity .2s ease !important;
+    @include hover {
+      opacity: 0.8;
+    }
   }
   &__template-qr {
     position: absolute;

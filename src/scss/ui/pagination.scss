@@ -50,6 +50,7 @@
   line-height: 30px;
   transition: color 0.2s ease;
   &._active {
+    pointer-events: none;
     color: var(--yellow);
   }
   @include hover {
@@ -66,5 +67,10 @@
 
   @include last(2) {
     display: none;
+  }
+}
+div.pagination-item {
+  @include hover {
+    color: inherit;
   }
 }

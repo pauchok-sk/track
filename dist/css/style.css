@@ -6863,6 +6863,12 @@ body {
   line-height: 140%;
   letter-spacing: 1.6px
 }
+.s-title-m {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 1.6px
+}
 .t-title {
   font-size: 32px;
   font-weight: 700;
@@ -6882,6 +6888,12 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 140%
+}
+.text-static {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0
 }
 .text {
   font-size: 20px;
@@ -6917,7 +6929,7 @@ body {
   background: #fff;
   width: 100%;
   background-color: #fff;
-  padding: 12px 35px 12px 20px;
+  padding: 12px 40px 12px 20px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -7119,6 +7131,7 @@ textarea.input {
   transition: color .2s ease
 }
 .pagination-item._active {
+  pointer-events: none;
   color: var(--yellow)
 }
 .pagination-item:nth-last-child(-n+2) {
@@ -7417,6 +7430,8 @@ textarea.input {
   box-shadow: 8px 8px 0 0 #000;
   border-radius: 8px;
   border: 1px solid #000;
+  left: auto!important;
+  right: 0!important;
   width: 225px
 }
 .header__profile-list {
@@ -7883,7 +7898,7 @@ textarea.input {
   z-index: 1
 }
 .orders._empty {
-  min-height: calc(100vh - 100px)
+  min-height: calc(100dvh - 100px)
 }
 .orders__head {
   display: flex;
@@ -7936,9 +7951,6 @@ textarea.input {
   font-size: 24px;
   font-weight: 600;
   line-height: 140%
-}
-.orders__card-right .text:nth-child(2) {
-  max-width: 95px
 }
 .orders__card-right .input-control {
   width: 140px;
@@ -8002,6 +8014,9 @@ textarea.input {
   width: 100%;
   height: 100%
 }
+.orders__submit {
+  margin-right: 24px
+}
 .orders__btn-more {
   margin: 40px auto 0 auto
 }
@@ -8052,7 +8067,8 @@ textarea.input {
   padding-bottom: 55%;
   border-radius: 2px;
   overflow: hidden;
-  border: 1px solid #fff
+  border: 1px solid #fff;
+  transition: opacity .2s ease!important
 }
 .screen__template-qr {
   position: absolute;
@@ -11489,6 +11505,14 @@ textarea.input {
   .text-lg-center {
     text-align: center!important
   }
+  .w-lg-fit {
+    width: -webkit-fit-content!important;
+    width: -moz-fit-content!important;
+    width: fit-content!important
+  }
+  .text-lg-nowrap {
+    white-space: nowrap!important
+  }
   ._scrollable::-webkit-scrollbar {
     width: 0;
     height: 0
@@ -13349,6 +13373,9 @@ textarea.input {
   .s-title {
     font-size: 32px
   }
+  .s-title-m {
+    font-size: 32px
+  }
   .hero__music {
     width: 100px
   }
@@ -13708,6 +13735,9 @@ textarea.input {
   .s-title {
     font-size: 26px
   }
+  .s-title-m {
+    font-size: 26px
+  }
   .t-title {
     font-size: 24px
   }
@@ -13855,6 +13885,9 @@ textarea.input {
   }
   .orders__card-price {
     width: 100%
+  }
+  .orders__submit {
+    margin-right: 0
   }
   .screen__head-info {
     text-align: center
@@ -14056,6 +14089,10 @@ textarea.input {
     font-size: 20px;
     line-height: 150%;
     letter-spacing: .8px
+  }
+  .s-title-m {
+    font-size: 26px;
+    letter-spacing: 1.04px
   }
   .t-title {
     font-size: 20px;
@@ -14387,11 +14424,21 @@ textarea.input {
   .screen {
     padding: 60px 0
   }
+  .screen__title {
+    font-size: 26px;
+    line-height: 125%;
+    letter-spacing: 1.04px
+  }
   .screen__tv {
     right: -10px
   }
   .template {
     overflow: hidden
+  }
+  .template__title {
+    font-size: 26px;
+    line-height: 125%;
+    letter-spacing: 1.04px
   }
   .template__wrapper {
     margin-top: 50px;
@@ -14443,6 +14490,9 @@ textarea.input {
   .template__preview {
     position: static
   }
+  .template__preview .t-title {
+    letter-spacing: normal!important
+  }
   .payments {
     padding-top: 32px
   }
@@ -14467,6 +14517,11 @@ textarea.input {
     font-weight: 600;
     line-height: 150%;
     letter-spacing: .8px
+  }
+  .profile__title {
+    font-size: 26px;
+    line-height: 125%;
+    letter-spacing: 1.04px
   }
   .banner-order {
     min-height: 640px;
@@ -14835,6 +14890,10 @@ textarea.input {
   .login__content {
     max-width: 310px
   }
+  .orders__card-price {
+    font-family: Unbounded,sans-serif;
+    font-weight: 600
+  }
   .orders__btn-more {
     margin-top: 32px;
     width: 100%
@@ -15041,6 +15100,9 @@ textarea.input {
   .pagination-item:hover {
     color: var(--yellow)
   }
+  div.pagination-item:hover {
+    color: inherit
+  }
   .btn-back:hover {
     color: var(--magenta)
   }
@@ -15093,6 +15155,9 @@ textarea.input {
   .screen__template a:hover,
   .screen__template button:hover {
     color: var(--magenta)
+  }
+  .screen__template-gallery:hover {
+    opacity: .8
   }
   .template__preview-btn:hover::before {
     border-color: var(--yellow)
@@ -15151,6 +15216,9 @@ textarea.input {
   .pagination-item:active {
     color: var(--yellow)
   }
+  div.pagination-item:active {
+    color: inherit
+  }
   .btn-back:active {
     color: var(--magenta)
   }
@@ -15203,6 +15271,9 @@ textarea.input {
   .screen__template a:active,
   .screen__template button:active {
     color: var(--magenta)
+  }
+  .screen__template-gallery:active {
+    opacity: .8
   }
   .template__preview-btn:active::before {
     border-color: var(--yellow)

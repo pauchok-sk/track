@@ -8,7 +8,7 @@
   }
 
   &._empty {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100dvh - 100px);
   }
 
   &__title {
@@ -137,12 +137,6 @@
       width: 100%;
     }
 
-    .text {
-      &:nth-child(2) {
-        max-width: 95px;
-      }
-    }
-
     .input-control {
       width: 140px;
       height: auto;
@@ -168,7 +162,7 @@
       font-size: 20px;
       font-weight: 600;
       line-height: 24px;
-      right: 24px; 
+      right: 24px;
       @include tablet {
         font-size: 16px;
         line-height: 20px;
@@ -189,6 +183,10 @@
     }
     @include laptop-min {
       width: 100%;
+    }
+    @include mobile {
+      font-family: "Unbounded", sans-serif;
+      font-weight: 600;
     }
   }
   &__status {
@@ -256,6 +254,10 @@
     }
   }
   &__submit {
+    margin-right: 24px;
+    @include laptop-min {
+      margin-right: 0;
+    }
     @include tablet {
       padding-left: 35px;
       padding-right: 35px;

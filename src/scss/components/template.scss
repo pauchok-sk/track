@@ -3,6 +3,13 @@
   @include tablet {
     overflow: hidden;
   }
+  &__title {
+    @include tablet {
+      font-size: 26px;
+      line-height: 125%;
+      letter-spacing: 1.04px;
+    }
+  }
   &__wrapper {
     display: flex;
     align-items: start;
@@ -284,7 +291,7 @@
     gap: 16px;
     margin-top: 64px;
     color: var(--yellow);
-    transition: color .2s ease;
+    transition: color 0.2s ease;
     @include hover {
       color: var(--magenta);
     }
@@ -309,6 +316,9 @@
 
     @include tablet {
       position: static;
+      .t-title {
+        letter-spacing: normal !important;
+      }
     }
   }
 

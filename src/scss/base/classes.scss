@@ -74,3 +74,13 @@
     text-shadow: 4px 4px 0px black;
   }
 }
+
+// media
+@media (min-width: 992px) {
+  .w-lg-fit {
+    width: fit-content !important;
+  }
+  .text-lg-nowrap {
+    white-space: nowrap !important;
+  }
+}
