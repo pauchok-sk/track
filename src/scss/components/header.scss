@@ -69,6 +69,8 @@
     }
   }
   &__btn-login {
+    padding-top: 1px;
+    padding-bottom: 1px;
     @include laptop-min {
       display: none;
     }

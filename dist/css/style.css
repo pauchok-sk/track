@@ -6506,10 +6506,10 @@ body {
   --container-width: calc(var(--content-width) + (var(--offset-width) * 2))
 }
 .container {
-  max-width: var(--container-width);
-  width: 100%;
-  padding: 0 var(--offset-width);
-  margin: 0 auto
+  max-width: var(--container-width)!important;
+  width: 100%!important;
+  padding: 0 var(--offset-width)!important;
+  margin: 0 auto!important
 }
 @-webkit-keyframes rotate {
   from {
@@ -7363,6 +7363,10 @@ textarea.input {
   font-weight: 700;
   transition: color .2s ease
 }
+.header__btn-login {
+  padding-top: 1px;
+  padding-bottom: 1px
+}
 .header__burger-btn {
   position: relative;
   display: none;
@@ -7436,6 +7440,8 @@ textarea.input {
 .hero {
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
   padding: 165px 0 95px 0;
   background-color: var(--yellow);
   color: #000;
@@ -7736,7 +7742,7 @@ textarea.input {
   background-color: var(--yellow)
 }
 .online-pay__body {
-  max-width: 800px
+  max-width: 720px
 }
 .online-pay__logos {
   display: flex;

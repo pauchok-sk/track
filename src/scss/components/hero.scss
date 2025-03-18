@@ -1,6 +1,8 @@
 .hero {
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
   padding: 165px 0px 95px 0px;
   background-color: var(--yellow);
   color: black;

@@ -5,8 +5,8 @@
 }
 
 .container {
-  max-width: var(--container-width);
-  width: 100%;
-  padding: 0 var(--offset-width);
-  margin: 0 auto;
+  max-width: var(--container-width) !important;
+  width: 100% !important;
+  padding: 0 var(--offset-width) !important;
+  margin: 0 auto !important;
 }
